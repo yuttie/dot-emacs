@@ -17,5 +17,5 @@ emacs -L ~/.emacs.d/site-lisp/anything-config \
       -L ~/.emacs.d/site-lisp/icicles \
       -L ~/.emacs.d/site-lisp/popwin-el \
       -L ~/.emacs.d/site-lisp/vimpulse \
-      #--quick -batch --funcall batch-byte-compile ~/.emacs.d/site-lisp/**/*.el
       --quick -batch --funcall batch-byte-recompile-directory ~/.emacs.d/site-lisp
+      #--quick -batch --funcall batch-byte-compile ~/.emacs.d/site-lisp/**/*.el
