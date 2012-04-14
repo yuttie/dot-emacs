@@ -1,4 +1,4 @@
-(require 'alist)
+(require 'alist)  ; This library is included in APEL.
 
 ;;; load-path
 ;(defun add-dir-and-subdirs-to-load-path (my-lisp-dir)
