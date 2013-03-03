@@ -1,6 +1,7 @@
 ;;
 ;; Wombat theme ported from Vim
 ;;
+(require 'paren)
 (set-background-color "#242424")
 (set-foreground-color "#f6f3e8")
 (set-cursor-color "#656565")
