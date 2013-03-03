@@ -52,16 +52,6 @@
 ;(add-dir-and-subdirs-to-load-path "~/.emacs.d/site-lisp")
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/vimpulse")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/undo-tree")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/icicles")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/twittering-mode")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/anything-config")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jaunte.el")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/popwin-el")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-deferred")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-inertial-scroll")
 
 ;;; emacs
 (setq-default fill-column 80)
