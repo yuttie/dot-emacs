@@ -53,6 +53,7 @@
           "evil-elscreen"
           "evil-numbers"
           "evil-surround"
+          "haskell-mode"
           "helm"
           "inertial-scroll"
           "jaunte"
