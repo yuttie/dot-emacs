@@ -1,5 +1,3 @@
-(require 'alist)  ; This library is included in APEL.
-
 ;;; load-path
 ;(defun add-dir-and-subdirs-to-load-path (my-lisp-dir)
 ;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
@@ -318,27 +316,27 @@
   '(progn
      (setq multi-term-program "/bin/zsh")
      (setq-default term-scroll-to-bottom-on-output 'this)
-     (remove-alist 'term-bind-key-alist "C-s")
-     (remove-alist 'term-bind-key-alist "C-r")
-     (set-alist    'term-bind-key-alist "C-p" 'term-send-raw-meta)
-     (set-alist    'term-bind-key-alist "C-n" 'term-send-raw-meta)
-     (set-alist    'term-bind-key-alist "M-q" 'term-send-raw-meta)
+     (setq term-bind-key-alist (delq (assoc "C-s" term-bind-key-alist) term-bind-key-alist))
+     (setq term-bind-key-alist (delq (assoc "C-r" term-bind-key-alist) term-bind-key-alist))
+     (add-to-list 'term-bind-key-alist '("C-p" . 'term-send-raw-meta))
+     (add-to-list 'term-bind-key-alist '("C-n" . 'term-send-raw-meta))
+     (add-to-list 'term-bind-key-alist '("M-q" . 'term-send-raw-meta))
 
      (add-to-list 'term-unbind-key-list "C-w")
-     (set-alist 'term-bind-key-alist "C-w c"   'delete-window)
-     (set-alist 'term-bind-key-alist "C-w C-c" 'delete-window)
-     (set-alist 'term-bind-key-alist "C-w o"   'delete-other-windows)
-     (set-alist 'term-bind-key-alist "C-w C-o" 'delete-other-windows)
-     (set-alist 'term-bind-key-alist "C-w s"   'split-window-vertically)
-     (set-alist 'term-bind-key-alist "C-w C-s" 'split-window-vertically)
-     (set-alist 'term-bind-key-alist "C-w v"   'split-window-horizontally)
-     (set-alist 'term-bind-key-alist "C-w C-v" 'split-window-horizontally)
-     (set-alist 'term-bind-key-alist "C-w w"   'vimpulse-cycle-windows)
-     (set-alist 'term-bind-key-alist "C-w C-w" 'vimpulse-cycle-windows)
-     (set-alist 'term-bind-key-alist "C-w j"   'windmove-down)
-     (set-alist 'term-bind-key-alist "C-w k"   'windmove-up)
-     (set-alist 'term-bind-key-alist "C-w h"   'windmove-left)
-     (set-alist 'term-bind-key-alist "C-w l"   'windmove-right)))
+     (add-to-list 'term-bind-key-alist '("C-w c"   . 'delete-window))
+     (add-to-list 'term-bind-key-alist '("C-w C-c" . 'delete-window))
+     (add-to-list 'term-bind-key-alist '("C-w o"   . 'delete-other-windows))
+     (add-to-list 'term-bind-key-alist '("C-w C-o" . 'delete-other-windows))
+     (add-to-list 'term-bind-key-alist '("C-w s"   . 'split-window-vertically))
+     (add-to-list 'term-bind-key-alist '("C-w C-s" . 'split-window-vertically))
+     (add-to-list 'term-bind-key-alist '("C-w v"   . 'split-window-horizontally))
+     (add-to-list 'term-bind-key-alist '("C-w C-v" . 'split-window-horizontally))
+     (add-to-list 'term-bind-key-alist '("C-w w"   . 'vimpulse-cycle-windows))
+     (add-to-list 'term-bind-key-alist '("C-w C-w" . 'vimpulse-cycle-windows))
+     (add-to-list 'term-bind-key-alist '("C-w j"   . 'windmove-down))
+     (add-to-list 'term-bind-key-alist '("C-w k"   . 'windmove-up))
+     (add-to-list 'term-bind-key-alist '("C-w h"   . 'windmove-left))
+     (add-to-list 'term-bind-key-alist '("C-w l"   . 'windmove-right))))
 
 ;;; diff-mode
 (add-hook 'diff-mode-hook
@@ -395,7 +393,7 @@
 
 ;;; CC Mode
 (setq-default c-basic-offset 4)
-(set-alist 'c-default-style 'other "linux")
+(add-to-list 'c-default-style '(other . "linux"))
 
 ;;; C++ Mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
