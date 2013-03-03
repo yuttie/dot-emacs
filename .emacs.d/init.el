@@ -59,6 +59,7 @@
           "jaunte"
           "multi-term"
           "popwin"
+          "powerline"
           "ruby-block"
           "timeclock-x"
           "twittering-mode"
