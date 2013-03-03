@@ -8,7 +8,36 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(el-get 'sync)
+(add-to-list 'el-get-sources
+             '(:name elscreen
+                     :description "Screen Manager for Emacsen"
+                     :type git
+                     :url "https://github.com/shosti/elscreen.git"))
+(add-to-list 'el-get-sources
+             '(:name jaunte
+                     :description "Emacs Hit a Hint"
+                     :type git
+                     :url "https://github.com/kawaguchi/jaunte.el.git"))
+
+(el-get 'sync
+        '("anything"
+          "anything-config"
+          "auto-complete"
+          "c-eldoc"
+          "color-theme"
+          "deferred"
+          "elscreen"
+          "evil"
+          "evil-elscreen"
+          "icicles"
+          "inertial-scroll"
+          "jaunte"
+          "multi-term"
+          "popwin"
+          "ruby-block"
+          "timeclock-x"
+          "twittering-mode"
+          "yari"))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
