@@ -392,8 +392,9 @@
             (define-key git-status-mode-map (kbd "K") 'scroll-other-window-down)))
 
 ;;; CC Mode
-(setq-default c-basic-offset 4)
-(add-to-list 'c-default-style '(other . "linux"))
+(add-hook 'c-mode-common-hook (lambda ()
+    (setq-default c-basic-offset 4)
+    (add-to-list 'c-default-style '(other . "linux"))))
 
 ;;; C++ Mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
