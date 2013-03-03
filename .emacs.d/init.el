@@ -53,6 +53,8 @@
           "elscreen"
           "evil"
           "evil-elscreen"
+          "evil-numbers"
+          "evil-surround"
           "icicles"
           "inertial-scroll"
           "jaunte"
