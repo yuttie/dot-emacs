@@ -139,15 +139,16 @@
     (add-to-list 'default-frame-alist '(width . 84))))
 
 ;;; color-theme
-(require 'color-theme)
-(autoload 'color-theme-fruit "color-theme-fruit" "Fruit color theme." t)
-(autoload 'color-theme-dark-fruit "color-theme-dark-fruit" "Dark Fruit color theme." t)
-(autoload 'color-theme-tango "color-theme-tango" "A color theme based on Tango Palette." t)
-(autoload 'color-theme-tangotango "color-theme-tangotango" "A color theme based on Tango Palette colors." t)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (if window-system (load "color-theme-wombat"))))
+(add-hook 'after-init-hook (lambda ()
+    (require 'color-theme)
+    (autoload 'color-theme-fruit "color-theme-fruit" "Fruit color theme." t)
+    (autoload 'color-theme-dark-fruit "color-theme-dark-fruit" "Dark Fruit color theme." t)
+    (autoload 'color-theme-tango "color-theme-tango" "A color theme based on Tango Palette." t)
+    (autoload 'color-theme-tangotango "color-theme-tangotango" "A color theme based on Tango Palette colors." t)
+    (eval-after-load "color-theme"
+      '(progn
+         (color-theme-initialize)
+         (if window-system (load "color-theme-wombat"))))))
 
 ;;; inertial-scroll.el
 ;; http://d.hatena.ne.jp/kiwanami/20101008/1286518936
@@ -191,18 +192,19 @@
 
 ;;; ElScreen
 (setq elscreen-startup-command-line-processing nil)
-(require 'elscreen)
 (setq elscreen-prefix-key (kbd "C-z"))
 (setq elscreen-display-tab t)
 (setq elscreen-tab-display-control nil)
 (setq elscreen-tab-display-kill-screen nil)
-(define-key elscreen-map (kbd "z") 'elscreen-toggle)
-(define-key elscreen-map (kbd "C-z") 'elscreen-toggle)
-(global-set-key (kbd "C-<tab>") 'elscreen-next)
-(global-set-key (kbd "C-S-<iso-lefttab>") 'elscreen-previous)
-(global-set-key (kbd "C-l") 'elscreen-next)
-(global-set-key (kbd "C-h") 'elscreen-previous)
-(vimpulse-map (kbd "C-h") 'elscreen-previous)
+(add-hook 'after-init-hook (lambda ()
+    (elscreen-start)
+    (define-key elscreen-map (kbd "z") 'elscreen-toggle)
+    (define-key elscreen-map (kbd "C-z") 'elscreen-toggle)
+    (global-set-key (kbd "C-<tab>") 'elscreen-next)
+    (global-set-key (kbd "C-S-<iso-lefttab>") 'elscreen-previous)
+    (global-set-key (kbd "C-l") 'elscreen-next)
+    (global-set-key (kbd "C-h") 'elscreen-previous)
+    (vimpulse-map (kbd "C-h") 'elscreen-previous)))
 
 ;;; Tramp
 (setq tramp-default-method "sshx")
