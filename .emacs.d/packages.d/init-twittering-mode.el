@@ -16,7 +16,6 @@
                   (replace-match "%S" nil nil twittering-status-format))
             (setq twittering-retweet-format "QT @%s: %t")
             (twittering-icon-mode 1)
-            (twittering-scroll-mode 1)
             (define-key twittering-mode-map (kbd "j") 'next-line)
             (define-key twittering-mode-map (kbd "k") 'previous-line)
             (define-key twittering-mode-map (kbd "J") 'twittering-goto-next-status)
