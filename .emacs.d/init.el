@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+
 ;;; El-Get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq el-get-user-package-directory "~/.emacs.d/packages.d/")
@@ -73,7 +75,6 @@
 ;      (normal-top-level-add-subdirs-to-load-path))))
 ;(add-dir-and-subdirs-to-load-path "~/.emacs.d/site-lisp")
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;;; emacs
 (setq-default fill-column 80)
