@@ -75,37 +75,6 @@
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
 (setq ps-multibyte-buffer 'non-latin-printer)
 
-;;; Viper and Vimpulse
-(setq viper-toggle-key "")
-(require 'vimpulse)
-
-(vimpulse-setq viper-inhibit-startup-message t)
-(vimpulse-setq viper-expert-level 5)
-
-(vimpulse-setq viper-auto-indent t)
-(vimpulse-setq viper-electric-mode t)
-(vimpulse-setq viper-case-fold-search t)
-(vimpulse-setq viper-re-search t)
-(vimpulse-setq viper-shift-width 4)
-(vimpulse-setq viper-search-wrap-around t)
-(vimpulse-setq viper-want-ctl-h-help nil)
-(vimpulse-setq viper-vi-style-in-minibuffer nil)
-;(vimpulse-setq viper-no-multiple-ESC nil)
-(vimpulse-setq viper-keep-point-on-repeat t)
-
-(vimpulse-define-text-object vimpulse-sexp (arg)
-  "Select a S-expression."
-  :keys '("ae" "ie")
-  (vimpulse-inner-object-range
-   arg
-   'backward-sexp
-   'forward-sexp))
-
-(vimpulse-map (kbd "C-w C-c") 'delete-window)
-(vimpulse-map (kbd "C-w C-s") 'split-window-vertically)
-(vimpulse-map (kbd "C-w C-v") 'split-window-horizontally)
-(vimpulse-map (kbd "C-w =") 'balance-windows)
-
 ;;; auto indentation
 (setq-default indent-tabs-mode nil)
 
@@ -116,7 +85,6 @@
 
 ;;; auto indentation in cc-mode
 (defun my-make-CR-do-indent ()  ; from cc-mode's manual
-  (setq-default viper-auto-indent nil)
   (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
 (add-hook 'c-initialization-hook 'my-make-CR-do-indent)
 
@@ -136,7 +104,6 @@
 
 (setq skk-large-jisyo nil)
 (setq skk-server-host "localhost")
-(setq skk-use-viper t)
 (setq skk-show-annotation t)
 ;(setq skk-use-azik t)
 (setq skk-use-act t)
@@ -206,8 +173,6 @@
          ("<mouse-5>"    . inertias-up-wheel))
        inertias-prefix-key))
 (inertias-global-minor-mode 1)  ; if comes before map, mapping doesn't work
-(vimpulse-map (kbd "C-f") 'inertias-up)
-(vimpulse-map (kbd "C-b") 'inertias-down)
 ;(global-set-key (vector mouse-wheel-down-event) 'inertias-down)
 ;(global-set-key (vector mouse-wheel-up-event)   'inertias-up)
 
@@ -238,8 +203,7 @@
     (global-set-key (kbd "C-<tab>") 'elscreen-next)
     (global-set-key (kbd "C-S-<iso-lefttab>") 'elscreen-previous)
     (global-set-key (kbd "C-l") 'elscreen-next)
-    (global-set-key (kbd "C-h") 'elscreen-previous)
-    (vimpulse-map (kbd "C-h") 'elscreen-previous)))
+    (global-set-key (kbd "C-h") 'elscreen-previous)))
 
 ;;; Tramp
 (setq tramp-default-method "sshx")
@@ -261,8 +225,6 @@
 (require 'anything-config)
 (define-key anything-map (kbd "C-p") 'anything-previous-line)
 (define-key anything-map (kbd "C-n") 'anything-next-line)
-(define-key viper-minibuffer-map (kbd "C-p") 'anything-previous-line)
-(define-key viper-minibuffer-map (kbd "C-n") 'anything-next-line)
 (define-key anything-map (kbd "C-M-p") 'anything-previous-source)
 (define-key anything-map (kbd "C-M-n") 'anything-next-source)
 (global-set-key (kbd "C-;") 'anything)
@@ -289,19 +251,8 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (turn-on-font-lock)
-            (setq viper-shift-width 2)
             (define-key org-mode-map (kbd "C-<tab>") 'elscreen-next)
-            (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previou)
-            (vimpulse-map-local (kbd "M-j") 'org-metadown)
-            (vimpulse-map-local (kbd "M-k") 'org-metaup)
-            (vimpulse-map-local (kbd "M-h") 'org-metaleft)
-            (vimpulse-map-local (kbd "M-l") 'org-metaright)
-            (vimpulse-map-local (kbd "<<") 'org-metaleft)
-            (vimpulse-map-local (kbd ">>") 'org-metaright)
-            (vimpulse-imap-local (kbd "M-j") 'org-metadown)
-            (vimpulse-imap-local (kbd "M-k") 'org-metaup)
-            (vimpulse-imap-local (kbd "M-h") 'org-metaleft)
-            (vimpulse-imap-local (kbd "M-l") 'org-metaright)))
+            (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previou)))
 
 ;;; Wanderlust
 ;(autoload 'wl "wl" "Wanderlust" t)
@@ -368,8 +319,6 @@
      (add-to-list 'term-bind-key-alist '("C-w C-s" . 'split-window-vertically))
      (add-to-list 'term-bind-key-alist '("C-w v"   . 'split-window-horizontally))
      (add-to-list 'term-bind-key-alist '("C-w C-v" . 'split-window-horizontally))
-     (add-to-list 'term-bind-key-alist '("C-w w"   . 'vimpulse-cycle-windows))
-     (add-to-list 'term-bind-key-alist '("C-w C-w" . 'vimpulse-cycle-windows))
      (add-to-list 'term-bind-key-alist '("C-w j"   . 'windmove-down))
      (add-to-list 'term-bind-key-alist '("C-w k"   . 'windmove-up))
      (add-to-list 'term-bind-key-alist '("C-w h"   . 'windmove-left))
@@ -397,8 +346,7 @@
 (define-key ac-completing-map (kbd "ESC")
   (lambda ()
     (interactive)
-    (ac-stop)
-    (viper-intercept-ESC-key)))
+    (ac-stop)))
 
 (add-hook 'c++-mode-hook
           '(lambda ()
@@ -474,7 +422,6 @@
 (add-hook 'ruby-mode-hook
           (lambda ()
             (inf-ruby-keys)
-            (setq viper-shift-width 2)
             (ruby-block-mode t)
             (setq ruby-block-highlight-toggle 'overlay)))
 
@@ -490,8 +437,7 @@
 (setq-default TeX-master nil)
 
 (add-hook 'LaTeX-mode-hook
-          (lambda ()
-            (setq viper-shift-width 2)))
+          (lambda ()))
 
 (setq TeX-newline-function 'reindent-then-newline-and-indent)
 (setq LaTeX-item-indent 2)
