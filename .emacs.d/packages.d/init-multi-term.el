@@ -1,0 +1,25 @@
+;;; Multi Term
+(autoload 'multi-term "multi-term" "Create new term buffer." t)
+(eval-after-load "multi-term"
+  '(progn
+     (setq multi-term-program "/bin/zsh")
+     (setq-default term-scroll-to-bottom-on-output 'this)
+     (setq term-bind-key-alist (delq (assoc "C-s" term-bind-key-alist) term-bind-key-alist))
+     (setq term-bind-key-alist (delq (assoc "C-r" term-bind-key-alist) term-bind-key-alist))
+     (add-to-list 'term-bind-key-alist '("C-p" . 'term-send-raw-meta))
+     (add-to-list 'term-bind-key-alist '("C-n" . 'term-send-raw-meta))
+     (add-to-list 'term-bind-key-alist '("M-q" . 'term-send-raw-meta))
+
+     (add-to-list 'term-unbind-key-list "C-w")
+     (add-to-list 'term-bind-key-alist '("C-w c"   . 'delete-window))
+     (add-to-list 'term-bind-key-alist '("C-w C-c" . 'delete-window))
+     (add-to-list 'term-bind-key-alist '("C-w o"   . 'delete-other-windows))
+     (add-to-list 'term-bind-key-alist '("C-w C-o" . 'delete-other-windows))
+     (add-to-list 'term-bind-key-alist '("C-w s"   . 'split-window-vertically))
+     (add-to-list 'term-bind-key-alist '("C-w C-s" . 'split-window-vertically))
+     (add-to-list 'term-bind-key-alist '("C-w v"   . 'split-window-horizontally))
+     (add-to-list 'term-bind-key-alist '("C-w C-v" . 'split-window-horizontally))
+     (add-to-list 'term-bind-key-alist '("C-w j"   . 'windmove-down))
+     (add-to-list 'term-bind-key-alist '("C-w k"   . 'windmove-up))
+     (add-to-list 'term-bind-key-alist '("C-w h"   . 'windmove-left))
+     (add-to-list 'term-bind-key-alist '("C-w l"   . 'windmove-right))))

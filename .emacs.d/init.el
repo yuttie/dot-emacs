@@ -162,70 +162,9 @@
     (set-scroll-bar-mode 'right)
     (add-to-list 'default-frame-alist '(width . 84))))
 
-;;; color-theme
-(add-hook 'after-init-hook (lambda ()
-    (require 'color-theme)
-    (autoload 'color-theme-fruit "color-theme-fruit" "Fruit color theme." t)
-    (autoload 'color-theme-dark-fruit "color-theme-dark-fruit" "Dark Fruit color theme." t)
-    (autoload 'color-theme-tango "color-theme-tango" "A color theme based on Tango Palette." t)
-    (autoload 'color-theme-tangotango "color-theme-tangotango" "A color theme based on Tango Palette colors." t)
-    (eval-after-load "color-theme"
-      '(progn
-         (color-theme-initialize)
-         (if window-system (load "color-theme-wombat"))))))
-
-;;; inertial-scroll.el
-;; http://d.hatena.ne.jp/kiwanami/20101008/1286518936
-;; http://github.com/kiwanami/emacs-inertial-scroll
-(require 'inertial-scroll)
-
-(setq inertias-initial-velocity 60)
-(setq inertias-initial-velocity-wheel 30)
-(setq inertias-update-time (/ 1000.0 60))
-(setq inertias-rest-coef 0)
-(setq inertias-global-minor-mode-map
-      (inertias-define-keymap
-       '(("<next>"  . inertias-up)
-         ("<prior>" . inertias-down)
-         ("C-v"     . inertias-up)
-         ("M-v"     . inertias-down)
-         ("<wheel-up>"   . inertias-down-wheel)
-         ("<wheel-down>" . inertias-up-wheel)
-         ("<mouse-4>"    . inertias-down-wheel)
-         ("<mouse-5>"    . inertias-up-wheel))
-       inertias-prefix-key))
-(inertias-global-minor-mode 1)  ; if comes before map, mapping doesn't work
-;(global-set-key (vector mouse-wheel-down-event) 'inertias-down)
-;(global-set-key (vector mouse-wheel-up-event)   'inertias-up)
-
-;;; jaunte.el
-;; http://kawaguchi.posterous.com/emacshit-a-hint
-(require 'jaunte)
-(global-set-key (kbd "C-c C-j") 'jaunte)
-
-;;; popwin.el
-;;; https://github.com/m2ym/popwin-el
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-
 ;;; Session
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
-
-;;; ElScreen
-(setq elscreen-startup-command-line-processing nil)
-(setq elscreen-prefix-key (kbd "C-z"))
-(setq elscreen-display-tab t)
-(setq elscreen-tab-display-control nil)
-(setq elscreen-tab-display-kill-screen nil)
-(add-hook 'after-init-hook (lambda ()
-    (elscreen-start)
-    (define-key elscreen-map (kbd "z") 'elscreen-toggle)
-    (define-key elscreen-map (kbd "C-z") 'elscreen-toggle)
-    (global-set-key (kbd "C-<tab>") 'elscreen-next)
-    (global-set-key (kbd "C-S-<iso-lefttab>") 'elscreen-previous)
-    (global-set-key (kbd "C-l") 'elscreen-next)
-    (global-set-key (kbd "C-h") 'elscreen-previous)))
 
 ;;; Tramp
 (setq tramp-default-method "sshx")
@@ -234,31 +173,6 @@
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
-
-;;; Icicles
-(require 'icicles)
-(icicle-mode 1)
-
-(setq icicle-highlight-lighter-flag nil)
-(set-face-background 'icicle-current-candidate-highlight "#c0e8ff")
-
-;;; Anything
-(require 'anything)
-(require 'anything-config)
-(define-key anything-map (kbd "C-p") 'anything-previous-line)
-(define-key anything-map (kbd "C-n") 'anything-next-line)
-(define-key anything-map (kbd "C-M-p") 'anything-previous-source)
-(define-key anything-map (kbd "C-M-n") 'anything-next-source)
-(global-set-key (kbd "C-;") 'anything)
-(setq anything-sources
-      '(anything-c-source-buffers
-        anything-c-source-elscreen
-        anything-c-source-file-name-history
-        anything-c-source-files-in-current-dir
-        anything-c-source-locate
-        anything-c-source-complex-command-history
-        anything-c-source-emacs-commands
-        anything-c-source-calculation-result))
 
 ;;; Time Clock
 ;(require 'timeclock-x)
@@ -281,70 +195,9 @@
 ;(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
 ;(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
 
-;;; twittering-mode
-(autoload 'twit "twittering-mode" "Start twittering-mode." t)
-(autoload 'twittering-mode "twittering-mode" "Major mode for Twitter" t)
-(eval-after-load "twittering-mode"
-  '(progn
-     (setq twittering-account-authorization 'authorized)
-     (setq twittering-oauth-access-token-alist
-           '(("oauth_token" . "86241283-NT6lU5RKPsce0tM0GjJszev4kB8Jx5594Dz3A2y98")
-             ("oauth_token_secret" . "UAJWm1oLYWcQihn0PkTdJU1t90X2Ag1Suvml0gXBnU")
-             ("user_id" . "86241283")
-             ("screen_name" . "yuttieyuttie")))))
-(add-hook 'twittering-mode-hook
-          (lambda ()
-            (string-match "%s" twittering-status-format)
-            (setq twittering-status-format
-                  (replace-match "%S" nil nil twittering-status-format))
-            (setq twittering-retweet-format "QT @%s: %t")
-            (twittering-icon-mode 1)
-            (twittering-scroll-mode 1)
-            (define-key twittering-mode-map (kbd "j") 'next-line)
-            (define-key twittering-mode-map (kbd "k") 'previous-line)
-            (define-key twittering-mode-map (kbd "J") 'twittering-goto-next-status)
-            (define-key twittering-mode-map (kbd "K") 'twittering-goto-previous-status)
-            (define-key twittering-mode-map (kbd "C-f") 'inertias-up)
-            (define-key twittering-mode-map (kbd "C-b") 'inertias-down)))
-(defun twitter ()
-  (interactive)
-  (global-linum-mode 0)
-  (twittering-mode)
-  (set-frame-name "Twitter")
-  (elscreen-create)
-  (twittering-visit-timeline "yuttieyuttie/i")
-  (elscreen-jump-0))
-
-
 ;;; browse-url
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium")
-
-;;; Multi Term
-(autoload 'multi-term "multi-term" "Create new term buffer." t)
-(eval-after-load "multi-term"
-  '(progn
-     (setq multi-term-program "/bin/zsh")
-     (setq-default term-scroll-to-bottom-on-output 'this)
-     (setq term-bind-key-alist (delq (assoc "C-s" term-bind-key-alist) term-bind-key-alist))
-     (setq term-bind-key-alist (delq (assoc "C-r" term-bind-key-alist) term-bind-key-alist))
-     (add-to-list 'term-bind-key-alist '("C-p" . 'term-send-raw-meta))
-     (add-to-list 'term-bind-key-alist '("C-n" . 'term-send-raw-meta))
-     (add-to-list 'term-bind-key-alist '("M-q" . 'term-send-raw-meta))
-
-     (add-to-list 'term-unbind-key-list "C-w")
-     (add-to-list 'term-bind-key-alist '("C-w c"   . 'delete-window))
-     (add-to-list 'term-bind-key-alist '("C-w C-c" . 'delete-window))
-     (add-to-list 'term-bind-key-alist '("C-w o"   . 'delete-other-windows))
-     (add-to-list 'term-bind-key-alist '("C-w C-o" . 'delete-other-windows))
-     (add-to-list 'term-bind-key-alist '("C-w s"   . 'split-window-vertically))
-     (add-to-list 'term-bind-key-alist '("C-w C-s" . 'split-window-vertically))
-     (add-to-list 'term-bind-key-alist '("C-w v"   . 'split-window-horizontally))
-     (add-to-list 'term-bind-key-alist '("C-w C-v" . 'split-window-horizontally))
-     (add-to-list 'term-bind-key-alist '("C-w j"   . 'windmove-down))
-     (add-to-list 'term-bind-key-alist '("C-w k"   . 'windmove-up))
-     (add-to-list 'term-bind-key-alist '("C-w h"   . 'windmove-left))
-     (add-to-list 'term-bind-key-alist '("C-w l"   . 'windmove-right))))
 
 ;;; diff-mode
 (add-hook 'diff-mode-hook
@@ -359,20 +212,6 @@
             (set-face-foreground 'diff-hunk-header "#f030d0")
             (set-face-foreground 'diff-index "#0070e6")
             (set-face-foreground 'diff-removed "red")))
-
-;;; Auto Complete Mode
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/auto-complete/dict")
-(ac-config-default)
-
-(define-key ac-completing-map (kbd "ESC")
-  (lambda ()
-    (interactive)
-    (ac-stop)))
-
-(add-hook 'c++-mode-hook
-          '(lambda ()
-             (add-to-list 'ac-sources 'ac-source-semantic)))
 
 ;;; CEDET
 ;(require 'cedet)
