@@ -54,7 +54,6 @@
           "evil-numbers"
           "evil-surround"
           "helm"
-          "icicles"
           "inertial-scroll"
           "jaunte"
           "multi-term"

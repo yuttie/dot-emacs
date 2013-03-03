@@ -6,3 +6,4 @@
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
 (define-key helm-map (kbd "C-M-n") 'helm-next-source)
 (global-set-key (kbd "C-;") 'helm-mini)
+(helm-mode 1)
