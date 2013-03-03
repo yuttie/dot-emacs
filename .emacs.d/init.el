@@ -44,9 +44,7 @@
                      :pkgname "auto-complete/popup-el"))
 
 (el-get 'sync
-        '("anything"
-          "anything-config"
-          "auto-complete"
+        '("auto-complete"
           "c-eldoc"
           "color-theme"
           "deferred"
@@ -55,6 +53,7 @@
           "evil-elscreen"
           "evil-numbers"
           "evil-surround"
+          "helm"
           "icicles"
           "inertial-scroll"
           "jaunte"
