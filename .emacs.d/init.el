@@ -57,6 +57,7 @@
           "helm"
           "inertial-scroll"
           "jaunte"
+          "magit"
           "multi-term"
           "popwin"
           "powerline"
