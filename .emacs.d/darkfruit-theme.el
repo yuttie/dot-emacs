@@ -1,5 +1,5 @@
 (deftheme darkfruit
-  "Created 2013-03-04.")
+  "Created 2013-03-05.")
 
 (custom-theme-set-faces
  'darkfruit
@@ -38,7 +38,11 @@
  '(mode-line-buffer-id ((t (:weight semi-bold :background "#000000"))))
  '(mode-line-emphasis ((t (:background "red" :weight bold))))
  '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "grey40" :style released-button))) (t (:inherit (highlight)))))
- '(mode-line-inactive ((t (:box nil :foreground "#BCBCBC" :background "#000000"))))
+ '(mode-line-inactive ((t (:background "gray20" :foreground "gray50" :box nil))))
+ '(powerline-active1 ((t (:background "gray34" :foreground "white"))))
+ '(powerline-active2 ((t (:background "gray19" :foreground "white"))))
+ '(powerline-inactive1 ((t (:background "gray15" :foreground "gray54"))))
+ '(powerline-inactive2 ((t (:background "gray7" :foreground "gray35"))))
  '(isearch ((t (:background "#000000" :foreground "#C4BE89"))))
  '(isearch-fail ((t (:background "#333333" :foreground "#FFFFFF"))))
  '(lazy-highlight ((t (:foreground "black" :background "yellow"))))
