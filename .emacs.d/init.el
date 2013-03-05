@@ -164,10 +164,7 @@
 ;;; GUI
 (if window-system
   (progn
-    (set-frame-font "Ricty-10")
-    (add-to-list 'default-frame-alist '(font . "Ricty-10"))
-    (set-fontset-font "fontset-default"
-                      'japanese-jisx0208 '("Ricty" . "unicode-bmp"))
+    (set-face-attribute 'default nil :family "Ricty" :height 100)
     (tool-bar-mode -1)
     (set-scroll-bar-mode 'right)
     (add-to-list 'default-frame-alist '(width . 84))))
