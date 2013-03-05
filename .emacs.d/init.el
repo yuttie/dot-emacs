@@ -155,9 +155,9 @@
 
 ;;; UI
 (setq inhibit-splash-screen t)
-(line-number-mode 1)    ;; for the mode line
-(column-number-mode 1)  ;; for the mode line
-(global-linum-mode 1)
+(line-number-mode)    ;; for the mode line
+(column-number-mode)  ;; for the mode line
+(global-linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
 
