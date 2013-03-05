@@ -43,27 +43,29 @@
              '(:name popup
                      :pkgname "auto-complete/popup-el"))
 
-(el-get 'sync
-        '("auto-complete"
-          "c-eldoc"
-          "deferred"
-          "elscreen"
-          "evil"
-          "evil-elscreen"
-          "evil-numbers"
-          "evil-surround"
-          "haskell-mode"
-          "helm"
-          "inertial-scroll"
-          "jaunte"
-          "magit"
-          "multi-term"
-          "popwin"
-          "powerline"
-          "ruby-block"
-          "timeclock-x"
-          "twittering-mode"
-          "yari"))
+(setq my-packages
+      '(auto-complete
+        c-eldoc
+        deferred
+        elscreen
+        evil
+        evil-elscreen
+        evil-numbers
+        evil-surround
+        haskell-mode
+        helm
+        inertial-scroll
+        jaunte
+        magit
+        multi-term
+        popwin
+        powerline
+        ruby-block
+        timeclock-x
+        twittering-mode
+        yari))
+
+(el-get 'sync my-packages)
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
