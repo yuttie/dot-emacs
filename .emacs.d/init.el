@@ -46,7 +46,6 @@
 (el-get 'sync
         '("auto-complete"
           "c-eldoc"
-          "color-theme"
           "deferred"
           "elscreen"
           "evil"
