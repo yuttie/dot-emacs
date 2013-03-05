@@ -1,7 +1,7 @@
 ;;; twittering-mode
 (autoload 'twit "twittering-mode" "Start twittering-mode." t)
 (autoload 'twittering-mode "twittering-mode" "Major mode for Twitter" t)
-(eval-after-load "twittering-mode"
+(eval-after-load 'twittering-mode
   '(progn
      (setq twittering-account-authorization 'authorized)
      (setq twittering-oauth-access-token-alist
