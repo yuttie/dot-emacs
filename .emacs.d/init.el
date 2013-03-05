@@ -46,6 +46,13 @@
 (add-to-list 'el-get-sources
              '(:name popup
                      :pkgname "auto-complete/popup-el"))
+(add-to-list 'el-get-sources
+             '(:name powerline
+                     :website "https://github.com/milkypostman/powerline"
+                     :description "Powerline for Emacs"
+                     :type github
+                     :pkgname "milkypostman/powerline"
+                     :features powerline))
 
 (setq my-packages
       '(auto-complete
