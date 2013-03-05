@@ -83,6 +83,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 ;;; emacs
+(show-paren-mode t)
 (setq-default fill-column 80)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq default-truncate-lines t)  ;; don't wrap lines by default
