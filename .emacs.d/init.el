@@ -219,11 +219,6 @@
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
-;;; c-eldoc
-(setq c-eldoc-includes "`pkg-config gtk+-2.0 --cflags` -I./ -I../ ")
-(autoload 'c-turn-on-eldoc-mode "c-eldoc" "Enable c-eldoc-mode" t)
-(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
 
@@ -247,12 +242,6 @@
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (add-to-list 'auto-mode-alist '("/*.\.py$" . python-mode))
 (add-to-list 'auto-mode-alist '("/wscript\\'" . python-mode))
-
-;;; Haskell Mode
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(autoload 'ghc-init "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 ;;; PKGBUILD Mode
 (autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
