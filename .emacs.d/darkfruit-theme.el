@@ -1,5 +1,5 @@
 (deftheme darkfruit
-  "Created 2013-03-05.")
+  "Created 2013-03-06.")
 
 (custom-theme-set-faces
  'darkfruit
@@ -43,9 +43,9 @@
  '(powerline-active2 ((t (:background "gray19" :foreground "white"))))
  '(powerline-inactive1 ((t (:background "gray15" :foreground "gray54"))))
  '(powerline-inactive2 ((t (:background "gray7" :foreground "gray35"))))
- '(isearch ((t (:background "#000000" :foreground "#C4BE89"))))
+ '(isearch ((t (:background "#55ffff" :foreground "black"))))
  '(isearch-fail ((t (:background "#333333" :foreground "#FFFFFF"))))
- '(lazy-highlight ((t (:foreground "black" :background "yellow"))))
+ '(lazy-highlight ((t (:background "#ffaa33" :foreground "black"))))
  '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
  '(next-error ((t (:background "#5f0000" :foreground "#ff5555" :weight bold))))
  '(query-replace ((t (:inherit (isearch)))))
