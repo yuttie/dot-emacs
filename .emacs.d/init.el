@@ -75,15 +75,6 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-;;; load-path
-;(defun add-dir-and-subdirs-to-load-path (my-lisp-dir)
-;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-;    (let ((default-directory my-lisp-dir))
-;      (setq load-path (cons my-lisp-dir load-path))
-;      (normal-top-level-add-subdirs-to-load-path))))
-;(add-dir-and-subdirs-to-load-path "~/.emacs.d/site-lisp")
-
-
 ;;; emacs
 (setq-default fill-column 80)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
