@@ -153,12 +153,10 @@
 (load-theme 'darkfruit t)
 
 ;;; GUI
-(if window-system
-  (progn
-    (set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
-    (tool-bar-mode -1)
-    (set-scroll-bar-mode 'right)
-    (add-to-list 'default-frame-alist '(width . 84))))
+(set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
+(tool-bar-mode -1)
+(set-scroll-bar-mode 'right)
+(add-to-list 'default-frame-alist '(width . 84))
 
 ;;; Session
 (require 'session)
