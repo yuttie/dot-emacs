@@ -53,6 +53,9 @@
                      :type github
                      :pkgname "milkypostman/powerline"
                      :features powerline))
+(add-to-list 'el-get-sources
+             '(:name session
+                     :type elpa))
 
 (setq my-packages
       '(auto-complete
@@ -72,6 +75,7 @@
         popwin
         powerline
         ruby-block
+        session
         timeclock-x
         twittering-mode
         yari))
