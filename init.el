@@ -45,7 +45,9 @@
                      :url "https://github.com/kawaguchi/jaunte.el.git"))
 (add-to-list 'el-get-sources
              '(:name popup
-                     :pkgname "auto-complete/popup-el"))
+                     :pkgname "auto-complete/popup-el"
+                     :submodule nil
+                     :depends (ert)))
 (add-to-list 'el-get-sources
              '(:name powerline
                      :website "https://github.com/milkypostman/powerline"
