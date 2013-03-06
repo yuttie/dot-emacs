@@ -132,14 +132,9 @@
 (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
 (global-set-key (kbd "C-x t") 'skk-tutorial)
 
-(setq skk-large-jisyo nil)
-(setq skk-server-host "localhost")
+(setq skk-cdb-large-jisyo "/usr/share/skk/SKK-JISYO.L.cdb")
 (setq skk-show-annotation t)
-;(setq skk-use-azik t)
 (setq skk-use-act t)
-
-(add-hook 'isearch-mode-hook 'skk-isearch-mode-setup)
-(add-hook 'isearch-mode-end-hook 'skk-isearch-mode-cleanup)
 
 (setq skk-rom-kana-rule-list
       (append skk-rom-kana-rule-list
@@ -149,6 +144,7 @@
                 ("z(" nil "（")
                 ("z)" nil "）"))))
 
+;; 送り仮名の優先的なマッチ
 (setq skk-henkan-strict-okuri-precedence t
       skk-process-okuri-early nil
       skk-henkan-okuri-strictly nil)
