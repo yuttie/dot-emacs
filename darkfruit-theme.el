@@ -8,7 +8,7 @@
  '(fixed-pitch ((t (:family "Monospace"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
  ;; Frame
- '(cursor ((t (:background "#656565"))))
+ '(cursor ((t (:background "#a0a0a0"))))
  '(fringe ((t (:background "#232526"))))
  '(mode-line ((t (:background "OliveDrab3" :foreground "dark green" :box nil :weight bold))))
  '(mode-line-inactive ((t (:background "gray20" :foreground "gray50" :box nil))))
