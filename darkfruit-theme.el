@@ -49,6 +49,8 @@
  '(ac-completion-face ((t (:foreground "gray" :underline nil))))
  '(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
  '(ac-selection-face ((t (:background "gray25" :foreground "#ff9999"))))
+ ;; Magit
+ '(magit-item-highlight ((t (:background "gray20"))))
  ;; Ediff
  '(ediff-current-diff-A ((t (:background "#4f3030" :foreground "white"))))
  '(ediff-current-diff-B ((t (:background "#4f3030" :foreground "white"))))
