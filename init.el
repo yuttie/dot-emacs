@@ -90,7 +90,6 @@
         powerline
         ruby-block
         session
-        timeclock-x
         twittering-mode
         yari))
 
@@ -190,11 +189,6 @@
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
-
-;;; Time Clock
-;(require 'timeclock-x)
-;(timeclock-modeline-display 1)
-;(timeclock-initialize)
 
 ;;; Org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
