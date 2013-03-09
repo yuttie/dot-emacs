@@ -44,6 +44,11 @@
  '(font-lock-variable-name-face ((t (:foreground "#d9ff41"))))
  '(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
  ;; show-paren-mode
- '(show-paren-match-face ((t (:background "white" :foreground "red")))))
+ '(show-paren-match-face ((t (:background "white" :foreground "red"))))
+ ;; Helm
+ '(helm-source-header ((t (:background "#272727" :foreground "#00ccff" :height 1.0))))
+ '(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
+ '(helm-candidate-number ((t (:background "#00ccff" :foreground "#004455"))))
+ '(helm-selection ((t (:background "#a0a0a0" :foreground "black" :underline nil)))))
 
 (provide-theme 'darkfruit)
