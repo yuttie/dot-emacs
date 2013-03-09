@@ -169,10 +169,6 @@
 (set-scroll-bar-mode 'right)
 (add-to-list 'default-frame-alist '(width . 84))
 
-;;; Session
-(require 'session)
-(add-hook 'after-init-hook 'session-initialize)
-
 ;;; Tramp
 (setq tramp-default-method "sshx")
 
