@@ -47,6 +47,11 @@
                      :type git
                      :url "https://github.com/kawaguchi/jaunte.el.git"))
 (add-to-list 'el-get-sources
+             '(:name minimap
+                     :description "Minimap sidebar for Emacs"
+                     :type elpa
+                     :features minimap))
+(add-to-list 'el-get-sources
              '(:name popup
                      :pkgname "auto-complete/popup-el"
                      :submodule nil
@@ -79,6 +84,7 @@
         inertial-scroll
         jaunte
         magit
+        minimap
         multi-term
         popwin
         powerline
