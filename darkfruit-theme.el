@@ -20,7 +20,7 @@
  '(minibuffer-prompt ((t (:foreground "white"))))
  ;; Highlight
  '(highlight ((t (:background "light gray"))))
- '(isearch ((t (:background "#55ffff" :foreground "black"))))
+ '(isearch ((t (:background "#55ddff" :foreground "black"))))
  '(query-replace ((t (:inherit (isearch)))))
  '(lazy-highlight ((t (:background "#ffaa33" :foreground "black"))))
  '(region ((t (:background "#444444"))))
@@ -40,7 +40,7 @@
  '(font-lock-regexp-grouping-backslash ((t (:weight bold))))
  '(font-lock-regexp-grouping-construct ((t (:weight bold))))
  '(font-lock-string-face ((t (:foreground "#9955ff"))))
- '(font-lock-type-face ((t (:foreground "#55ffff"))))
+ '(font-lock-type-face ((t (:foreground "#55ddff"))))
  '(font-lock-variable-name-face ((t (:foreground "#d9ff41"))))
  '(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
  ;; show-paren-mode
@@ -50,7 +50,7 @@
  '(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
  '(ac-selection-face ((t (:background "gray25" :foreground "#ff9999"))))
  ;; diff-mode
- '(diff-header ((t (:background "gray25" :foreground "#00ccff"))))
+ '(diff-header ((t (:background "gray25" :foreground "#55ddff"))))
  '(diff-file-header ((t (:background "gray25" :weight bold :inherit (diff-header)))))
  '(diff-index ((t (:inherit (diff-file-header)))))
  '(diff-hunk-header ((t (:foreground "#9955ff" :inherit (diff-header)))))
@@ -76,9 +76,9 @@
  '(ediff-even-diff-B ((t (:background "gray20" :foreground "white"))))
  '(ediff-even-diff-C ((t (:background "gray20" :foreground "white"))))
  ;; Helm
- '(helm-source-header ((t (:background "#272727" :foreground "#00ccff" :height 1.0))))
+ '(helm-source-header ((t (:background "#272727" :foreground "#55ddff" :height 1.0))))
  '(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
- '(helm-candidate-number ((t (:background "#00ccff" :foreground "#004455"))))
+ '(helm-candidate-number ((t (:background "#55ddff" :foreground "#004455"))))
  '(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil)))))
 
 (provide-theme 'darkfruit)
