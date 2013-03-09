@@ -95,6 +95,7 @@
 
 ;;; emacs
 (show-paren-mode t)
+(setq show-paren-delay 0)
 (setq-default fill-column 80)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq default-truncate-lines t)  ;; don't wrap lines by default
