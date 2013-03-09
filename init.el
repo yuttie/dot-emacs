@@ -27,6 +27,10 @@
                      :type git
                      :url "https://github.com/ohler/ert.git"))
 (add-to-list 'el-get-sources
+             '(:name evil
+                     :build ("make info")
+                     :info "doc"))
+(add-to-list 'el-get-sources
              '(:name evil-elscreen
                      :features evil-elscreen
                      :depends (evil elscreen)))
