@@ -49,6 +49,17 @@
  '(ac-completion-face ((t (:foreground "gray" :underline nil))))
  '(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
  '(ac-selection-face ((t (:background "gray25" :foreground "#ff9999"))))
+ ;; diff-mode
+ '(diff-header ((t (:background "gray25" :foreground "#00ccff"))))
+ '(diff-file-header ((t (:background "gray25" :weight bold :inherit (diff-header)))))
+ '(diff-index ((t (:inherit (diff-file-header)))))
+ '(diff-hunk-header ((t (:foreground "#9955ff" :inherit (diff-header)))))
+ '(diff-removed ((t (:foreground "red" :inherit (diff-changed)))))
+ '(diff-added ((t (:foreground "#4a9400" :inherit (diff-changed)))))
+ '(diff-function ((t (:foreground "#e06800" :background "white" :inherit (diff-header)))))
+ '(diff-context ((t (:foreground "gray70"))))
+ '(diff-nonexistent ((t (:inherit (diff-file-header)))))
+ '(diff-refine-change ((t (:background "#660000"))))
  ;; Magit
  '(magit-item-highlight ((t (:background "gray20"))))
  ;; Ediff
