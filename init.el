@@ -72,6 +72,7 @@
         evil-elscreen
         evil-numbers
         evil-surround
+        flymake-cursor
         ghc-mod
         haskell-mode
         helm
