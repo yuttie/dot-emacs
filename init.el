@@ -61,6 +61,7 @@
 
 (setq my-packages
       '(auto-complete
+        auto-complete-clang
         c-eldoc
         deferred
         elscreen
