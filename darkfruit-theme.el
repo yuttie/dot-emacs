@@ -47,8 +47,8 @@
  '(show-paren-match-face ((t (:background "white" :foreground "red"))))
  ;; auto-complete
  '(ac-completion-face ((t (:foreground "gray" :underline nil))))
- '(ac-candidate-face ((t (:background "gray30" :foreground "white"))))
- '(ac-selection-face ((t (:background "#a0a0a0" :foreground "black"))))
+ '(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
+ '(ac-selection-face ((t (:background "gray25" :foreground "#ff9999"))))
  ;; Ediff
  '(ediff-current-diff-A ((t (:background "#4f3030" :foreground "white"))))
  '(ediff-current-diff-B ((t (:background "#4f3030" :foreground "white"))))
@@ -66,6 +66,6 @@
  '(helm-source-header ((t (:background "#272727" :foreground "#00ccff" :height 1.0))))
  '(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
  '(helm-candidate-number ((t (:background "#00ccff" :foreground "#004455"))))
- '(helm-selection ((t (:background "#a0a0a0" :foreground "black" :underline nil)))))
+ '(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil)))))
 
 (provide-theme 'darkfruit)
