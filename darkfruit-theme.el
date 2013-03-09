@@ -42,6 +42,8 @@
  '(font-lock-string-face ((t (:foreground "#9955ff"))))
  '(font-lock-type-face ((t (:foreground "#55ffff"))))
  '(font-lock-variable-name-face ((t (:foreground "#d9ff41"))))
- '(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000")))))
+ '(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
+ ;; show-paren-mode
+ '(show-paren-match-face ((t (:background "white" :foreground "red")))))
 
 (provide-theme 'darkfruit)
