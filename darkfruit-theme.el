@@ -29,7 +29,7 @@
  '(escape-glyph ((t (:foreground "#5599ff"))))
  ;; Main
  '(font-lock-builtin-face ((t (:foreground "#ff1975"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#465457"))))
+ '(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:foreground "#7f7f7f"))))
  '(font-lock-constant-face ((t (:foreground "#9955ff"))))
  '(font-lock-doc-face ((t (:foreground "#7f7f7f" :slant italic))))
