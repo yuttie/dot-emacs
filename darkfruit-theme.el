@@ -10,6 +10,7 @@
  ;; Frame
  '(cursor ((t (:background "#a0a0a0"))))
  '(fringe ((t (:background "#232526"))))
+ '(linum ((t (:inherit (fringe)))))
  '(mode-line ((t (:background "OliveDrab3" :foreground "dark green" :box nil :weight bold))))
  '(mode-line-inactive ((t (:background "gray20" :foreground "gray50" :box nil))))
  '(powerline-active1 ((t (:background "gray34" :foreground "white"))))
