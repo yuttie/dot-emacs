@@ -8,5 +8,5 @@
     (ac-stop)))
 
 (add-hook 'c++-mode-hook
-          '(lambda ()
-             (add-to-list 'ac-sources 'ac-source-semantic)))
+          (lambda ()
+            (add-to-list 'ac-sources ac-source-semantic)))
