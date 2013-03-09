@@ -34,6 +34,9 @@
              '(:name fuzzy
                      :pkgname "auto-complete/fuzzy-el"))
 (add-to-list 'el-get-sources
+             '(:name ghc-mod
+                     :depends (haskell-mode)))
+(add-to-list 'el-get-sources
              '(:name icicles
                      :description "Minibuffer input completion and cycling"
                      :type git
@@ -69,6 +72,7 @@
         evil-elscreen
         evil-numbers
         evil-surround
+        ghc-mod
         haskell-mode
         helm
         inertial-scroll
