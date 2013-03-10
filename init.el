@@ -81,7 +81,8 @@
                      :type elpa))
 
 (setq my-packages
-      '(auto-complete
+      '(auctex
+        auto-complete
         auto-complete-clang
         c-eldoc
         deferred
@@ -318,50 +319,3 @@
 (add-hook 'ess-mode-hook
           (lambda ()
             (setq ess-indent-level 2)))
-
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-
-(setq-default TeX-master nil)
-
-(add-hook 'LaTeX-mode-hook
-          (lambda ()))
-
-(setq TeX-newline-function 'reindent-then-newline-and-indent)
-(setq LaTeX-item-indent 2)
-(setq TeX-brace-indent-level 2)
-
-(setq TeX-source-correlate-mode t
-      TeX-source-correlate-method 'source-specials
-      TeX-source-correlate-start-server t)
-
-(setq TeX-default-mode 'japanese-latex-mode)
-(setq japanese-TeX-command-default "pTeX")
-(setq japanese-LaTeX-command-default "pLaTeX")
-(setq japanese-LaTeX-default-style "jsarticle")
-(add-hook 'LaTeX-mode-hook
-          (lambda ()
-            ;(add-to-list 'LaTeX-style-list '("jsresearchnote"))
-            ;(setq LaTeX-command-style
-            ;      (append '(("^jsresearchnote$" "%(PDF)platex %S%(PDFout)"))
-            ;              LaTeX-command-style))
-            (setcar (cdr (assoc "jBibTeX" japanese-TeX-command-list)) "pbibtex %s")))
-
-(eval-after-load "tex"
-  '(progn
-     (add-to-list 'TeX-format-list
-                  '("JLATEX" japanese-latex-mode
-                    "\\\\\\(documentstyle\\|documentclass\\)[^%\n]*{\\(jsresearchnote\\)"))
-     (setq TeX-view-program-list
-           (list (assoc "xdvi" TeX-view-program-list-builtin)))
-     (setcar (cadr (assoc "xdvi"  TeX-view-program-list)) "%(o?)pxdvi")
-     (add-to-list 'TeX-command-list
-                  '("PDF" "dvipdfmx %s" TeX-run-command nil t)
-                  t)
-     (add-to-list 'TeX-command-list
-                  '("PDF B4" "dvipdfmx -p 257mm,364mm %s" TeX-run-command nil t)
-                  t)
-     (add-to-list 'TeX-command-list
-                  '("View PDF" "evince %s.pdf" TeX-run-discard-or-function nil t)
-                  t)
-     ))
