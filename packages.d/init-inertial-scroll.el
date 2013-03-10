@@ -7,6 +7,7 @@
 (setq inertias-initial-velocity-wheel 30)
 (setq inertias-update-time (/ 1000.0 60))
 (setq inertias-rest-coef 0)
+(setq inertias-rebound-flash nil)
 (setq inertias-global-minor-mode-map
       (inertias-define-keymap
        '(("<next>"  . inertias-up)
