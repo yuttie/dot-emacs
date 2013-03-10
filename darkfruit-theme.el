@@ -62,6 +62,8 @@
  '(diff-refine-change ((t (:background "#660000"))))
  ;; Magit
  '(magit-item-highlight ((t (:background "gray20"))))
+ ;; Minimap
+ '(minimap-active-region-background ((t (:background "gray30"))))
  ;; Ediff
  '(ediff-current-diff-A ((t (:background "#4f3030" :foreground "white"))))
  '(ediff-current-diff-B ((t (:background "#4f3030" :foreground "white"))))
