@@ -204,6 +204,7 @@
 (set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
 (tool-bar-mode -1)
 (set-scroll-bar-mode 'right)
+(setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
 (add-to-list 'default-frame-alist '(width . 84))
 
 ;;; Tramp
