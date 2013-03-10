@@ -149,11 +149,22 @@
   (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
 (add-hook 'c-initialization-hook 'my-make-CR-do-indent)
 
-;;; ispell
+;;; spell check
 (setq ispell-dictionary "en")
 (setq ispell-program-name "aspell")
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+
+(add-hook 'magit-commit-mode-hook (lambda () (flyspell-mode 1)))
+(setq prog-mode-hooks
+      '(c-mode-common-hook
+        css-mode-hook
+        emacs-lisp-mode-hook
+        ess-mode-hook
+        haskell-mode-hook
+        ruby-mode-hook))
+(dolist (h prog-mode-hooks)
+  (add-hook h (lambda () (flyspell-prog-mode))))
 
 ;;; SKK
 (require 'skk-autoloads)
