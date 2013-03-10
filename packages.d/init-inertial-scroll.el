@@ -1,8 +1,6 @@
 ;;; inertial-scroll.el
 ;; http://d.hatena.ne.jp/kiwanami/20101008/1286518936
 ;; http://github.com/kiwanami/emacs-inertial-scroll
-(require 'inertial-scroll)
-
 (setq inertias-initial-velocity 60)
 (setq inertias-initial-velocity-wheel 30)
 (setq inertias-update-time (/ 1000.0 60))

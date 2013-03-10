@@ -46,6 +46,14 @@
                      :type git
                      :url "https://github.com/emacsmirror/icicles.git"))
 (add-to-list 'el-get-sources
+             '(:name inertial-scroll
+                     :description "Inertial scrolling for emacs"
+                     :website "https://github.com/kiwanami/emacs-inertial-scroll"
+                     :type github
+                     :pkgname "kiwanami/emacs-inertial-scroll"
+                     :features inertial-scroll
+                     :depends (deferred)))
+(add-to-list 'el-get-sources
              '(:name jaunte
                      :description "Emacs Hit a Hint"
                      :type git
