@@ -2,6 +2,8 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+(add-to-list 'ac-modes 'text-mode)
+
 (define-key ac-completing-map (kbd "ESC")
   (lambda ()
     (interactive)
