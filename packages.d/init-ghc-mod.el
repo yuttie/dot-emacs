@@ -3,4 +3,4 @@
           (lambda ()
             (ghc-init)
             (flymake-mode)
-            (add-to-list 'ac-sources ac-source-ghc-mod)))
+            (add-to-list 'ac-sources 'ac-source-ghc-mod)))

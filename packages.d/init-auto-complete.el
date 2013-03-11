@@ -9,8 +9,8 @@
 
 (add-hook 'c++-mode-hook
           (lambda ()
-            (add-to-list 'ac-sources ac-source-semantic)))
+            (add-to-list 'ac-sources 'ac-source-semantic)))
 
 (add-hook 'css-mode-hook
           (lambda ()
-            (add-to-list 'ac-sources ac-source-css-property)))
+            (add-to-list 'ac-sources 'ac-source-css-property)))
