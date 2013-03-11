@@ -156,7 +156,7 @@
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
-(add-hook 'magit-commit-mode-hook (lambda () (flyspell-mode 1)))
+(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 (setq prog-mode-hooks
       '(c-mode-common-hook
         css-mode-hook
