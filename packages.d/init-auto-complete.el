@@ -1,6 +1,7 @@
 ;;; Auto Complete Mode
 (require 'auto-complete-config)
 (ac-config-default)
+(ac-flyspell-workaround)
 
 (add-to-list 'ac-modes 'text-mode)
 
