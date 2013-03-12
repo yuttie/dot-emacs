@@ -120,6 +120,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq default-truncate-lines t)  ;; don't wrap lines by default
 (setq truncate-partial-width-windows nil)
+(define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
 ;;; Electric Buffer Menu
 (global-set-key (kbd "C-x C-b") 'electric-buffer-list)
