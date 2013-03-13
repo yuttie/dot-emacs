@@ -1,6 +1,9 @@
 (deftheme darkfruit
   "Created 2013-03-06.")
 
+;; Set attributes of the default face for existing frames and new frames.
+(set-face-attribute 'default nil :background "#272727" :foreground "#FFFFFF")
+
 (custom-theme-set-faces
  'darkfruit
  ;; Standard
