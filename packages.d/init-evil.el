@@ -2,6 +2,7 @@
 (require 'evil)
 (evil-mode 1)
 (setq evil-default-cursor t)
+(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (eval-after-load 'auto-complete
                  '(progn
                     (define-key evil-insert-state-map (kbd "C-n") 'ac-next)
