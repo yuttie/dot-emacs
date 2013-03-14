@@ -177,7 +177,7 @@
 (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
 (global-set-key (kbd "C-x t") 'skk-tutorial)
 
-(setq skk-cdb-large-jisyo "/usr/share/skk/SKK-JISYO.L.cdb")
+(setq skk-cdb-large-jisyo "~/.emacs.d/site-lisp/ddskk-14.4/dic/SKK-JISYO.L.cdb")
 (setq skk-show-annotation t)
 (setq skk-use-act t)
 
