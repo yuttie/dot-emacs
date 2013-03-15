@@ -3,6 +3,7 @@
 
 ;; Set attributes of the default face for existing frames and new frames.
 (set-face-attribute 'default nil :background "#272727" :foreground "#FFFFFF")
+(set-face-attribute 'cursor nil :background "#a0a0a0")
 
 (custom-theme-set-faces
  'darkfruit
