@@ -1,3 +1,4 @@
+(setq magit-diff-refine-hunk 'all)
 (add-hook 'magit-status-mode-hook
 	  (lambda ()
 	    (define-key magit-status-mode-map (kbd "j") 'next-line)
