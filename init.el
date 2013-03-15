@@ -81,7 +81,8 @@
                      :type elpa))
 
 (setq my-packages
-      '(auctex
+      '(ace-jump-mode
+        auctex
         auto-complete
         auto-complete-clang
         c-eldoc
