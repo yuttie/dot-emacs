@@ -170,29 +170,31 @@
   (add-hook h (lambda () (flyspell-prog-mode))))
 
 ;;; SKK
-(require 'skk-autoloads)
-(require 'skk-study)
+(load "skk-autoloads" t)
+(eval-after-load 'skk-autoloads
+  '(progn
+     (require 'skk-study)
 
-(global-set-key (kbd "C-x C-j") 'skk-mode)
-(global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
-(global-set-key (kbd "C-x t") 'skk-tutorial)
+     (global-set-key (kbd "C-x C-j") 'skk-mode)
+     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
+     (global-set-key (kbd "C-x t") 'skk-tutorial)
 
-(setq skk-cdb-large-jisyo "~/.emacs.d/site-lisp/ddskk-14.4/dic/SKK-JISYO.L.cdb")
-(setq skk-show-annotation t)
-(setq skk-use-act t)
+     (setq skk-cdb-large-jisyo "~/.emacs.d/site-lisp/ddskk-14.4/dic/SKK-JISYO.L.cdb")
+     (setq skk-show-annotation t)
+     (setq skk-use-act t)
 
-(setq skk-rom-kana-rule-list
-      (append skk-rom-kana-rule-list
-              '(("!"  nil "！")
-                ("~"  nil "〜")
-                ("z " nil "　")
-                ("z(" nil "（")
-                ("z)" nil "）"))))
+     (setq skk-rom-kana-rule-list
+           (append skk-rom-kana-rule-list
+                   '(("!"  nil "！")
+                     ("~"  nil "〜")
+                     ("z " nil "　")
+                     ("z(" nil "（")
+                     ("z)" nil "）"))))
 
-;; 送り仮名の優先的なマッチ
-(setq skk-henkan-strict-okuri-precedence t
-      skk-process-okuri-early nil
-      skk-henkan-okuri-strictly nil)
+     ;; 送り仮名の優先的なマッチ
+     (setq skk-henkan-strict-okuri-precedence t
+           skk-process-okuri-early nil
+           skk-henkan-okuri-strictly nil)))
 
 ;;; UI
 (setq inhibit-splash-screen t)
