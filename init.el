@@ -55,11 +55,6 @@
                      :features inertial-scroll
                      :depends (deferred)))
 (add-to-list 'el-get-sources
-             '(:name jaunte
-                     :description "Emacs Hit a Hint"
-                     :type git
-                     :url "https://github.com/kawaguchi/jaunte.el.git"))
-(add-to-list 'el-get-sources
              '(:name minimap
                      :description "Minimap sidebar for Emacs"
                      :type elpa
@@ -97,7 +92,6 @@
         haskell-mode
         helm
         inertial-scroll
-        jaunte
         magit
         minimap
         multi-term
