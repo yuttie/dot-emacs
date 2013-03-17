@@ -10,6 +10,13 @@
     (interactive)
     (ac-stop)))
 
+(add-hook 'auto-complete-mode-hook
+          (lambda ()
+            (setq ac-sources
+                  (append '(ac-source-files-in-current-dir
+                            ac-source-filename)
+                          ac-sources))))
+
 (add-hook 'c++-mode-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-semantic)))
