@@ -138,6 +138,8 @@
 ;;; printing
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
 (setq ps-multibyte-buffer 'non-latin-printer)
+(require 'printing)
+(pr-update-menus t)
 
 ;;; auto indentation
 (setq-default indent-tabs-mode nil)
