@@ -1,6 +1,7 @@
 ;;; Auto Complete Mode
 (require 'auto-complete-config)
-(ac-config-default)
+(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+(global-auto-complete-mode t)
 (ac-flyspell-workaround)
 
 (add-to-list 'ac-modes 'text-mode)
