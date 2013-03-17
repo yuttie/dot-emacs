@@ -24,3 +24,12 @@
 (add-hook 'css-mode-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-css-property)))
+
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (setq ac-sources
+                  (append '(ac-source-features
+                            ac-source-functions
+                            ac-source-variables
+                            ac-source-symbols)
+                          ac-sources))))
