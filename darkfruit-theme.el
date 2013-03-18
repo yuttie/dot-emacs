@@ -65,7 +65,7 @@
  '(diff-nonexistent ((t (:inherit (diff-file-header)))))
  '(diff-refine-change ((t (:background "#660000"))))
  ;; Magit
- '(magit-item-highlight ((t (:background "gray20"))))
+ '(magit-item-highlight ((t (:inherit nil))))
  ;; Minimap
  '(minimap-active-region-background ((t (:background "gray30"))))
  ;; Ediff
