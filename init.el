@@ -109,6 +109,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 ;;; emacs
+(blink-cursor-mode)
 (show-paren-mode t)
 (setq show-paren-delay 0)
 (setq-default fill-column 80)
