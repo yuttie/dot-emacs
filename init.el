@@ -230,11 +230,6 @@
             (define-key org-mode-map (kbd "C-<tab>") 'elscreen-next)
             (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previou)))
 
-;;; Wanderlust
-;(autoload 'wl "wl" "Wanderlust" t)
-;(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
-;(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
-
 ;;; browse-url
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
