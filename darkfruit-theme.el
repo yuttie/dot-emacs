@@ -58,12 +58,15 @@
  '(diff-file-header ((t (:background "gray25" :weight bold :inherit (diff-header)))))
  '(diff-index ((t (:inherit (diff-file-header)))))
  '(diff-hunk-header ((t (:foreground "#9955ff" :inherit (diff-header)))))
- '(diff-removed ((t (:foreground "red" :inherit (diff-changed)))))
- '(diff-added ((t (:foreground "#4a9400" :inherit (diff-changed)))))
+ '(diff-removed ((t (:background "#553333"))))
+ '(diff-added ((t (:background "#335533"))))
+ '(diff-changed ((t)))
  '(diff-function ((t (:foreground "#e06800" :background "white" :inherit (diff-header)))))
  '(diff-context ((t (:foreground "gray70"))))
  '(diff-nonexistent ((t (:inherit (diff-file-header)))))
- '(diff-refine-change ((t (:background "#660000"))))
+ '(diff-refine-removed ((t (:background "#aa2222"))))
+ '(diff-refine-added ((t (:background "#22aa22"))))
+ '(diff-refine-change ((t (:background "#aaaa22"))))
  ;; Magit
  '(magit-item-highlight ((t (:inherit nil))))
  ;; Minimap
