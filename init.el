@@ -118,12 +118,21 @@
 (setq truncate-partial-width-windows nil)
 (define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
-;;; Electric Buffer Menu
-(global-set-key (kbd "C-x C-b") 'electric-buffer-list)
-(eval-after-load "ebuff-menu"
-  '(progn
-     (define-key electric-buffer-menu-mode-map (kbd "j") 'next-line)
-     (define-key electric-buffer-menu-mode-map (kbd "k") 'previous-line)))
+;;; UI
+(setq inhibit-splash-screen t)
+(line-number-mode)    ;; for the mode line
+(column-number-mode)  ;; for the mode line
+(setq linum-format "%3d")
+(global-linum-mode)
+(setq-default indicate-empty-lines t)
+(load-theme 'darkfruit t)
+
+;;; GUI
+(set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
+(tool-bar-mode -1)
+(set-scroll-bar-mode 'right)
+(setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
+(add-to-list 'default-frame-alist '(width . 84))
 
 ;;; language
 (set-language-environment "Japanese")
@@ -147,6 +156,18 @@
 (defun my-make-CR-do-indent ()  ; from cc-mode's manual
   (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
 (add-hook 'c-initialization-hook 'my-make-CR-do-indent)
+
+;;; completion
+(setq completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
+(setq read-buffer-completion-ignore-case t)
+
+;;; Electric Buffer Menu
+(global-set-key (kbd "C-x C-b") 'electric-buffer-list)
+(eval-after-load "ebuff-menu"
+  '(progn
+     (define-key electric-buffer-menu-mode-map (kbd "j") 'next-line)
+     (define-key electric-buffer-menu-mode-map (kbd "k") 'previous-line)))
 
 ;;; spell check
 (setq ispell-dictionary "en")
@@ -194,30 +215,8 @@
      (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
      (global-set-key (kbd "C-x t") 'skk-tutorial)))
 
-
-;;; UI
-(setq inhibit-splash-screen t)
-(line-number-mode)    ;; for the mode line
-(column-number-mode)  ;; for the mode line
-(setq linum-format "%3d")
-(global-linum-mode)
-(setq-default indicate-empty-lines t)
-(load-theme 'darkfruit t)
-
-;;; GUI
-(set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
-(tool-bar-mode -1)
-(set-scroll-bar-mode 'right)
-(setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
-(add-to-list 'default-frame-alist '(width . 84))
-
 ;;; Tramp
 (setq tramp-default-method "sshx")
-
-;;; completion
-(setq completion-ignore-case t)
-(setq read-file-name-completion-ignore-case t)
-(setq read-buffer-completion-ignore-case t)
 
 ;;; Org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
