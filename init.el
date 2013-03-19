@@ -128,7 +128,6 @@
 ;;; language
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
-(setq default-input-method "japanese-skk-auto-fill")
 
 ;;; printing
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
@@ -172,9 +171,7 @@
   '(progn
      (require 'skk-study)
 
-     (global-set-key (kbd "C-x C-j") 'skk-mode)
-     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
-     (global-set-key (kbd "C-x t") 'skk-tutorial)
+     (setq default-input-method "japanese-skk-auto-fill")
 
      (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.L.cdb")
      (setq skk-show-annotation t)
@@ -191,7 +188,12 @@
      ;; 送り仮名の優先的なマッチ
      (setq skk-henkan-strict-okuri-precedence t
            skk-process-okuri-early nil
-           skk-henkan-okuri-strictly nil)))
+           skk-henkan-okuri-strictly nil)
+
+     (global-set-key (kbd "C-x C-j") 'skk-mode)
+     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
+     (global-set-key (kbd "C-x t") 'skk-tutorial)))
+
 
 ;;; UI
 (setq inhibit-splash-screen t)
