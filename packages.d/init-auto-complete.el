@@ -1,6 +1,13 @@
 ;;; Auto Complete Mode
 (require 'auto-complete-config)
-(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+(setq-default ac-sources
+              '(ac-source-yasnippet
+                ac-source-words-in-buffer
+                ac-source-abbrev
+                ac-source-dictionary
+                ac-source-words-in-all-buffer
+                ac-source-files-in-current-dir
+                ac-source-filename))
 (global-auto-complete-mode t)
 (ac-flyspell-workaround)
 
@@ -10,14 +17,6 @@
   (lambda ()
     (interactive)
     (ac-stop)))
-
-(add-hook 'auto-complete-mode-hook
-          (lambda ()
-            (setq ac-sources
-                  (append '(ac-source-yasnippet
-                            ac-source-files-in-current-dir
-                            ac-source-filename)
-                          ac-sources))))
 
 (add-hook 'c-mode-common-hook
           (lambda ()
