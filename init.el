@@ -80,7 +80,8 @@
         ruby-block
         session
         twittering-mode
-        yari))
+        yari
+        yasnippet))
 
 (el-get 'sync my-packages)
 

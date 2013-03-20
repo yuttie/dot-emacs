@@ -14,7 +14,8 @@
 (add-hook 'auto-complete-mode-hook
           (lambda ()
             (setq ac-sources
-                  (append '(ac-source-files-in-current-dir
+                  (append '(ac-source-yasnippet
+                            ac-source-files-in-current-dir
                             ac-source-filename)
                           ac-sources))))
 
