@@ -89,6 +89,7 @@
         evil-surround
         flymake-cursor
         ghc-mod
+        gtags
         haskell-mode
         helm
         inertial-scroll
