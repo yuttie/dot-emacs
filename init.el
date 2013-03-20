@@ -233,20 +233,6 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
 
-;;; diff-mode
-(add-hook 'diff-mode-hook
-          (lambda ()
-            (set-face-foreground 'diff-added "#4a9400")
-            (set-face-foreground 'diff-context "black")
-            (set-face-foreground 'diff-file-header "#0070e6")
-            (set-face-background 'diff-file-header "white")
-            (set-face-foreground 'diff-function "#e06800")
-            (set-face-background 'diff-function "white")
-            (set-face-background 'diff-header "white")
-            (set-face-foreground 'diff-hunk-header "#f030d0")
-            (set-face-foreground 'diff-index "#0070e6")
-            (set-face-foreground 'diff-removed "red")))
-
 ;;; CEDET
 ;(require 'cedet)
 
