@@ -14,34 +14,19 @@
 
 (add-to-list 'el-get-sources
              '(:name auto-complete
-                     :pkgname "auto-complete/auto-complete"
-                     :submodule nil
-                     :depends (ert fuzzy popup)))
+                     :submodule nil))
 (add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
                      :type git
                      :url "https://github.com/shosti/elscreen.git"))
 (add-to-list 'el-get-sources
-             '(:name ert
-                     :description "Emacs Lisp Regression Testing"
-                     :type git
-                     :url "https://github.com/ohler/ert.git"))
-(add-to-list 'el-get-sources
              '(:name evil-elscreen
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
-             '(:name fuzzy
-                     :pkgname "auto-complete/fuzzy-el"))
-(add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
-(add-to-list 'el-get-sources
-             '(:name icicles
-                     :description "Minibuffer input completion and cycling"
-                     :type git
-                     :url "https://github.com/emacsmirror/icicles.git"))
 (add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
@@ -57,9 +42,7 @@
                      :features minimap))
 (add-to-list 'el-get-sources
              '(:name popup
-                     :pkgname "auto-complete/popup-el"
-                     :submodule nil
-                     :depends (ert)))
+                     :submodule nil))
 (add-to-list 'el-get-sources
              '(:name powerline
                      :website "https://github.com/milkypostman/powerline"
