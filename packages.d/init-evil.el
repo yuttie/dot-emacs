@@ -1,6 +1,7 @@
 ;;; Evil
 (evil-mode 1)
 (setq evil-default-cursor t)
+(setq evil-search-wrap nil)
 (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (eval-after-load 'auto-complete
                  '(progn
