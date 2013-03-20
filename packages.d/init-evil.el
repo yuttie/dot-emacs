@@ -1,5 +1,4 @@
 ;;; Evil
-(require 'evil)
 (evil-mode 1)
 (setq evil-default-cursor t)
 (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
