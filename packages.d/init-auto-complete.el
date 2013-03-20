@@ -6,8 +6,7 @@
                 ac-source-abbrev
                 ac-source-dictionary
                 ac-source-words-in-all-buffer
-                ac-source-files-in-current-dir
-                ac-source-filename))
+                ac-source-files-in-current-dir))
 (global-auto-complete-mode t)
 (ac-flyspell-workaround)
 
@@ -17,6 +16,10 @@
   (lambda ()
     (interactive)
     (ac-stop)))
+
+(add-hook 'auto-complete-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-filename)))
 
 (add-hook 'c-mode-common-hook
           (lambda ()
