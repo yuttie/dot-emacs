@@ -18,9 +18,9 @@
                             ac-source-filename)
                           ac-sources))))
 
-(add-hook 'c++-mode-hook
+(add-hook 'c-mode-common-hook
           (lambda ()
-            (add-to-list 'ac-sources 'ac-source-semantic)))
+            (add-to-list 'ac-sources 'ac-source-gtags)))
 
 (add-hook 'css-mode-hook
           (lambda ()
