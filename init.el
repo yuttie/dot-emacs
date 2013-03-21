@@ -97,7 +97,6 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq default-truncate-lines t)  ;; don't wrap lines by default
 (setq truncate-partial-width-windows nil)
-(define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
 ;;; UI
 (setq inhibit-splash-screen t)
