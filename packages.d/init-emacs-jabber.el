@@ -1,4 +1,5 @@
 (setq jabber-account-list
-      (with-temp-buffer
-        (insert-file-contents "~/.emacs-jabber")
-        (read (buffer-string))))
+      (when (file-exists-p "~/.emacs-jabber")
+        (with-temp-buffer
+          (insert-file-contents "~/.emacs-jabber")
+          (read (buffer-string)))))
