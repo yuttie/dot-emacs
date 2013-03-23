@@ -62,6 +62,7 @@
         c-eldoc
         deferred
         elscreen
+        emacs-jabber
         evil
         evil-elscreen
         evil-numbers
