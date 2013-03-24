@@ -63,6 +63,7 @@
         deferred
         elscreen
         emacs-jabber
+        ess
         evil
         evil-elscreen
         evil-numbers
