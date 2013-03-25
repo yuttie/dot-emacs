@@ -227,14 +227,6 @@
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
 
-;;; git
-(add-hook 'git-status-mode-hook
-          (lambda ()
-            (define-key git-status-mode-map (kbd "j") 'git-next-file)
-            (define-key git-status-mode-map (kbd "k") 'git-prev-file)
-            (define-key git-status-mode-map (kbd "J") 'scroll-other-window)
-            (define-key git-status-mode-map (kbd "K") 'scroll-other-window-down)))
-
 ;;; CC Mode
 (add-hook 'c-mode-common-hook (lambda ()
     (setq-default c-basic-offset 4)
