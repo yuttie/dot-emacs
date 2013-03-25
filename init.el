@@ -279,9 +279,3 @@
             (inf-ruby-keys)
             (ruby-block-mode t)
             (setq ruby-block-highlight-toggle 'overlay)))
-
-;;; ESS
-(autoload 'R-mode "ess-site" "Major mode for editing R source." t)
-(add-hook 'ess-mode-hook
-          (lambda ()
-            (setq ess-indent-level 2)))
