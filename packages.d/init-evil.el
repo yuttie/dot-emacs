@@ -14,3 +14,8 @@
                  '(progn
                     (define-key evil-normal-state-map (kbd "C-f") 'inertias-up)
                     (define-key evil-normal-state-map (kbd "C-b") 'inertias-down)))
+(eval-after-load 'wl
+                 '(progn
+                    (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
+                    (add-to-list 'evil-emacs-state-modes 'wl-summary-mode)
+                    (add-hook 'wl-folder-mode-hook 'evil-emacs-state)))
