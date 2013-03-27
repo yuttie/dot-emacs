@@ -82,6 +82,7 @@
         ruby-block
         session
         twittering-mode
+        wanderlust
         yari
         yasnippet))
 
