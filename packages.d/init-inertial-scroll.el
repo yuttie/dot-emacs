@@ -10,8 +10,6 @@
       (inertias-define-keymap
        '(("<next>"  . inertias-up)
          ("<prior>" . inertias-down)
-         ("C-v"     . inertias-up)
-         ("M-v"     . inertias-down)
          ("<wheel-up>"   . inertias-down-wheel)
          ("<wheel-down>" . inertias-up-wheel)
          ("<mouse-4>"    . inertias-down-wheel)
