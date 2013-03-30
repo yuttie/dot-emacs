@@ -105,7 +105,7 @@
 (setq inhibit-splash-screen t)
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
-(setq linum-format "%3d")
+(setq linum-format " %3d ")
 (global-linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
