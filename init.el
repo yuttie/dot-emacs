@@ -75,6 +75,7 @@
         helm
         inertial-scroll
         magit
+        markdown-mode
         minimap
         multi-term
         popwin
