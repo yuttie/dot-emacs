@@ -84,6 +84,7 @@
         session
         twittering-mode
         wanderlust
+        wgrep
         yari
         yasnippet))
 
