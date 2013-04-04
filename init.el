@@ -158,7 +158,6 @@
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
-(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 (setq prog-mode-hooks
       '(c-mode-common-hook
         css-mode-hook
@@ -200,6 +199,12 @@
 
 ;;; Tramp
 (setq tramp-default-method "sshx")
+
+;;; Text mode
+(add-hook 'text-mode-hook
+          (lambda ()
+            (auto-fill-mode)
+            (flyspell-mode)))
 
 ;;; Org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
