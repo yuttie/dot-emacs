@@ -60,6 +60,7 @@
         auto-complete
         auto-complete-clang
         c-eldoc
+        calfw
         deferred
         elscreen
         emacs-jabber
