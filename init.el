@@ -208,9 +208,6 @@
             (flyspell-mode)))
 
 ;;; Org mode
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(setq org-hide-leading-stars t)
-;(setq org-odd-levels-only t)
 (setq org-log-done t)
 (add-hook 'org-mode-hook
           (lambda ()
@@ -243,13 +240,7 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;;; Python Mode
-(autoload 'python-mode "python-mode.el" "Python mode." t)
-(add-to-list 'auto-mode-alist '("/*.\.py$" . python-mode))
 (add-to-list 'auto-mode-alist '("/wscript\\'" . python-mode))
-
-;;; PKGBUILD Mode
-(autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
-(add-to-list 'auto-mode-alist '("/PKGBUILD$" . pkgbuild-mode))
 
 ;;; Auto Insert Mode
 (require 'autoinsert)
@@ -272,7 +263,6 @@
     ))
 
 ;;; Ruby mode
-(autoload 'ruby-block-mode "ruby-block" "Displays the line having keyword corresponding to END keyword." t)
 (add-hook 'ruby-mode-hook
           (lambda ()
             (inf-ruby-keys)
