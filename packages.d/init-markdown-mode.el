@@ -1,1 +1,1 @@
-(setq markdown-command "pandoc --from markdown --to html5")
+(setq markdown-command "pandoc --from markdown --to html5 --standalone")
