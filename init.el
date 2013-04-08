@@ -62,6 +62,7 @@
         c-eldoc
         calfw
         deferred
+        edit-server
         elscreen
         emacs-jabber
         ess
