@@ -213,6 +213,7 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (turn-on-font-lock)
+            (set (make-local-variable 'system-time-locale) "C")
             (define-key org-mode-map (kbd "C-<tab>") 'elscreen-next)
             (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previou)))
 
