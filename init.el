@@ -120,6 +120,8 @@
 (set-scroll-bar-mode 'right)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
 (add-to-list 'default-frame-alist '(width . 84))
+(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
 
 ;;; language
 (set-language-environment "Japanese")
