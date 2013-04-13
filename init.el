@@ -70,7 +70,6 @@
         evil-elscreen
         evil-numbers
         evil-surround
-        flymake-cursor
         ghc-mod
         gtags
         haskell-mode
@@ -234,6 +233,11 @@
 
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
+
+;;; flymake
+(setq help-at-pt-timer-delay 0)
+(setq help-at-pt-display-when-idle '(flymake-overlay))
+(eval-after-load 'flymake '(help-at-pt-set-timer))
 
 ;;; CC Mode
 (add-hook 'c-mode-common-hook (lambda ()
