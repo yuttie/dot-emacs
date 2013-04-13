@@ -237,7 +237,11 @@
 ;;; flymake
 (setq help-at-pt-timer-delay 0)
 (setq help-at-pt-display-when-idle '(flymake-overlay))
-(eval-after-load 'flymake '(help-at-pt-set-timer))
+(eval-after-load 'flymake
+  '(progn
+     (help-at-pt-set-timer)
+     (global-set-key (kbd "M-n") 'flymake-goto-next-error)
+     (global-set-key (kbd "M-p") 'flymake-goto-prev-error)))
 
 ;;; CC Mode
 (add-hook 'c-mode-common-hook (lambda ()
