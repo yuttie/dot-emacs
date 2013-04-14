@@ -74,6 +74,7 @@
         gtags
         haskell-mode
         helm
+        helm-descbinds
         inertial-scroll
         magit
         markdown-mode
