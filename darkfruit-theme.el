@@ -49,6 +49,17 @@
  '(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
  ;; show-paren-mode
  '(show-paren-match-face ((t (:background "white" :foreground "red"))))
+ ;; Rainbow-delimiters
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#ff81e6"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#e6ff81"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#81e6ff"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#ff81e6"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#e6ff81"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#81e6ff"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#ff81e6"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#e6ff81"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#81e6ff"))))
+ '(rainbow-delimiters-unmatched-face ((t (:background "red" :foreground "black"))))
  ;; auto-complete
  '(ac-completion-face ((t (:foreground "gray" :underline nil))))
  '(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
