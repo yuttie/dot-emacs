@@ -130,6 +130,10 @@
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
 (setq ps-multibyte-buffer 'non-latin-printer)
 
+;;; history
+(setq history-length 10000)
+(setq recentf-max-saved-items 10000)
+
 ;;; auto indentation
 (setq-default indent-tabs-mode nil)
 
