@@ -162,16 +162,7 @@
 (setq ispell-program-name "aspell")
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
-
-(setq prog-mode-hooks
-      '(c-mode-common-hook
-        css-mode-hook
-        emacs-lisp-mode-hook
-        ess-mode-hook
-        haskell-mode-hook
-        ruby-mode-hook))
-(dolist (h prog-mode-hooks)
-  (add-hook h (lambda () (flyspell-prog-mode))))
+(add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
 
 ;;; SKK
 (load "skk-autoloads" t)
