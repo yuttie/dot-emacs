@@ -157,13 +157,6 @@
 (setq read-file-name-completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
 
-;;; Electric Buffer Menu
-(global-set-key (kbd "C-x C-b") 'electric-buffer-list)
-(eval-after-load "ebuff-menu"
-  '(progn
-     (define-key electric-buffer-menu-mode-map (kbd "j") 'next-line)
-     (define-key electric-buffer-menu-mode-map (kbd "k") 'previous-line)))
-
 ;;; spell check
 (setq ispell-dictionary "en")
 (setq ispell-program-name "aspell")
