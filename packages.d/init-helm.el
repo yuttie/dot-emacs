@@ -5,4 +5,6 @@
 (define-key helm-map (kbd "C-n") 'helm-next-line)
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
 (define-key helm-map (kbd "C-M-n") 'helm-next-source)
-(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
