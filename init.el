@@ -75,6 +75,7 @@
         haskell-mode
         helm
         helm-descbinds
+        highlight-parentheses
         inertial-scroll
         magit
         markdown-mode
