@@ -90,4 +90,7 @@
  '(helm-candidate-number ((t (:background "#55ddff" :foreground "#004455"))))
  '(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil)))))
 
+;; highlight-parentheses
+(setq hl-paren-colors '("#ff0000" "#bf4040" "#9f6060" "#8f7070" "#808080"))
+
 (provide-theme 'darkfruit)
