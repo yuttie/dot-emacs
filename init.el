@@ -81,6 +81,7 @@
         markdown-mode
         minimap
         multi-term
+        org-mode
         popwin
         powerline
         ruby-block
