@@ -76,6 +76,7 @@
         helm
         helm-descbinds
         highlight-parentheses
+        html5
         inertial-scroll
         magit
         markdown-mode
