@@ -252,7 +252,7 @@
 (add-to-list 'auto-mode-alist '("/wscript\\'" . python-mode))
 
 ;;; nXML Mode
-(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . nxml-mode)
+(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . nxml-mode))
 
 ;;; Auto Insert Mode
 (require 'autoinsert)
