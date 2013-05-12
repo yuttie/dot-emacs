@@ -278,4 +278,6 @@
 (add-hook 'ruby-mode-hook
           (lambda ()
             (ruby-block-mode t)
-            (setq ruby-block-highlight-toggle 'overlay)))
+            (setq ruby-block-highlight-toggle 'overlay)
+            (local-set-key (kbd "RET") 'reindent-then-newline-and-indent)
+            (local-set-key (kbd "C-j") 'reindent-then-newline-and-indent)))
