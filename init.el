@@ -277,6 +277,5 @@
 ;;; Ruby mode
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (inf-ruby-keys)
             (ruby-block-mode t)
             (setq ruby-block-highlight-toggle 'overlay)))
