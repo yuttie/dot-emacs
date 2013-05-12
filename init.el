@@ -85,7 +85,6 @@
         org-mode
         popwin
         powerline
-        ruby-block
         session
         twittering-mode
         wanderlust
