@@ -83,6 +83,7 @@
         markdown-mode
         minimap
         multi-term
+        multiple-cursors
         org-mode
         popwin
         powerline
