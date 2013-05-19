@@ -70,6 +70,7 @@
         evil-elscreen
         evil-numbers
         evil-surround
+        expand-region
         ghc-mod
         gtags
         haskell-mode
