@@ -244,9 +244,8 @@
      (global-set-key (kbd "M-p") 'flymake-goto-prev-error)))
 
 ;;; CC Mode
-(add-hook 'c-mode-common-hook (lambda ()
-    (setq-default c-basic-offset 4)
-    (add-to-list 'c-default-style '(other . "linux"))))
+(setq-default c-basic-offset 4)
+(add-to-list 'c-default-style '(other . "linux"))
 
 ;;; C++ Mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
