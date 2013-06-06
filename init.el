@@ -82,6 +82,7 @@
         magit
         markdown-mode
         minimap
+        mmm-mode
         multi-term
         multiple-cursors
         org-mode
