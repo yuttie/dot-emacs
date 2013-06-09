@@ -34,7 +34,6 @@
 \usepackage{latexsym}
 \usepackage{amssymb,amsmath}
 \usepackage{graphicx}
-\usepackage{xcolor}
 %\usepackage{algorithm}  % must be behind hyperref
 %\usepackage{listings}
 %\usepackage{fancybox}
