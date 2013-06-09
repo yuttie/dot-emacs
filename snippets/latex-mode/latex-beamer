@@ -36,6 +36,8 @@
 \usepackage{graphicx}
 %\usepackage{algorithm}  % must be behind hyperref
 %\usepackage{minted}
+%\usemintedstyle{pastie}
+%\newminted[js]{javascript}{bgcolor=black!5,gobble=4,linenos=true}
 %\usepackage{fancybox}
 
 % Font
