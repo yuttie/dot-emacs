@@ -47,6 +47,7 @@
 \usepackage{luatexja-fontspec}
 \setmainfont[Ligatures=TeX]{TeXGyreHeros}
 \setsansfont[Ligatures=TeX]{TeXGyreHeros}
+\setmonofont{Ricty}
 \setmainjfont[BoldFont=M+ 1c bold]{M+ 1c medium}
 \setsansjfont[BoldFont=M+ 1c bold]{M+ 1c medium}
 \usepackage{luatexja-otf}
