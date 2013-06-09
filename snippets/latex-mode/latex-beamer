@@ -35,7 +35,7 @@
 \usepackage{amssymb,amsmath}
 \usepackage{graphicx}
 %\usepackage{algorithm}  % must be behind hyperref
-%\usepackage{listings}
+%\usepackage{minted}
 %\usepackage{fancybox}
 
 % Font
