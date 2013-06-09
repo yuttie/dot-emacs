@@ -1,0 +1,122 @@
+# -*- mode: snippet -*-
+# name: latex-beamer
+# key: latex-beamer
+# --
+\documentclass[12pt]{beamer}
+
+% Theme
+\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{background}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{page number in head/foot}{fg=black}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamercolor{title}{fg=cyan!80!black}
+\setbeamertemplate{frametitle}{\begin{centering}\insertframetitle\par\end{centering}}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{item}{fg=lime!80!black}
+\setbeamercolor{alerted text}{fg=magenta}
+\setbeamercolor{example text}{fg=lime!80!black}
+\setbeamercolor{block title example}{fg=lime!50!black,bg=lime!30!white}
+\setbeamercolor{block body example}{fg=black,bg=lime!30!white}
+\setbeamertemplate{block example begin}{%
+  \begin{center}%
+    {\usebeamercolor[fg]{block title example}\insertblocktitle}\linebreak%
+    \begin{beamercolorbox}[wd=0.8\textwidth]{block body example}%
+}
+\setbeamertemplate{block example end}{%
+    \end{beamercolorbox}%
+  \end{center}%
+}
+
+% Packages
+\usepackage{luatexja}
+\usepackage{latexsym}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage{algorithm}  % must be behind hyperref
+%\usepackage{listings}
+%\usepackage{fancybox}
+
+% Font
+%\usepackage{pxfonts}
+%\usepackage{mathpazo}
+%\usepackage{mathpple}
+%\usepackage{txfonts}
+%\usepackage{mathptmx}
+\usepackage{luatexja-fontspec}
+\setmainfont[Ligatures=TeX]{TeXGyreHeros}
+\setsansfont[Ligatures=TeX]{TeXGyreHeros}
+\setmainjfont[BoldFont=M+ 1c bold]{M+ 1c medium}
+\setsansjfont[BoldFont=M+ 1c bold]{M+ 1c medium}
+\usepackage{luatexja-otf}
+
+
+% Path
+%\graphicspath{{image/}}
+
+
+% Layout Settings
+%\setlength{\voffset}{-0.5in}
+%\addtolength{\textheight}{1.0in}
+%\setlength{\hoffset}{-0.25in}
+%\addtolength{\textwidth}{0.5in}
+
+
+% Floats
+%\setcounter{topnumber}{2}  % max number of floats at top of a page
+%\setcounter{bottomnumber}{1}  % max number of floats at bottom of a page
+%\setcounter{totalnumber}{3}  % max number of floats on a page
+%\setcounter{dbltopnumber}{2}
+%\renewcommand{\topfraction}{0.7}  % max fraction of page for floats at top; the bigger the more floats can be put at top of a page
+%\renewcommand{\bottomfraction}{0.3}  % max fraction of page for floats at bottom; the bigger the more floats can be put at bottom of a page
+%\renewcommand{\textfraction}{0.2}  % min fraction of page for text; smaller value allow LaTeX to put small amount of text on a page
+%\renewcommand{\floatpagefraction}{0.5}  % min fraction of float page that should have floats; bigger value discourages LaTeX from putting a small float on a float page
+%\renewcommand\dbltopfraction{.7}
+%\renewcommand\dblfloatpagefraction{.5}
+
+
+% Bibliography Style
+%\bibliographystyle{plain}
+
+
+% Mathmatical Functions
+%\DeclareMathOperator{\sin}{sin}
+%\DeclareMathOperator{\argmax}{argmax}
+
+
+% Other Commands
+\definecolor{todo-color}{rgb}{1.0,0.0,0.0}
+\newcommand{\todo}[1]{{\textcolor{todo-color}{#1}}}
+\newcommand{\rarrow}{$\Rightarrow$}
+\newcommand{\mathbs}[1]{{\boldsymbol{#1}}}
+%\newcommand{\ud}{{\,\mathrm{d}}}
+\newcommand{\diff}[2]{\frac{d#1}{d#2}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+
+
+% Document Properties
+\title{$1}
+\author{$2}
+\institute{$3}
+\date{$4}
+
+
+\begin{document}
+
+
+{%
+  \setbeamertemplate{background}{}
+  \setbeamertemplate{footline}{}
+  \frame{\titlepage}
+}
+\setcounter{framenumber}{0}
+
+
+\begin{frame}{TITLE}
+  $0
+\end{frame}
+
+
+\end{document}
