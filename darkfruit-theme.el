@@ -15,7 +15,7 @@
  '(cursor ((t (:background "#a0a0a0"))))
  '(fringe ((t (:background "gray30" :foreground "gray60"))))
  '(linum ((t (:inherit (fringe)))))
- '(mode-line ((t (:background "OliveDrab3" :foreground "dark green" :box nil :weight bold))))
+ '(mode-line ((t (:background "gray80" :foreground "gray10" :box nil :weight bold))))
  '(mode-line-inactive ((t (:background "gray20" :foreground "gray50" :box nil))))
  '(powerline-active1 ((t (:background "gray34" :foreground "white"))))
  '(powerline-active2 ((t (:background "gray19" :foreground "white"))))
