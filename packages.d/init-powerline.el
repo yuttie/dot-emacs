@@ -8,7 +8,8 @@
                                     ((equal evil-state 'insert)   'powerline-mode-insert)
                                     ((equal evil-state 'visual)   'powerline-mode-visual)
                                     ((equal evil-state 'replace)  'powerline-mode-replace)
-                                    ((equal evil-state 'operator) 'powerline-mode-operator)))
+                                    ((equal evil-state 'operator) 'powerline-mode-operator)
+                                    ((equal evil-state 'emacs)    'powerline-mode-emacs)))
                         (face1 (cond
                                 ((not active)               'powerline-first-inactive)
                                 ((equal evil-state 'insert) 'powerline-first-insert)

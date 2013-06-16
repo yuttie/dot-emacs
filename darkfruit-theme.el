@@ -22,6 +22,7 @@
  '(powerline-mode-visual   ((t (:background "#ffaf00" :foreground "#875f00" :box nil :weight bold))))
  '(powerline-mode-replace  ((t (:background "#d70000" :foreground "white"   :box nil :weight bold))))
  '(powerline-mode-operator ((t (:background "#d70000" :foreground "white"   :box nil :weight bold))))
+ '(powerline-mode-emacs    ((t (:inherit (mode-line)))))
  '(powerline-mode-inactive ((t (:background "gray20"  :foreground "gray50"  :box nil))))
  '(powerline-first-normal   ((t (:background "#d0d0d0" :foreground "#262626"))))
  '(powerline-first-insert   ((t (:background "#87d7ff" :foreground "#005f87"))))
