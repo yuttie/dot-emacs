@@ -25,6 +25,14 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
+             '(:name flycheck-d
+                     :description "This library adds D support to flycheck."
+                     :website "https://github.com/tom-tan/flycheck-d"
+                     :type github
+                     :pkgname "tom-tan/flycheck-d"
+                     :features flycheck-d
+                     :depends (flycheck dash)))
+(add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
@@ -71,6 +79,7 @@
         evil-numbers
         evil-surround
         expand-region
+        flycheck-d
         ghc-mod
         gtags
         haskell-mode
