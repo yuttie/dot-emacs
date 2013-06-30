@@ -83,6 +83,7 @@
         evil-numbers
         evil-surround
         expand-region
+        flycheck
         flycheck-d
         ghc-mod
         gtags
