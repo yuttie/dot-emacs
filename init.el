@@ -70,6 +70,7 @@
         c-eldoc
         calfw
         deferred
+        d-mode
         edit-server
         elscreen
         emacs-jabber
