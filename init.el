@@ -13,9 +13,6 @@
       (eval-print-last-sexp))))
 
 (add-to-list 'el-get-sources
-             '(:name auctex
-                     :checkout "e31a958a6c8520d6ff8a805f8bb5d12926cd3012"))
-(add-to-list 'el-get-sources
              '(:name auto-complete
                      :submodule nil))
 (add-to-list 'el-get-sources
