@@ -20,6 +20,8 @@
   (lambda ()
     (interactive)
     (ac-stop)))
+(define-key ac-completing-map (kbd "<return>") nil)
+(define-key ac-completing-map (kbd "RET") nil)
 
 (add-hook 'auto-complete-mode-hook
           (lambda ()
