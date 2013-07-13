@@ -12,6 +12,10 @@
 
 (add-to-list 'ac-modes 'text-mode)
 
+(setq ac-auto-start t)
+(setq ac-auto-show-menu t)
+(setq ac-quick-help-delay 0.5)
+
 (define-key ac-completing-map (kbd "ESC")
   (lambda ()
     (interactive)
