@@ -3,9 +3,6 @@
 (setq-default ac-sources
               '(ac-source-yasnippet
                 ac-source-words-in-buffer
-                ac-source-abbrev
-                ac-source-dictionary
-                ac-source-words-in-all-buffer
                 ac-source-files-in-current-dir))
 (global-auto-complete-mode t)
 (ac-flyspell-workaround)
@@ -43,3 +40,8 @@
                             ac-source-variables
                             ac-source-symbols)
                           ac-sources))))
+
+(add-hook 'text-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-abbrev)
+            (add-to-list 'ac-sources 'ac-source-dictionary)))
