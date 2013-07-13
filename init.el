@@ -99,6 +99,7 @@
         org-mode
         popwin
         powerline
+        ruby-mode
         session
         twittering-mode
         wanderlust
