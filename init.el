@@ -64,6 +64,7 @@
 
 (setq my-packages
       '(ace-jump-mode
+        ac-math
         auctex
         auto-complete
         auto-complete-clang
