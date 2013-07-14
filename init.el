@@ -91,6 +91,7 @@
         highlight-parentheses
         html5
         inertial-scroll
+        inf-ruby
         magit
         markdown-mode
         minimap
