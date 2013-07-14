@@ -19,3 +19,6 @@
 (setq org-capture-templates
       '(("i" "idea"   entry (file+headline "" "Idea")   "* [%<%Y-%m-%dT%H:%M:%S>] %?\n%i\n%a" :prepend t)
         ("a" "agenda" entry (file+headline "" "Agenda") "* [%<%Y-%m-%dT%H:%M:%S>] %?\n%i\n%a" :prepend t)))
+
+;; org-agenda
+(setq org-agenda-files '("~/notes.org"))
