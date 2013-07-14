@@ -8,3 +8,10 @@
              (lambda ()
                (define-key org-mode-map (kbd "C-<tab>") 'elscreen-next)
                (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previous))))
+
+;; org-capture
+(setq org-default-notes-file "~/notes.org")
+(global-set-key (kbd "C-c c") 'org-capture)
+(setq org-capture-templates
+      '(("i" "idea"   entry (file+headline "" "Idea")   "* [%<%Y-%m-%dT%H:%M:%S>] %?\n%i\n%a")
+        ("a" "agenda" entry (file+headline "" "Agenda") "* [%<%Y-%m-%dT%H:%M:%S>] %?\n%i\n%a")))
