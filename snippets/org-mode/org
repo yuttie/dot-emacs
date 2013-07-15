@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: org
+# key: org
+# --
+# -*- mode: org; -*-
+#+STARTUP: indent
+#+STARTUP: showall
