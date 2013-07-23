@@ -21,6 +21,10 @@
 (evil-define-key 'normal org-mode-map (kbd "M-l") 'org-metaright)
 (evil-define-key 'normal org-mode-map (kbd "M-j") 'org-metadown)
 (evil-define-key 'normal org-mode-map (kbd "M-k") 'org-metaup)
+(evil-define-key 'motion undo-tree-visualizer-map (kbd "j") 'undo-tree-visualize-redo)
+(evil-define-key 'motion undo-tree-visualizer-map (kbd "k") 'undo-tree-visualize-undo)
+(evil-define-key 'motion undo-tree-visualizer-map (kbd "h") 'undo-tree-visualize-switch-branch-left)
+(evil-define-key 'motion undo-tree-visualizer-map (kbd "l") 'undo-tree-visualize-switch-branch-right)
 (eval-after-load 'wl
   '(progn
      (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
