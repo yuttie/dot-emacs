@@ -21,6 +21,9 @@
                      :type git
                      :url "https://github.com/shosti/elscreen.git"))
 (add-to-list 'el-get-sources
+             '(:name evil
+                     :before (setq evil-search-module 'evil-search)))
+(add-to-list 'el-get-sources
              '(:name evil-elscreen
                      :features evil-elscreen
                      :depends (evil elscreen)))
