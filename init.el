@@ -157,7 +157,7 @@
 (setq history-length 10000)
 (setq recentf-max-saved-items 10000)
 
-;; uniquify
+;;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
