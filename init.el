@@ -130,6 +130,7 @@
         yari
         yasnippet))
 
+(el-get-cleanup my-packages)
 (el-get 'sync my-packages)
 
 (require 'package)
