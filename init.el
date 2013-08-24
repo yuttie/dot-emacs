@@ -121,6 +121,10 @@
         powerline
         ruby-mode
         session
+        term+
+        term+evil
+        term+mode
+        term+mux
         twittering-mode
         wanderlust
         wgrep
