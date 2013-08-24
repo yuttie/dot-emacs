@@ -28,6 +28,16 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
+             '(:name f
+                     :description "Modern API for working with files and directories in Emacs"
+                     :website "https://github.com/rejeep/f.el"
+                     :type github
+                     :pkgname "rejeep/f.el"
+                     :depends (s dash)))
+(add-to-list 'el-get-sources
+             '(:name flycheck
+                     :depends (s dash f cl-lib)))
+(add-to-list 'el-get-sources
              '(:name flycheck-d
                      :description "This library adds D support to flycheck."
                      :website "https://github.com/tom-tan/flycheck-d"
