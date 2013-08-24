@@ -39,6 +39,9 @@
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
+             '(:name haskell-mode
+                     :load "haskell-mode-autoloads.el"))
+(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
