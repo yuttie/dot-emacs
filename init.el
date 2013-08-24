@@ -79,6 +79,10 @@
 (add-to-list 'el-get-sources
              '(:name session
                      :type elpa))
+(add-to-list 'el-get-sources
+             '(:name undo-tree
+                     :url "http://www.dr-qubit.org/undo-tree/undo-tree-0.6.4.el"
+                     :localname "undo-tree.el"))
 
 (setq my-packages
       '(ace-jump-mode
