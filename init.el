@@ -33,7 +33,6 @@
                      :website "https://github.com/tom-tan/flycheck-d"
                      :type github
                      :pkgname "tom-tan/flycheck-d"
-                     :features flycheck-d
                      :depends (flycheck dash)))
 (add-to-list 'el-get-sources
              '(:name ghc-mod
