@@ -74,8 +74,8 @@
         auctex
         auto-complete
         auto-complete-clang
-        c-eldoc
         calfw
+        c-eldoc
         deferred
         d-mode
         edit-server
