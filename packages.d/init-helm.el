@@ -1,6 +1,7 @@
 ;;; Helm
 (helm-mode 1)
 (setq helm-input-idle-delay 0)
+(define-key helm-map (kbd "C-h") (kbd "DEL"))
 (define-key helm-map (kbd "C-p") 'helm-previous-line)
 (define-key helm-map (kbd "C-n") 'helm-next-line)
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
