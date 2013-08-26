@@ -158,6 +158,7 @@
 (global-linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
+(define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 
 ;;; GUI
 (set-face-attribute 'default nil :family "Ricty" :height 100 :weight 'bold)
