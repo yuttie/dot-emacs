@@ -110,6 +110,7 @@
         haskell-mode
         helm
         helm-descbinds
+        helm-ls-git
         highlight-parentheses
         html5
         inertial-scroll
