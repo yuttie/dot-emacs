@@ -7,11 +7,12 @@
 
 (lexical-let ((gray "#7f7f7f")
               (black "#272727")
-              (red "#ff1975")
-              (yellow "#ffdd55")
-              (green "#d9ff41")
-              (blue "#55ddff")
-              (purple "#9955ff"))
+              (red "#f92672")
+              (yellow "#e6db74")
+              (orange "#fd971f")
+              (green "#a6e22e")
+              (blue "#66d9ef")
+              (purple "#ae81ff"))
   (custom-theme-set-faces
    'darkfruit
    ;; Standard
@@ -62,12 +63,12 @@
    `(font-lock-function-name-face ((t (:foreground ,green :slant italic))))
    `(font-lock-keyword-face ((t (:foreground ,red))))
    `(font-lock-negation-char-face ((t (:weight bold :foreground "#e7f6da"))))
-   `(font-lock-preprocessor-face ((t (:foreground ,yellow))))
+   `(font-lock-preprocessor-face ((t (:foreground ,red))))
    `(font-lock-regexp-grouping-backslash ((t (:weight bold))))
    `(font-lock-regexp-grouping-construct ((t (:weight bold))))
-   `(font-lock-string-face ((t (:foreground ,purple))))
+   `(font-lock-string-face ((t (:foreground ,yellow))))
    `(font-lock-type-face ((t (:foreground ,blue))))
-   `(font-lock-variable-name-face ((t (:foreground ,green))))
+   `(font-lock-variable-name-face ((t (:foreground ,orange))))
    `(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
    ;; show-paren-mode
    `(show-paren-match-face ((t (:background "white" :foreground "red"))))
