@@ -123,6 +123,7 @@
         org-mode
         popwin
         powerline
+        rainbow-mode
         ruby-mode
         session
         term+
