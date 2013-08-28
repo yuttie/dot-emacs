@@ -6,6 +6,7 @@
 (set-face-attribute 'cursor nil :background "#a0a0a0")
 
 (lexical-let ((gray "#7f7f7f")
+              (black "#272727")
               (red "#ff1975")
               (yellow "#ffdd55")
               (green "#d9ff41")
@@ -14,7 +15,7 @@
   (custom-theme-set-faces
    'darkfruit
    ;; Standard
-   `(default ((t (:background "#272727" :foreground "#FFFFFF"))))
+   `(default ((t (:background ,black :foreground "#FFFFFF"))))
    `(fixed-pitch ((t (:family "Monospace"))))
    `(variable-pitch ((t (:family "Sans Serif"))))
    ;; Frame
@@ -106,7 +107,7 @@
    `(ediff-even-diff-B ((t (:background "gray20" :foreground "white"))))
    `(ediff-even-diff-C ((t (:background "gray20" :foreground "white"))))
    ;; Helm
-   `(helm-source-header ((t (:background "#272727" :foreground ,blue :height 1.0))))
+   `(helm-source-header ((t (:background ,black :foreground ,blue :height 1.0))))
    `(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
    `(helm-candidate-number ((t (:background ,blue :foreground "#004455"))))
    `(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil))))))
