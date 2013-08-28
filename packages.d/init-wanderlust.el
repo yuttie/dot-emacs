@@ -3,6 +3,7 @@
 (setq wl-draft-reply-buffer-style 'keep)
 (setq mime-edit-split-message nil)
 (setq elmo-imap4-use-modified-utf7 t)
+(setq wl-summary-incorporate-marks '("N" "U" "!" "A" "F"))
 
 ;; Key Bindings
 (eval-after-load 'wl
