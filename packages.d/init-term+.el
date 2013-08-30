@@ -1,3 +1,6 @@
 (require 'term+)
 (require 'xterm-256color)
 (setq term+open-in-other-window t)
+(defun term+open-elscreen (files)
+  (term+open files (lambda (filename &rest args) (elscreen-find-file filename))))
+(term+new-control-command "\033]51;open-elscreen;" "\033\\" 'term+open-elscreen)
