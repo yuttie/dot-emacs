@@ -1,6 +1,6 @@
 (setq elmo-message-fetch-threshold nil)  ; no threshold
 (setq wl-prefetch-threshold nil)  ; no threshold
-(setq wl-local-domain "local")
+(setq wl-message-id-domain "yuta.taniguchi.y.t@gmail.com")
 (setq wl-draft-reply-buffer-style 'keep)
 (setq mime-edit-split-message nil)
 (setq elmo-imap4-use-modified-utf7 t)
