@@ -17,8 +17,8 @@
    'darkfruit
    ;; Standard
    `(default ((t (:background ,black :foreground "#FFFFFF"))))
-   `(fixed-pitch ((t (:family "Monospace"))))
-   `(variable-pitch ((t (:family "Sans Serif"))))
+   `(fixed-pitch ((t (:family "monospace"))))
+   `(variable-pitch ((t (:family "sans serif"))))
    ;; Frame
    `(cursor ((t (:background "#a0a0a0"))))
    `(fringe ((t (:background "gray30" :foreground "gray60"))))
