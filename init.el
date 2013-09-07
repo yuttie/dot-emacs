@@ -163,7 +163,7 @@
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 
 ;;; GUI
-(set-face-attribute 'default nil :family "monospace" :height 90 :weight 'bold)
+(set-face-attribute 'default nil :family "monospace" :height 90)
 (tool-bar-mode -1)
 (set-scroll-bar-mode 'right)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
