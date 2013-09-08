@@ -159,7 +159,54 @@
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 
 ;;; GUI
-(set-face-attribute 'default nil :family "monospace" :height 90)
+;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
+(defconst default-fontset-name "myfonts")
+(defconst default-base-font-name "monospace")
+(defconst default-base-font-size 9)
+(defconst default-ja-font-name "Migu 1M")
+
+(defun setup-window-system-configuration (&optional frame)
+  "Initialize configurations for window system.
+Configurations, which require X (there exists a frame), are
+placed in this function.
+
+When Emacs is started as a GUI application, just running this
+function initializes the configurations.
+
+When Emacs is started as a daemon, this function should be called
+just after the first frame is created by a client. For this,
+this function is added to `after-make-frame-functions' and
+removed from them after the first call."
+  (with-selected-frame (or frame (selected-frame))
+    (when window-system
+      (let* ((fontset-name default-fontset-name)
+             (base default-base-font-name) (size default-base-font-size)
+             (ja default-ja-font-name)
+             (base-font (format "%s-%d:weight=normal:slant=normal" base size))
+             (ja-font (font-spec :family ja))
+             (fsn (concat "fontset-" fontset-name))
+             (elt (list (cons 'font fsn))))
+        ;; create font
+        (create-fontset-from-ascii-font base-font nil fontset-name)
+        (set-fontset-font fsn 'unicode ja-font nil 'append)
+        ;; default
+        (set-frame-font fsn)
+        (setq-default initial-frame-alist (append elt initial-frame-alist)
+                      default-frame-alist (append elt default-frame-alist))
+        ;; current frame
+        (set-frame-parameter (selected-frame) 'font fsn)
+        ;; call once
+        (remove-hook 'after-init-hook #'setup-window-system-configuration)
+        (remove-hook 'after-make-frame-functions
+                     #'setup-window-system-configuration)))))
+
+(when window-system
+  (if after-init-time
+      ;; already initialized
+      (setup-window-system-configuration)
+    (add-hook 'after-init-hook #'setup-window-system-configuration)))
+(add-hook 'after-make-frame-functions #'setup-window-system-configuration)
+
 (tool-bar-mode -1)
 (set-scroll-bar-mode 'right)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
