@@ -91,7 +91,7 @@
    `(diff-refine-added ((t (:background "#22aa22"))))
    `(diff-refine-change ((t (:background "#aaaa22"))))
    ;; Magit
-   `(magit-item-highlight ((t (:inherit nil))))
+   `(magit-item-highlight ((t (:background nil))))
    ;; Minimap
    `(minimap-active-region-background ((t (:background "gray30"))))
    ;; Ediff
