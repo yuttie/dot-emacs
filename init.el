@@ -153,7 +153,7 @@
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
-(global-linum-mode)
+(add-hook 'prog-mode-hook 'linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
