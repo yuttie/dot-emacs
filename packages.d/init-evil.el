@@ -29,4 +29,5 @@
   '(progn
      (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
      (add-to-list 'evil-emacs-state-modes 'wl-summary-mode)
+     (add-to-list 'evil-emacs-state-modes 'wl-template-mode)
      (add-hook 'wl-folder-mode-hook 'evil-emacs-state)))
