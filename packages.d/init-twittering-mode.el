@@ -2,6 +2,7 @@
 (autoload 'twit "twittering-mode" "Start twittering-mode." t)
 (autoload 'twittering-mode "twittering-mode" "Major mode for Twitter" t)
 (setq twittering-use-master-password t)
+(setq twittering-use-icon-storage t)
 (add-hook 'twittering-mode-hook
           (lambda ()
             (setq twittering-status-format "%i %S %FACE[shadow]{%s}\t\t%@\n%FOLD[        ]{%T%RT{%FACE[shadow]{\n↻Retweeted by %S}}\n")
