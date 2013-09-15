@@ -6,6 +6,7 @@
 (setq wl-summary-incorporate-marks '("N" "U" "!" "A" "F" "$"))
 (setq wl-fcc-force-as-read t)
 (setq wl-interactive-send t)  ; Confirm before sending a draft
+(setq wl-message-id-use-message-from t)
 (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)  ; Automatically configure SMTP when we start writing a draft
 
 ;; Key Bindings
