@@ -4,9 +4,7 @@
 (setq twittering-use-master-password t)
 (add-hook 'twittering-mode-hook
           (lambda ()
-            (string-match "%s" twittering-status-format)
-            (setq twittering-status-format
-                  (replace-match "%S" nil nil twittering-status-format))
+            (setq twittering-status-format "%i %S %FACE[shadow]{%s}\t\t%@\n%FOLD[        ]{%T%RT{%FACE[shadow]{\n↻Retweeted by %S}}\n")
             (setq show-trailing-whitespace nil)
             (twittering-icon-mode 1)
             (define-key twittering-mode-map (kbd "j") 'next-line)
