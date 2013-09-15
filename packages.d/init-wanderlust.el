@@ -7,6 +7,7 @@
 (setq wl-fcc-force-as-read t)
 (setq wl-interactive-send t)  ; Confirm before sending a draft
 (setq wl-message-id-use-message-from t)
+(setq wl-auto-save-drafts-interval nil)
 (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)  ; Automatically configure SMTP when we start writing a draft
 
 ;; Key Bindings
