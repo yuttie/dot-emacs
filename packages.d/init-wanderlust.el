@@ -8,6 +8,10 @@
 (setq wl-interactive-send t)  ; Confirm before sending a draft
 (setq wl-message-id-use-message-from t)
 (setq wl-auto-save-drafts-interval nil)
+(add-hook 'wl-summary-prepared-hook
+          (lambda ()
+            (wl-summary-sort-by-date t)
+            (wl-summary-display-top)))
 (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)  ; Automatically configure SMTP when we start writing a draft
 
 ;; Key Bindings
