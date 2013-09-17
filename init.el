@@ -295,8 +295,7 @@ removed from them after the first call."
             (flyspell-mode)))
 
 ;;; browse-url
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "google-chrome")
+(setq browse-url-browser-function 'browse-url-firefox)
 
 ;;; Ediff
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
