@@ -8,6 +8,7 @@
 (setq wl-interactive-send t)  ; Confirm before sending a draft
 (setq wl-message-id-use-message-from t)
 (setq wl-auto-save-drafts-interval nil)
+(setq wl-folder-move-cur-folder t)
 (setq elmo-network-session-idle-timeout 60)
 (add-hook 'wl-summary-prepared-hook
           (lambda ()
