@@ -46,7 +46,7 @@
    `(powerline-buffer-id-inactive ((t (:inherit (powerline-second-inactive)))))
    `(minibuffer-prompt ((t (:foreground "white"))))
    ;; Highlight
-   `(highlight ((t (:background "light gray"))))
+   `(highlight ((t (:background "gray25"))))
    `(isearch ((t (:background ,blue :foreground "black"))))
    `(query-replace ((t (:inherit (isearch)))))
    `(lazy-highlight ((t (:background "#ffaa33" :foreground "black"))))
