@@ -10,6 +10,8 @@
 (setq wl-auto-save-drafts-interval nil)
 (setq wl-folder-move-cur-folder t)
 (setq elmo-network-session-idle-timeout 60)
+(setq wl-summary-buffer-prev-folder-function 'ignore)
+(setq wl-summary-buffer-next-folder-function 'ignore)
 (add-hook 'wl-summary-mode-hook 'hl-line-mode)
 (add-hook 'wl-summary-prepared-hook
           (lambda ()
