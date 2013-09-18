@@ -165,6 +165,7 @@
 (defconst default-base-font-name "monospace")
 (defconst default-base-font-size 9)
 (defconst default-ja-font-name "Migu 1M")
+(defconst default-ja-font-scale 1.204)
 
 (defun setup-window-system-configuration (&optional frame)
   "Initialize configurations for window system.
@@ -182,7 +183,8 @@ removed from them after the first call."
     (when window-system
       (let* ((fontset-name default-fontset-name)
              (base default-base-font-name) (size default-base-font-size)
-             (ja default-ja-font-name)
+             (ja default-ja-font-name) (ja-pat (format ".*%s.*" default-ja-font-name))
+             (scale default-ja-font-scale)
              (base-font (format "%s-%d:weight=normal:slant=normal" base size))
              (ja-font (font-spec :family ja))
              (fsn (concat "fontset-" fontset-name))
@@ -190,6 +192,7 @@ removed from them after the first call."
         ;; create font
         (create-fontset-from-ascii-font base-font nil fontset-name)
         (set-fontset-font fsn 'unicode ja-font nil 'append)
+        (add-to-list 'face-font-rescale-alist (cons ja-pat scale))
         ;; default
         (set-frame-font fsn)
         (setq-default initial-frame-alist (append elt initial-frame-alist)
