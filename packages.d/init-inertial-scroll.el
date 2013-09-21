@@ -16,5 +16,5 @@
          ("<mouse-5>"    . inertias-up-wheel))
        inertias-prefix-key))
 (inertias-global-minor-mode 1)  ; if comes before map, mapping doesn't work
-;(global-set-key (vector mouse-wheel-down-event) 'inertias-down)
-;(global-set-key (vector mouse-wheel-up-event)   'inertias-up)
+;(global-set-key (vector mouse-wheel-down-event) #'inertias-down)
+;(global-set-key (vector mouse-wheel-up-event)   #'inertias-up)

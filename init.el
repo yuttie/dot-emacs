@@ -153,7 +153,7 @@
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
-(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook #'linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
@@ -215,8 +215,8 @@ removed from them after the first call."
 (set-scroll-bar-mode 'right)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
 (add-to-list 'default-frame-alist '(width . 84))
-(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
-(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
+(global-set-key (kbd "<C-mouse-4>") #'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") #'text-scale-decrease)
 
 ;;; language
 (set-language-environment "Japanese")
@@ -239,13 +239,13 @@ removed from them after the first call."
 
 ;;; auto indentation in lisp-mode
 (defun set-newline-and-indent ()
-  (local-set-key (kbd "RET") 'newline-and-indent))
-(add-hook 'lisp-mode-hook 'set-newline-and-indent)
+  (local-set-key (kbd "RET") #'newline-and-indent))
+(add-hook 'lisp-mode-hook #'set-newline-and-indent)
 
 ;;; auto indentation in cc-mode
 (defun my-make-CR-do-indent ()  ; from cc-mode's manual
-  (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
-(add-hook 'c-initialization-hook 'my-make-CR-do-indent)
+  (define-key c-mode-base-map (kbd "RET") #'c-context-line-break))
+(add-hook 'c-initialization-hook #'my-make-CR-do-indent)
 
 ;;; completion
 (setq completion-ignore-case t)
@@ -284,9 +284,9 @@ removed from them after the first call."
            skk-process-okuri-early nil
            skk-henkan-okuri-strictly nil)
 
-     (global-set-key (kbd "C-x C-j") 'skk-mode)
-     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
-     (global-set-key (kbd "C-x t") 'skk-tutorial)))
+     (global-set-key (kbd "C-x C-j") #'skk-mode)
+     (global-set-key (kbd "C-x j") #'skk-auto-fill-mode)
+     (global-set-key (kbd "C-x t") #'skk-tutorial)))
 
 ;;; Tramp
 (setq tramp-default-method "sshx")
@@ -298,16 +298,16 @@ removed from them after the first call."
             (flyspell-mode)))
 
 ;;; browse-url
-(setq browse-url-browser-function 'browse-url-firefox)
+(setq browse-url-browser-function #'browse-url-firefox)
 
 ;;; Ediff
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
-(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function #'ediff-setup-windows-plain)
+(setq ediff-split-window-function #'split-window-horizontally)
 
 ;;; eldoc
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook #'turn-on-eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook #'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook #'turn-on-eldoc-mode)
 
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
@@ -318,8 +318,8 @@ removed from them after the first call."
 (eval-after-load 'flymake
   '(progn
      (help-at-pt-set-timer)
-     (global-set-key (kbd "M-n") 'flymake-goto-next-error)
-     (global-set-key (kbd "M-p") 'flymake-goto-prev-error)))
+     (global-set-key (kbd "M-n") #'flymake-goto-next-error)
+     (global-set-key (kbd "M-p") #'flymake-goto-prev-error)))
 
 ;;; CC Mode
 (setq-default c-basic-offset 4)

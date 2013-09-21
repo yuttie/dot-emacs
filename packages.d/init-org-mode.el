@@ -6,13 +6,13 @@
 (eval-after-load 'elscreen
   '(add-hook 'org-mode-hook
              (lambda ()
-               (define-key org-mode-map (kbd "C-<tab>") 'elscreen-next)
-               (define-key org-mode-map (kbd "C-S-<iso-lefttab>") 'elscreen-previous))))
+               (define-key org-mode-map (kbd "C-<tab>") #'elscreen-next)
+               (define-key org-mode-map (kbd "C-S-<iso-lefttab>") #'elscreen-previous))))
 
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c c") #'org-capture)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c b") #'org-iswitchb)
 
 ;; org-capture
 (setq org-default-notes-file "~/notes.org")
