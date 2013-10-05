@@ -197,8 +197,8 @@ removed from them after the first call."
         (add-to-list 'face-font-rescale-alist (cons ja-pat scale))
         ;; default
         (set-frame-font fsn nil t)
-        (setq-default initial-frame-alist (append elt initial-frame-alist)
-                      default-frame-alist (append elt default-frame-alist))
+        (setq initial-frame-alist (append elt initial-frame-alist)
+              default-frame-alist (append elt default-frame-alist))
         ;; current frame
         (set-frame-parameter (selected-frame) 'font fsn)
         ;; call once
