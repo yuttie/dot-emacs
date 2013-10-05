@@ -111,7 +111,12 @@
    `(helm-source-header ((t (:background ,black :foreground ,blue :height 1.0))))
    `(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
    `(helm-candidate-number ((t (:background ,blue :foreground "#004455"))))
-   `(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil))))))
+   `(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil))))
+   ;; ElScreen
+   `(elscreen-tab-background-face ((t (:background "gray30"))))
+   `(elscreen-tab-control-face ((t (:background "white" :foreground "black" :underline "gray50"))))
+   `(elscreen-tab-current-screen-face ((t (:background "white" :foreground "black"))))
+   `(elscreen-tab-other-screen-face ((t (:background "gray60" :foreground "gray30"))))))
 
 ;; highlight-parentheses
 (setq hl-paren-colors '("#ff0000" "#bf4040" "#9f6060" "#8f7070" "#808080"))
