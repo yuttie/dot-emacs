@@ -71,7 +71,7 @@
    `(font-lock-variable-name-face ((t (:foreground ,orange))))
    `(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
    ;; show-paren-mode
-   `(show-paren-match-face ((t (:background "white" :foreground "red"))))
+   `(show-paren-match-face ((t (:background nil :foreground "red"))))
    ;; auto-complete
    `(ac-completion-face ((t (:foreground "gray" :underline nil))))
    `(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
