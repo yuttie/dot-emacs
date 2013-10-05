@@ -196,7 +196,7 @@ removed from them after the first call."
         (set-fontset-font fsn 'unicode ja-font nil 'append)
         (add-to-list 'face-font-rescale-alist (cons ja-pat scale))
         ;; default
-        (set-frame-font fsn)
+        (set-frame-font fsn nil t)
         (setq-default initial-frame-alist (append elt initial-frame-alist)
                       default-frame-alist (append elt default-frame-alist))
         ;; current frame
