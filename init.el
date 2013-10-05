@@ -99,6 +99,7 @@
     edit-server
     elscreen
     emacs-jabber
+    emmet-mode
     ess
     evil
     evil-elscreen
