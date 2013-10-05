@@ -21,6 +21,12 @@
                      :type git
                      :url "https://github.com/shosti/elscreen.git"))
 (add-to-list 'el-get-sources
+             '(:name emmet-mode
+                     :website "https://github.com/smihica/emmet-mode"
+                     :description "Unofficial Emmet's support for emacs"
+                     :type github
+                     :pkgname "smihica/emmet-mode"))
+(add-to-list 'el-get-sources
              '(:name evil
                      :before (setq evil-search-module 'evil-search)))
 (add-to-list 'el-get-sources
