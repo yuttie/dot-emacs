@@ -13,12 +13,6 @@
       (eval-print-last-sexp))))
 
 (add-to-list 'el-get-sources
-             '(:name anzu
-                     :website "https://github.com/syohex/emacs-anzu"
-                     :description "Emacs Port of anzu.vim"
-                     :type github
-                     :pkgname "syohex/emacs-anzu"))
-(add-to-list 'el-get-sources
              '(:name auto-complete
                      :submodule nil))
 (add-to-list 'el-get-sources
