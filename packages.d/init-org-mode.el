@@ -14,6 +14,13 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c b") #'org-iswitchb)
 
+(eval-after-load 'evil
+  '(progn
+     (evil-define-key 'normal org-mode-map (kbd "M-h") #'org-metaleft)
+     (evil-define-key 'normal org-mode-map (kbd "M-l") #'org-metaright)
+     (evil-define-key 'normal org-mode-map (kbd "M-j") #'org-metadown)
+     (evil-define-key 'normal org-mode-map (kbd "M-k") #'org-metaup)))
+
 ;; org-capture
 (setq org-default-notes-file "~/notes.org")
 (setq org-capture-templates

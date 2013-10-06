@@ -19,6 +19,13 @@
             (wl-summary-display-top)))
 (add-hook 'wl-mail-setup-hook #'wl-draft-config-exec)  ; Automatically configure SMTP when we start writing a draft
 
+(eval-after-load 'evil
+  '(progn
+     (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
+     (add-to-list 'evil-emacs-state-modes 'wl-summary-mode)
+     (add-to-list 'evil-emacs-state-modes 'wl-template-mode)
+     (add-hook 'wl-folder-mode-hook #'evil-emacs-state)))
+
 ;; Key Bindings
 (eval-after-load 'wl
   '(progn

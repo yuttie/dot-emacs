@@ -20,6 +20,11 @@
 (define-key ac-completing-map (kbd "<return>") nil)
 (define-key ac-completing-map (kbd "RET") nil)
 
+(eval-after-load 'evil
+  '(progn
+     (define-key evil-insert-state-map (kbd "C-n") #'ac-next)
+     (define-key evil-insert-state-map (kbd "C-p") #'ac-previous)))
+
 (add-hook 'auto-complete-mode-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-filename)))

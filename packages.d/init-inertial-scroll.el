@@ -18,3 +18,8 @@
 (inertias-global-minor-mode 1)  ; if comes before map, mapping doesn't work
 ;(global-set-key (vector mouse-wheel-down-event) #'inertias-down)
 ;(global-set-key (vector mouse-wheel-up-event)   #'inertias-up)
+
+(eval-after-load 'evil
+  '(progn
+     (define-key evil-normal-state-map (kbd "C-f") #'inertias-up)
+     (define-key evil-normal-state-map (kbd "C-b") #'inertias-down)))
