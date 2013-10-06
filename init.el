@@ -60,6 +60,20 @@
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
+             '(:name git-gutter+
+                     :website "https://github.com/nonsequitur/git-gutter-plus"
+                     :description "Manage Git hunks straight from the buffer"
+                     :type github
+                     :pkgname "nonsequitur/git-gutter-plus"
+                     :depends (git-commit-mode)))
+(add-to-list 'el-get-sources
+             '(:name git-gutter-fringe+
+                     :website "https://github.com/nonsequitur/git-gutter-fringe-plus"
+                     :description "Fringe version of git-gutter+.el"
+                     :type github
+                     :pkgname "nonsequitur/git-gutter-fringe-plus"
+                     :depends (git-gutter+ fringe-helper)))
+(add-to-list 'el-get-sources
              '(:name haskell-mode
                      :load "haskell-mode-autoloads.el"))
 (add-to-list 'el-get-sources
