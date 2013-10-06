@@ -65,7 +65,7 @@
                      :description "Manage Git hunks straight from the buffer"
                      :type github
                      :pkgname "nonsequitur/git-gutter-plus"
-                     :depends (git-commit-mode)))
+                     :depends (git-modes)))
 (add-to-list 'el-get-sources
              '(:name git-gutter-fringe+
                      :website "https://github.com/nonsequitur/git-gutter-fringe-plus"
