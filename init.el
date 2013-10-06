@@ -98,6 +98,8 @@
     flycheck
     flycheck-d
     ghc-mod
+    git-gutter+
+    git-gutter-fringe+
     gtags
     haskell-mode
     helm
