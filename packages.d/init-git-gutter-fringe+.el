@@ -1,4 +1,4 @@
-(defun load-git-gutter-fringe+ ()
+(defun load-git-gutter-fringe+ (&optional frame)
   (require 'git-gutter-fringe+)
   (remove-hook 'after-make-frame-functions #'load-git-gutter-fringe+))
 
