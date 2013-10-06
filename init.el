@@ -41,14 +41,7 @@
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
              '(:name f
-                     :description "Modern API for working with files and directories in Emacs"
-                     :website "https://github.com/rejeep/f.el"
-                     :type github
-                     :pkgname "rejeep/f.el"
                      :depends (s dash)))
-(add-to-list 'el-get-sources
-             '(:name flycheck
-                     :depends (s dash f cl-lib)))
 (add-to-list 'el-get-sources
              '(:name flycheck-d
                      :description "This library adds D support to flycheck."
@@ -74,9 +67,6 @@
                      :pkgname "nonsequitur/git-gutter-fringe-plus"
                      :depends (git-gutter+ fringe-helper)))
 (add-to-list 'el-get-sources
-             '(:name haskell-mode
-                     :load "haskell-mode-autoloads.el"))
-(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
@@ -85,26 +75,11 @@
                      :features inertial-scroll
                      :depends (deferred)))
 (add-to-list 'el-get-sources
-             '(:name minimap
-                     :description "Minimap sidebar for Emacs"
-                     :type elpa
-                     :features minimap))
-(add-to-list 'el-get-sources
              '(:name multi-mode-util
                     :pkgname "tarao/multi-mode-util"))
 (add-to-list 'el-get-sources
              '(:name popup
                      :submodule nil))
-(add-to-list 'el-get-sources
-             '(:name powerline
-                     :website "https://github.com/milkypostman/powerline"
-                     :description "Powerline for Emacs"
-                     :type github
-                     :pkgname "milkypostman/powerline"
-                     :features powerline))
-(add-to-list 'el-get-sources
-             '(:name session
-                     :type elpa))
 
 (defconst my-packages
   '(ace-jump-mode
