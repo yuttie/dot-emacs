@@ -2,4 +2,4 @@
 
 (eval-after-load 'evil
   '(progn
-     (define-key evil-normal-state-map (kbd "SPC") #'ace-jump-mode)))
+     (define-key evil-motion-state-map (kbd "SPC") #'ace-jump-word-mode)))
