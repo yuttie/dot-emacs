@@ -258,6 +258,9 @@ removed from them after the first call."
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 (add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
 
+;;; desktop
+(setq desktop-path '("."))
+
 ;;; SKK
 (load "skk-autoloads" t)
 (eval-after-load 'skk-autoloads
