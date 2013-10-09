@@ -223,6 +223,7 @@ removed from them after the first call."
 ;;; programming
 (add-hook 'prog-mode-hook #'linum-mode)
 (add-hook 'prog-mode-hook #'whitespace-mode)
+(add-hook 'prog-mode-hook #'flyspell-prog-mode)
 (eval-after-load 'whitespace
   '(progn
      (setq whitespace-style '(face lines-tail))
@@ -263,7 +264,6 @@ removed from them after the first call."
 (setq ispell-program-name "aspell")
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
-(add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
 
 ;;; desktop
 (setq desktop-path '("."))
