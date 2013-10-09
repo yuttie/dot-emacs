@@ -54,6 +54,8 @@
    `(secondary-selection ((t (:background "#272822"))))
    `(trailing-whitespace ((((class color)) (:background "red")) (t (:inverse-video t))))
    `(escape-glyph ((t (:foreground "#5599ff"))))
+   ;; whitespace
+   `(whitespace-line ((t (:background "yellow" :foreground "black"))))
    ;; Main
    `(font-lock-builtin-face ((t (:foreground ,red))))
    `(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
