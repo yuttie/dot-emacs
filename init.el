@@ -150,7 +150,6 @@
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
-(add-hook 'prog-mode-hook #'linum-mode)
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
@@ -220,6 +219,14 @@ removed from them after the first call."
 ;;; language
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
+
+;;; programming
+(add-hook 'prog-mode-hook #'linum-mode)
+(add-hook 'prog-mode-hook #'whitespace-mode)
+(eval-after-load 'whitespace
+  '(progn
+     (setq whitespace-style '(face lines-tail))
+     (setq whitespace-line-column 80)))
 
 ;;; printing
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
