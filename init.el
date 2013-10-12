@@ -334,9 +334,6 @@ removed from them after the first call."
 ;;; CC Mode
 (setq-default c-basic-offset 4)
 (add-to-list 'c-default-style '(other . "linux"))
-(add-hook 'c-initialization-hook
-          (lambda ()
-            (define-key c-mode-base-map (kbd "C-c C-b") nil)))
 
 ;;; C++ Mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
