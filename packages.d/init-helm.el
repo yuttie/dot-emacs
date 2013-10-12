@@ -9,22 +9,22 @@
 
 (global-set-key (kbd "M-x") #'helm-M-x)
 
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(global-set-key (kbd "C-c C-f") #'helm-for-files)
-(global-set-key (kbd "C-c C-b") #'helm-buffers-list)
-(global-set-key (kbd "C-c f f") #'helm-find)
+(global-set-key (kbd "C-x C-f") #'helm-for-files)
+(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
+(global-set-key (kbd "C-c f f") #'helm-find-files)
+(global-set-key (kbd "C-c f F") #'helm-find)
 (global-set-key (kbd "C-c f l") #'helm-locate)
 
 (global-set-key (kbd "C-c i e") #'helm-info-emacs)
 (global-set-key (kbd "C-c i l") #'helm-info-elisp)
-(global-set-key (kbd "C-c i C-l") #'helm-info-emacs-lisp-intro)
+(global-set-key (kbd "C-c i L") #'helm-info-emacs-lisp-intro)
 
 (global-set-key (kbd "C-c C-h u") #'helm-ucs)
 (global-set-key (kbd "C-c C-h c") #'helm-colors)
 (global-set-key (kbd "C-c C-h m") #'helm-man-woman)
 (global-set-key (kbd "C-c C-h t") #'helm-top)
 (global-set-key (kbd "C-c M-s o") #'helm-occur)
-(global-set-key (kbd "C-c p") #'helm-show-kill-ring)
+(global-set-key (kbd "C-c p")     #'helm-show-kill-ring)
 
 ;; Disable automatic selection when only one candidate directory is matched.
 (setq helm-ff-auto-update-initial-value nil)
