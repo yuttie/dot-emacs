@@ -154,6 +154,8 @@
 (load-theme 'darkfruit t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 (global-unset-key (kbd "C-x C-b"))  ; running 'list-buffers' is not useful
+(keyboard-translate ?\C-t ?\C-x)
+(keyboard-translate ?\C-x ?\C-t)
 
 ;;; GUI
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
