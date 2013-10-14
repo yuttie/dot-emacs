@@ -153,8 +153,12 @@
 (setq-default indicate-empty-lines t)
 (load-theme 'darkfruit t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
-(keyboard-translate ?\C-t ?\C-x)
-(keyboard-translate ?\C-x ?\C-t)
+(defun swap-C-x-and-C-t (frame)
+  (with-selected-frame frame
+    (keyboard-translate ?\C-t ?\C-x)
+    (keyboard-translate ?\C-x ?\C-t)))
+(swap-C-x-and-C-t (selected-frame))
+(add-hook 'after-make-frame-functions #'swap-C-x-and-C-t)
 
 ;;; GUI
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
