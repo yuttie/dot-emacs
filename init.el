@@ -326,15 +326,6 @@ removed from them after the first call."
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
 
-;;; flymake
-(setq help-at-pt-timer-delay 0)
-(setq help-at-pt-display-when-idle '(flymake-overlay))
-(eval-after-load 'flymake
-  '(progn
-     (help-at-pt-set-timer)
-     (global-set-key (kbd "M-n") #'flymake-goto-next-error)
-     (global-set-key (kbd "M-p") #'flymake-goto-prev-error)))
-
 ;;; CC Mode
 (setq-default c-basic-offset 4)
 (add-to-list 'c-default-style '(other . "linux"))
