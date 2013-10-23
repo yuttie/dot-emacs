@@ -2,6 +2,7 @@
 (add-hook 'haskell-mode-hook
           (lambda ()
             (ghc-init)
+            (flycheck-mode -1)
             (flymake-mode)
             (setq help-at-pt-timer-delay 0)
             (setq help-at-pt-display-when-idle '(flymake-overlay))
