@@ -37,11 +37,11 @@
              '(:name f
                      :depends (s dash)))
 (add-to-list 'el-get-sources
-             '(:name flycheck-d
-                     :description "This library adds D support to flycheck."
-                     :website "https://github.com/tom-tan/flycheck-d"
+             '(:name flycheck-d-unittest
+                     :description "This library adds D unittest support to flycheck."
+                     :website "https://github.com/flycheck/flycheck-d-unittest"
                      :type github
-                     :pkgname "tom-tan/flycheck-d"
+                     :pkgname "flycheck/flycheck-d-unittest"
                      :depends (flycheck dash)))
 (add-to-list 'el-get-sources
              '(:name ghc-mod
@@ -96,7 +96,7 @@
     evil-surround
     expand-region
     flycheck
-    flycheck-d
+    flycheck-d-unittest
     ghc-mod
     git-gutter+
     git-gutter-fringe+
