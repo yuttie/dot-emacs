@@ -24,8 +24,8 @@
 (add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
-                     :type git
-                     :url "https://github.com/shosti/elscreen.git"))
+                     :type github
+                     :pkgname "shosti/elscreen"))
 (add-to-list 'el-get-sources
              '(:name emmet-mode
                      :website "https://github.com/smihica/emmet-mode"
