@@ -16,6 +16,12 @@
              '(:name auto-complete
                      :submodule nil))
 (add-to-list 'el-get-sources
+             '(:name d-mode
+                     :description "An Emacs mode for D code."
+                     :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
+                     :type github
+                     :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"))
+(add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
                      :type git
