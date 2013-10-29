@@ -21,13 +21,14 @@
 %\usepackage{fancybox}
 
 % Font
-%\usepackage{pxfonts}
-%\usepackage{mathpazo}
-%\usepackage{mathpple}
+%\usepackage{newpxtext,newpxmath}  % Palatino
+%\usepackage{tgpagella}            % Palatino
+%\usepackage{mathpazo}             % Palatino (obsolete by Pagella?)
+%\usepackage{newtxtext,newtxmath}  % Times
+%\usepackage{tgtermes}             % Times
+%\usepackage{mathptmx}             % Times (obsolete by Termes?)
 %\usepackage{euler}
 %\usepackage{eulervm}
-%\usepackage{txfonts}
-%\usepackage{mathptmx}
 %\usepackage[bold,expert]{otf}
 %\usepackage[bold,expert,hiragino]{luatexja-preset}  % for LuaLaTeX
 %\usepackage{luatexja-otf}  % for LuaLaTeX
