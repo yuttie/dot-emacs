@@ -25,6 +25,7 @@
 %\usepackage{mathpazo}
 %\usepackage{mathpple}
 %\usepackage{euler}
+%\usepackage{eulervm}
 %\usepackage{txfonts}
 %\usepackage{mathptmx}
 %\usepackage[bold,expert]{otf}
