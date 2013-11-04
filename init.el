@@ -27,7 +27,8 @@
                      :website "http://wiki.gentoo.org/wiki/Project:Emacs"
                      :type git
                      :branch "ebuild-mode"
-                     :url "git://git.overlays.gentoo.org/proj/emacs-tools.git"))
+                     :url "git://git.overlays.gentoo.org/proj/emacs-tools.git"
+                     :build (("make" "ebuild-mode.info"))))
 (add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
