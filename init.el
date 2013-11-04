@@ -99,6 +99,7 @@
     c-eldoc
     deferred
     d-mode
+    ebuild-mode
     edit-server
     elscreen
     emacs-jabber
