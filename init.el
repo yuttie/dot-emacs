@@ -125,7 +125,6 @@
     inf-ruby
     magit
     markdown-mode
-    minimap
     mmm-mode
     multiple-cursors
     org-mode
