@@ -69,6 +69,9 @@
                      :pkgname "nonsequitur/git-gutter-fringe-plus"
                      :depends (git-gutter+ fringe-helper)))
 (add-to-list 'el-get-sources
+             '(:name haskell-mode
+                     :post-init (require 'haskell-mode-autoloads)))
+(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
