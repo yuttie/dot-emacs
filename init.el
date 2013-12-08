@@ -163,7 +163,7 @@
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
 (setq-default indicate-empty-lines t)
-(load-theme 'darkfruit t)
+(load-theme 'steady t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 (defun swap-C-x-and-C-t (frame)
   (with-selected-frame frame
