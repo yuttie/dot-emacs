@@ -44,7 +44,7 @@
    `(powerline-buffer-id-insert   ((t (:inherit (powerline-second-insert)))))
    `(powerline-buffer-id-inactive ((t (:inherit (powerline-second-inactive)))))
 
-   `(minibuffer-prompt ((t (:foreground "white"))))
+   `(minibuffer-prompt ((t (:foreground ,black))))
    ;; Highlight
    `(highlight ((t (:background "gray75"))))
    `(isearch ((t (:background ,blue :foreground "black"))))
