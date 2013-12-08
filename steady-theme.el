@@ -8,7 +8,7 @@
 (lexical-let ((gray   "gray70")
               (black  "#272727")
               (red    "#c7243a")
-              (orange "#edad0b")
+              (yellow "#edad0b")
               (green  "#839e19")
               (blue   "#006ea5")
               (purple "#744199"))
@@ -70,7 +70,7 @@
    `(font-lock-regexp-grouping-construct ((t (:weight bold))))
    `(font-lock-string-face ((t (:foreground ,purple))))
    `(font-lock-type-face ((t (:foreground ,blue))))
-   `(font-lock-variable-name-face ((t (:foreground ,orange))))
+   `(font-lock-variable-name-face ((t (:foreground ,yellow))))
    `(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
    ;; show-paren-mode
    `(show-paren-match-face ((t (:background nil :foreground "red"))))
