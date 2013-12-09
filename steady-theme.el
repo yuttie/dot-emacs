@@ -75,9 +75,9 @@
    ;; show-paren-mode
    `(show-paren-match-face ((t (:background nil :foreground "red"))))
    ;; auto-complete
-   `(ac-completion-face ((t (:foreground "gray" :underline nil))))
-   `(ac-candidate-face ((t (:background "gray20" :foreground "white"))))
-   `(ac-selection-face ((t (:background "gray25" :foreground "#ff9999"))))
+   `(ac-completion-face ((t (:foreground ,gray :underline nil))))
+   `(ac-candidate-face ((t (:background "gray90" :foreground "gray20"))))
+   `(ac-selection-face ((t (:background "#cbe6f3" :foreground "#007ab7" :weight bold))))
    ;; diff-mode
    `(diff-header ((t (:background "gray25" :foreground ,blue))))
    `(diff-file-header ((t (:background "gray25" :weight bold :inherit (diff-header)))))
