@@ -50,7 +50,7 @@
    `(isearch ((t (:background ,blue :foreground "black"))))
    `(query-replace ((t (:inherit (isearch)))))
    `(lazy-highlight ((t (:background "#ffaa33" :foreground "black"))))
-   `(region ((t (:background "gray90" :foreground unspecified))))
+   `(region ((t (:background "#f6d4d8" :foreground unspecified))))
    `(secondary-selection ((t (:background "#272822"))))
    `(trailing-whitespace ((((class color)) (:background "red")) (t (:inverse-video t))))
    `(escape-glyph ((t (:foreground "#5599ff"))))
