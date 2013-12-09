@@ -8,7 +8,7 @@
 (lexical-let ((gray   "gray70")
               (black  "#272727")
               (red    "#c7243a")
-              (yellow "#edad0b")
+              (yellow "#d59b0a")
               (green  "#839e19")
               (blue   "#006ea5")
               (purple "#744199"))
