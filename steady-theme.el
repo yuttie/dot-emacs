@@ -110,10 +110,10 @@
    `(ediff-even-diff-B ((t (:background "gray20" :foreground "white"))))
    `(ediff-even-diff-C ((t (:background "gray20" :foreground "white"))))
    ;; Helm
-   `(helm-source-header ((t (:background ,black :foreground ,blue :height 1.0))))
-   `(helm-header ((t (:background "#00aad4" :foreground "#004455"))))
-   `(helm-candidate-number ((t (:background ,blue :foreground "#004455"))))
-   `(helm-selection ((t (:background "gray25" :foreground "#ff9999" :underline nil))))
+   `(helm-source-header ((t (:background "gray90" :foreground "black" :height 1.0))))
+   `(helm-header ((t (:background "gray80" :foreground "black"))))
+   `(helm-candidate-number ((t (:background unspecified :foreground "gray50"))))
+   `(helm-selection ((t (:background "#cbe6f3" :foreground "#007ab7" :weight bold :underline nil))))
    ;; ElScreen
    `(elscreen-tab-background-face ((t (:background "gray80"))))
    `(elscreen-tab-control-face ((t (:background "white" :foreground "black" :underline "gray50"))))
