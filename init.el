@@ -326,6 +326,11 @@ removed from them after the first call."
 ;;; browse-url
 (setq browse-url-browser-function #'browse-url-firefox)
 
+;;; diff-mode
+(add-hook 'diff-mode-hook
+          (lambda ()
+            (diff-auto-refine-mode)))
+
 ;;; Ediff
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
