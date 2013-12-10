@@ -93,7 +93,7 @@
    `(diff-refine-added ((t (:background "#C0D860"))))
    `(diff-refine-change ((t (:background "#C0D860"))))
    ;; Magit
-   `(magit-item-highlight ((t (:background nil))))
+   `(magit-item-highlight ((t (:background "gray95"))))
    ;; Minimap
    `(minimap-active-region-background ((t (:background "gray30"))))
    ;; Ediff
