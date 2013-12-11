@@ -79,8 +79,8 @@
    `(ac-candidate-face ((t (:background "gray90" :foreground "gray20"))))
    `(ac-selection-face ((t (:background "#cbe6f3" :foreground "#007ab7" :weight bold))))
    ;; diff-mode
-   `(diff-header ((t (:background "gray90" :foreground ,blue))))
-   `(diff-file-header ((t (:background "gray90" :weight bold :inherit (diff-header)))))
+   `(diff-header ((t (:background "gray85" :foreground ,blue))))
+   `(diff-file-header ((t (:background "gray85" :weight bold :inherit (diff-header)))))
    `(diff-index ((t (:inherit (diff-file-header)))))
    `(diff-hunk-header ((t (:foreground ,purple :inherit (diff-header)))))
    `(diff-removed ((t (:background "#f6d4d8"))))
@@ -93,7 +93,7 @@
    `(diff-refine-added ((t (:background "#C0D860"))))
    `(diff-refine-change ((t (:background "#C0D860"))))
    ;; Magit
-   `(magit-item-highlight ((t (:background "gray95"))))
+   `(magit-item-highlight ((t (:background "gray95" :weight bold))))
    ;; Minimap
    `(minimap-active-region-background ((t (:background "gray30"))))
    ;; Ediff
