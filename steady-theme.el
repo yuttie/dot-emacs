@@ -21,6 +21,7 @@
    ;; Frame
    `(cursor ((t (:background ,red))))
    `(fringe ((t (:background "#e3e0c9" :foreground "#737266"))))
+   `(menu ((t (:background "gray50" :foreground "white" :inverse-video nil))))
    `(linum ((t (:inherit (fringe)))))
    `(mode-line ((t (:background "gray80" :foreground "gray10" :box nil :weight bold))))
    `(mode-line-inactive ((t (:background "gray20" :foreground "gray50" :box nil))))
