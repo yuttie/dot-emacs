@@ -73,6 +73,9 @@
    `(font-lock-type-face ((t (:foreground ,blue))))
    `(font-lock-variable-name-face ((t (:foreground ,yellow))))
    `(font-lock-warning-face ((t (:background "#ffff00" :foreground "#000000"))))
+   ;; completions
+   `(completions-common-part      ((t (:foreground "gray50"))))
+   `(completions-first-difference ((t (:foreground ,red))))
    ;; show-paren-mode
    `(show-paren-match-face ((t (:background nil :foreground "red"))))
    ;; auto-complete
