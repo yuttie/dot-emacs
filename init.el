@@ -144,6 +144,7 @@
     rainbow-mode
     ruby-mode
     session
+    steady-theme-emacs
     term+
     term+evil
     term+mode
