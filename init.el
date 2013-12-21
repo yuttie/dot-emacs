@@ -111,6 +111,7 @@
     ess
     evil
     evil-elscreen
+    evil-matchit
     evil-numbers
     evil-surround
     expand-region
