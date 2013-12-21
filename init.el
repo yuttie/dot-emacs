@@ -92,6 +92,12 @@
 (add-to-list 'el-get-sources
              '(:name popup
                      :submodule nil))
+(add-to-list 'el-get-sources
+             '(:name steady-theme-emacs
+                     :website "https://github.com/yuttie/steady-theme-emacs"
+                     :description "A steady theme for Emacs"
+                     :type github
+                     :pkgname "yuttie/steady-theme-emacs"))
 
 (defconst my-packages
   '(ace-jump-mode
