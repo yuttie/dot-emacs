@@ -42,6 +42,13 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
+             '(:name evil-matchit
+                     :website "https://github.com/redguardtoo/evil-matchit"
+                     :description "Vim matchit ported into Emacs"
+                     :type github
+                     :pkgname "redguardtoo/evil-matchit"
+                     :depends (evil)))
+(add-to-list 'el-get-sources
              '(:name f
                      :depends (s dash)))
 (add-to-list 'el-get-sources
