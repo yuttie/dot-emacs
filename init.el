@@ -97,7 +97,8 @@
                      :website "https://github.com/yuttie/steady-theme-emacs"
                      :description "A steady theme for Emacs"
                      :type github
-                     :pkgname "yuttie/steady-theme-emacs"))
+                     :pkgname "yuttie/steady-theme-emacs"
+                     :post-init (add-to-list 'custom-theme-load-path default-directory)))
 
 (defconst my-packages
   '(ace-jump-mode
