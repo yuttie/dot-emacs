@@ -43,8 +43,8 @@
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
              '(:name evil-matchit
-                     :website "https://github.com/redguardtoo/evil-matchit"
                      :description "Vim matchit ported into Emacs"
+                     :website "https://github.com/redguardtoo/evil-matchit"
                      :type github
                      :pkgname "redguardtoo/evil-matchit"
                      :depends (evil)))
@@ -63,15 +63,15 @@
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
              '(:name git-gutter+
-                     :website "https://github.com/nonsequitur/git-gutter-plus"
                      :description "Manage Git hunks straight from the buffer"
+                     :website "https://github.com/nonsequitur/git-gutter-plus"
                      :type github
                      :pkgname "nonsequitur/git-gutter-plus"
                      :depends (git-modes)))
 (add-to-list 'el-get-sources
              '(:name git-gutter-fringe+
-                     :website "https://github.com/nonsequitur/git-gutter-fringe-plus"
                      :description "Fringe version of git-gutter+.el"
+                     :website "https://github.com/nonsequitur/git-gutter-fringe-plus"
                      :type github
                      :pkgname "nonsequitur/git-gutter-fringe-plus"
                      :depends (git-gutter+ fringe-helper)))
@@ -94,8 +94,8 @@
                      :submodule nil))
 (add-to-list 'el-get-sources
              '(:name steady-theme-emacs
-                     :website "https://github.com/yuttie/steady-theme-emacs"
                      :description "A steady theme for Emacs"
+                     :website "https://github.com/yuttie/steady-theme-emacs"
                      :type github
                      :pkgname "yuttie/steady-theme-emacs"
                      :post-init (add-to-list 'custom-theme-load-path default-directory)))
