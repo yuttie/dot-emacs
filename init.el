@@ -103,6 +103,7 @@
 (defconst my-packages
   '(ace-jump-mode
     ac-math
+    ag
     auctex
     auto-complete
     auto-complete-clang
