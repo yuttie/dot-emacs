@@ -313,6 +313,7 @@ removed from them after the first call."
 
      (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.L.cdb")
      (setq skk-show-annotation t)
+     (setq skk-show-inline 'vertical)
      (setq skk-use-act t)
 
      (setq skk-rom-kana-rule-list
