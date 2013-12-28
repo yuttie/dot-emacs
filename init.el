@@ -12,6 +12,18 @@
 ;; (log-exec-time-of load file)
 ;; (log-exec-time-of require feature)
 ;; (log-exec-time-of el-get-load-package-user-init-file package)
+(defmacro log-start-end-time-of (fn arg)
+  `(defadvice ,fn (around ,(intern (concat "log-start-end-time-of-" (symbol-name fn))) activate compile)
+     (message "log-start-end-time-of: start: %s %s %f" (symbol-name ',fn) ,arg (float-time))
+     ad-do-it
+     (message "log-start-end-time-of: end: %s %s %f" (symbol-name ',fn) ,arg (float-time))))
+;; (log-start-end-time-of load file)
+;; (log-start-end-time-of require feature)
+;; (log-start-end-time-of el-get-load-package-user-init-file package)
+;; (add-hook 'after-init-hook
+;;           (lambda ()
+;;             (message "before-init-time: %f" (float-time before-init-time))
+;;             (message "after-init-time: %f" (float-time after-init-time))))
 
 ;;; El-Get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
