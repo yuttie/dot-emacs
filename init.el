@@ -1,6 +1,18 @@
 ;;; -*- lexical-binding: t -*-
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+;;; Measure the execution time of functions
+(defmacro log-exec-time-of (fn arg)
+  `(defadvice ,fn (around ,(intern (concat "log-exec-time-of-" (symbol-name fn))) activate compile)
+     (let ((start-time (current-time)))
+       ad-do-it
+       (let* ((end-time (current-time))
+              (elapsed-time (float-time (subtract-time end-time start-time))))
+         (message "log-exec-time-of: %s %s %f" (symbol-name ',fn) ,arg elapsed-time)))))
+;; (log-exec-time-of load file)
+;; (log-exec-time-of require feature)
+;; (log-exec-time-of el-get-load-package-user-init-file package)
+
 ;;; El-Get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq el-get-user-package-directory "~/.emacs.d/packages.d/")
