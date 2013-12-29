@@ -177,6 +177,7 @@
     powerline
     rainbow-mode
     ruby-mode
+    search-web
     session
     steady-theme-emacs
     term+
