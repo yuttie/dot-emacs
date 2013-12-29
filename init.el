@@ -118,6 +118,13 @@
              '(:name popup
                      :submodule nil))
 (add-to-list 'el-get-sources
+             '(:name search-web
+                     :description "Post web search queries using `browse-url'"
+                     :website "https://github.com/tomoya/search-web.el"
+                     :type github
+                     :pkgname "tomoya/search-web.el"
+                     :features search-web))
+(add-to-list 'el-get-sources
              '(:name steady-theme-emacs
                      :description "A steady theme for Emacs"
                      :website "https://github.com/yuttie/steady-theme-emacs"
