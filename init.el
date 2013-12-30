@@ -2,6 +2,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;;; Measure the execution time of functions
+;; (require 'initchart)
 ;; (record-execution-time-of load file)
 ;; (record-execution-time-of require feature)
 ;; (record-execution-time-of el-get-load-package-user-init-file package)
