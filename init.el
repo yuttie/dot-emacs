@@ -2,58 +2,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;;; Measure the execution time of functions
-(defmacro record-execution-time-of (fn arg)
-  `(defadvice ,fn (around ,(intern (concat "record-execution-time-of-" (symbol-name fn))) activate compile)
-     (let ((start-time (current-time)))
-       ad-do-it
-       (let ((end-time (current-time)))
-         (message "exec-time: %s(%s) %f %f" (symbol-name ',fn) ,arg (float-time start-time) (float-time end-time))))))
-(defun visualize-init-sequence ()
-  ""
-  (interactive)
-  (flet ((parse (line)
-                (and (string-match "^exec-time: \\([^ ]+\\) \\([^ ]+\\) \\([^ ]+\\)$" line)
-                     `(,(match-string 1 line)
-                       ,(string-to-number (match-string 2 line))
-                       ,(string-to-number (match-string 3 line)))))
-         (log< (x y) (< (cadr x) (cadr y)))
-         (render (logs)
-                 (let* ((times (mapcar #'cadr logs))
-                        (time-min (apply #'min times))
-                        (time-max (apply #'max times))
-                        (offset time-min)
-                        (scale (/ 2000 (- time-max time-min)))
-                        (y 0)
-                        )
-                   (flet ((render-log (log)
-                                      (let* ((name (car log))
-                                             (start-time (cadr log))
-                                             (end-time (caddr log))
-                                             (str (format "<g><rect x=\"%fpx\" y=\"%fem\" width=\"%f\" height=\"1.1em\" fill=\"silver\"></rect><text x=\"%fpx\" y=\"%fem\">%s</text></g>"
-                                                          (* scale (- start-time offset))
-                                                          y
-                                                          (* scale (- end-time start-time))
-                                                          (* scale (- start-time offset))
-                                                          (+ y 1.0)
-                                                          name)))
-                                        (incf y 1.1)
-                                        str)))
-                     (mapconcat #'identity
-                                `(,(format "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" baseProfile=\"full\" width=\"%fpx\" height=\"%fem\">"
-                                           2000
-                                           (* 1.1 (length logs)))
-                                  ,@(mapcar #'render-log logs)
-                                  "</svg>")
-                                "\n")))))
-    (set-buffer "*Messages*")
-    (let* ((lines (split-string (buffer-substring-no-properties (point-min) (point-max)) "\n" t))
-           (logs (delq nil (mapcar #'parse lines)))
-           (sorted-logs (sort logs #'log<))
-           (fp (read-file-name "SVG filename:")))
-      (with-temp-buffer
-        (insert (render sorted-logs))
-        (when (file-writable-p fp)
-          (write-region (point-min) (point-max) fp))))))
 ;; (record-execution-time-of load file)
 ;; (record-execution-time-of require feature)
 ;; (record-execution-time-of el-get-load-package-user-init-file package)
