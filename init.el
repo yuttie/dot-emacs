@@ -39,9 +39,9 @@
                                         (incf y 1.1)
                                         str)))
                      (mapconcat #'identity
-                                `("<svg version=\"1.1\"
-                                        baseProfile=\"full\"
-                                        xmlns=\"http://www.w3.org/2000/svg\">"
+                                `(,(format "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" baseProfile=\"full\" width=\"%fpx\" height=\"%fem\">"
+                                           2000
+                                           (* 1.1 (length logs)))
                                   ,@(mapcar #'render-log logs)
                                   "</svg>")
                                 "\n")))))
