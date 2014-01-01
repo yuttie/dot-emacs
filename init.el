@@ -128,6 +128,7 @@
     ag
     auctex
     auto-complete
+    auto-complete-auctex
     auto-complete-clang
     calfw
     c-eldoc
