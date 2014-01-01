@@ -3,12 +3,9 @@
 
 ;;; Measure the execution time of functions
 ;; (require 'initchart)
-;; (record-execution-time-of load file)
-;; (record-execution-time-of require feature)
-;; (record-execution-time-of el-get-load-package-user-init-file package)
-;; (add-hook 'after-init-hook
-;;           (lambda ()
-;;             (message "exec-time: init %f %f" (float-time before-init-time) (float-time after-init-time))))
+;; (initchart-record-execution-time-of load file)
+;; (initchart-record-execution-time-of require feature)
+;; (initchart-record-execution-time-of el-get-load-package-user-init-file package)
 
 ;;; El-Get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
