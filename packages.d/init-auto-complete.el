@@ -8,6 +8,7 @@
 (ac-flyspell-workaround)
 
 (add-to-list 'ac-modes 'text-mode)
+(add-to-list 'ac-modes 'latex-mode)
 
 (setq ac-auto-start t)
 (setq ac-auto-show-menu t)
