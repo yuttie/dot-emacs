@@ -349,19 +349,22 @@ removed from them after the first call."
 
      ;; 送り仮名の厳密なマッチ
      (setq skk-henkan-okuri-strictly t)
+     (setq skk-process-okuri-early nil)
      (add-hook 'minibuffer-setup-hook
                (lambda ()
-                 (when (and (boundp 'skk-henkan-okuri-strictly)
-                            skk-henkan-okuri-strictly
-                            (not (eq last-command 'skk-purge-jisyo)))
-                   (setq skk-henkan-okuri-strictly nil)
-                   (put 'skk-henkan-okuri-strictly 'temporary-nil t))))
+                 (if (and (boundp 'skk-henkan-okuri-strictly)
+                          skk-henkan-okuri-strictly
+                          (not (eq last-command 'skk-purge-from-jisyo)))
+                     (progn
+                       (setq skk-henkan-okuri-strictly nil)
+                       (put 'skk-henkan-okuri-strictly 'temporary-nil t)))))
      (add-hook 'minibuffer-exit-hook
                (lambda ()
-                 (when (and (get 'skk-henkan-okuri-strictly 'temporary-nil)
-                            (<= (minibuffer-depth) 1))
-                   (put 'skk-henkan-okuri-strictly 'temporary-nil nil)
-                   (setq skk-henkan-okuri-strictly t))))
+                 (if (and (get 'skk-henkan-okuri-strictly 'temporary-nil)
+                          (<= (minibuffer-depth) 1))
+                     (progn
+                       (put 'skk-henkan-okuri-strictly 'temporary-nil nil)
+                       (setq skk-henkan-okuri-strictly t)))))
 
      (global-set-key (kbd "C-x C-j") #'skk-mode)
      (global-set-key (kbd "C-x j") #'skk-auto-fill-mode)
