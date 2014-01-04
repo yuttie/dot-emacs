@@ -10,8 +10,10 @@
 %\usepackage{luatexja}  % for LuaLaTeX without the ltjsarticle class
 \usepackage{latexsym}
 \usepackage{amssymb,amsmath}
-\usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{graphicx}
+%\usepackage[dvipdfmx]{xcolor}    % for use with dvipdfmx
+%\usepackage[dvipdfmx]{graphicx}  % for use with dvipdfmx
 %\usepackage{longtable}  % must be ahead of hyperref (http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?hyperref#sf5e3f3f)
 %\usepackage[dvipdfmx]{hyperref}
 %\usepackage{pxjahyper}  % for pLaTeX + hyperref + dvipdfmx
