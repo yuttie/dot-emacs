@@ -28,8 +28,7 @@
                      :website "https://github.com/monsanto/auto-complete-auctex"
                      :type github
                      :pkgname "monsanto/auto-complete-auctex"
-                     :depends (auctex auto-complete yasnippet)
-                     :features auto-complete-auctex))
+                     :depends (auctex auto-complete yasnippet)))
 (add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
