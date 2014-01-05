@@ -94,6 +94,9 @@
              '(:name haskell-mode
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
+             '(:name html5
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
