@@ -405,7 +405,7 @@ removed from them after the first call."
 
 ;;; CC Mode
 (setq-default c-basic-offset 4)
-(add-to-list 'c-default-style '(other . "linux"))
+(setq c-default-style '((java-mode . "java") (awk-mode . "awk") (other . "linux")))
 
 ;;; C++ Mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
