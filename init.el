@@ -1,10 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
-;;; Measure the execution time of functions
-;; (require 'initchart)
-;; (initchart-record-execution-time-of load file)
-;; (initchart-record-execution-time-of require feature)
-;; (initchart-record-execution-time-of el-get-load-package-user-init-file package)
+;;; Measure the execution time of those functions
+(require 'initchart)
+(initchart-record-execution-time-of load file)
+(initchart-record-execution-time-of require feature)
+(initchart-record-execution-time-of el-get-load-package-user-init-file package)
 
 ;;; El-Get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
