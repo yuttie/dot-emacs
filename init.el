@@ -19,6 +19,9 @@
       (eval-print-last-sexp))))
 
 (add-to-list 'el-get-sources
+             '(:name ace-jump-mode
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name auto-complete
                      :submodule nil))
 (add-to-list 'el-get-sources
