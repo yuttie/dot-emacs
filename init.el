@@ -153,7 +153,7 @@
     ebuild-mode
     edit-server
     elscreen
-    ;emacs-jabber  ; 2014-01-05: This cannot be built at this time
+    emacs-jabber
     emmet-mode
     ess
     evil
