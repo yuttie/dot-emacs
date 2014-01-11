@@ -106,6 +106,9 @@
              '(:name multi-mode-util
                     :pkgname "tarao/multi-mode-util"))
 (add-to-list 'el-get-sources
+             '(:name multiple-cursors
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name popup
                      :submodule nil))
 (add-to-list 'el-get-sources
