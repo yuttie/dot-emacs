@@ -1,10 +1,10 @@
 ;;; Helm
-(fmakunbound 'completing-read)
-(fmakunbound 'read-file-name)
-(autoload 'completing-read "helm"
-  "Read a string in the minibuffer, with completion.")
-(autoload 'read-file-name "helm"
-  "Read file name, prompting with PROMPT and completing in directory DIR.")
+(setq completing-read-function 'helm-completing-read-default
+      read-file-name-function  'helm-generic-read-file-name)
+(autoload 'helm-completing-read-default "helm"
+  "An helm replacement of `completing-read'.")
+(autoload 'helm-generic-read-file-name "helm"
+  "An helm replacement of `read-file-name'.")
 
 (eval-after-load 'helm
   '(progn
