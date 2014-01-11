@@ -62,6 +62,9 @@
                      :pkgname "redguardtoo/evil-matchit"
                      :depends (evil)))
 (add-to-list 'el-get-sources
+             '(:name expand-region
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name f
                      :depends (s dash)))
 (add-to-list 'el-get-sources
