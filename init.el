@@ -122,6 +122,9 @@
                      :type github
                      :pkgname "yuttie/steady-theme-emacs"
                      :post-init (add-to-list 'custom-theme-load-path default-directory)))
+(add-to-list 'el-get-sources
+             '(:name twittering-mode
+                     :features nil))
 
 (defconst my-packages
   '(ace-jump-mode
