@@ -51,6 +51,9 @@
                      :type github
                      :pkgname "shosti/elscreen"))
 (add-to-list 'el-get-sources
+             '(:name ess
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name evil
                      :before (setq evil-search-module 'evil-search)))
 (add-to-list 'el-get-sources
