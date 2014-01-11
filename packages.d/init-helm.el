@@ -2,9 +2,9 @@
 (fmakunbound 'completing-read)
 (fmakunbound 'read-file-name)
 (autoload 'completing-read "helm"
-  "Read a string in the minibuffer, with completion." t)
+  "Read a string in the minibuffer, with completion.")
 (autoload 'read-file-name "helm"
-  "Read file name, prompting with PROMPT and completing in directory DIR." t)
+  "Read file name, prompting with PROMPT and completing in directory DIR.")
 
 (eval-after-load 'helm
   '(progn
