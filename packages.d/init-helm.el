@@ -1,11 +1,20 @@
 ;;; Helm
-(helm-mode 1)
-(setq helm-input-idle-delay 0)
-(define-key helm-map (kbd "C-h") (kbd "DEL"))
-(define-key helm-map (kbd "C-p") #'helm-previous-line)
-(define-key helm-map (kbd "C-n") #'helm-next-line)
-(define-key helm-map (kbd "C-M-p") #'helm-previous-source)
-(define-key helm-map (kbd "C-M-n") #'helm-next-source)
+(fmakunbound 'completing-read)
+(fmakunbound 'read-file-name)
+(autoload 'completing-read "helm"
+  "Read a string in the minibuffer, with completion." t)
+(autoload 'read-file-name "helm"
+  "Read file name, prompting with PROMPT and completing in directory DIR." t)
+
+(eval-after-load 'helm
+  '(progn
+     (helm-mode 1)
+     (setq helm-input-idle-delay 0)
+     (define-key helm-map (kbd "C-h") (kbd "DEL"))
+     (define-key helm-map (kbd "C-p") #'helm-previous-line)
+     (define-key helm-map (kbd "C-n") #'helm-next-line)
+     (define-key helm-map (kbd "C-M-p") #'helm-previous-source)
+     (define-key helm-map (kbd "C-M-n") #'helm-next-source)))
 
 (global-set-key (kbd "M-x") #'helm-M-x)
 
