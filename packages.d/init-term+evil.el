@@ -1,3 +1,6 @@
 (eval-after-load 'evil
-  '(progn (require 'term+evil)
-          (when (featurep 'term+mode) (require 'multi-mode+evil))))
+  '(eval-after-load 'term+
+     '(progn
+        (require 'term+evil)
+        (eval-after-load 'term+mode
+          '(require 'multi-mode+evil)))))
