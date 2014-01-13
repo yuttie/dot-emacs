@@ -81,6 +81,14 @@
                      :pkgname "flycheck/flycheck-d-unittest"
                      :depends (flycheck dash)))
 (add-to-list 'el-get-sources
+             '(:name flycheck-haskell
+                     :description "Improved Haskell support for Flycheck"
+                     :website "https://github.com/flycheck/flycheck-haskell"
+                     :type github
+                     :pkgname "flycheck/flycheck-haskell"
+                     :depends (flycheck haskell-mode dash f)
+                     :post-init (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup)))
+(add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
