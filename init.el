@@ -87,7 +87,7 @@
                      :type github
                      :pkgname "flycheck/flycheck-haskell"
                      :depends (flycheck haskell-mode dash f)
-                     :post-init (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup)))
+                     :post-init (eval-after-load 'flycheck '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))))
 (add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
