@@ -1,11 +1,4 @@
 (add-hook 'haskell-mode-hook
           (lambda ()
             (ghc-init)
-            (flycheck-mode -1)
-            (flymake-mode)
-            (setq help-at-pt-timer-delay 0)
-            (setq help-at-pt-display-when-idle '(flymake-overlay))
-            (help-at-pt-set-timer)
-            (define-key haskell-mode-map (kbd "M-n") #'flymake-goto-next-error)
-            (define-key haskell-mode-map (kbd "M-p") #'flymake-goto-prev-error)
             (add-to-list 'ac-sources 'ac-source-ghc-mod)))
