@@ -49,6 +49,7 @@
 
 (global-set-key (kbd "M-s e") (make-search-command "英辞郎 on the WEB"))
 (global-set-key (kbd "M-s g") (make-search-command "Google"))
+(global-set-key (kbd "M-s h") (make-search-command "Hoogle"))
 (global-set-key (kbd "M-s m") (make-search-command "Mozilla Developer Network"))
 (global-set-key (kbd "M-s w") (make-search-command "Wikipedia (en)"))
 
@@ -56,5 +57,6 @@
   '(progn
      (define-key evil-normal-state-map (kbd "g s e") (make-search-command "英辞郎 on the WEB"))
      (define-key evil-normal-state-map (kbd "g s g") (make-search-command "Google"))
+     (define-key evil-normal-state-map (kbd "g s h") (make-search-command "Hoogle"))
      (define-key evil-normal-state-map (kbd "g s m") (make-search-command "Mozilla Developer Network"))
      (define-key evil-normal-state-map (kbd "g s w") (make-search-command "Wikipedia (en)"))))
