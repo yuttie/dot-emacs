@@ -1,4 +1,4 @@
-;;; Helm
+;;; Autoloads
 (setq completing-read-function 'helm-completing-read-default
       read-file-name-function  'helm-generic-read-file-name)
 (autoload 'helm-completing-read-default "helm"
@@ -6,13 +6,17 @@
 (autoload 'helm-generic-read-file-name "helm"
   "An helm replacement of `read-file-name'.")
 
+;;; Variables
+(setq helm-input-idle-delay 0)
+(setq helm-ff-auto-update-initial-value nil)  ; Disable automatic selection when only one candidate directory is matched.
+
+;;; Key bindings
 (eval-after-load 'helm
   '(progn
-     (helm-mode 1)
-     (setq helm-input-idle-delay 0)
-     (define-key helm-map (kbd "C-h") (kbd "DEL"))
-     (define-key helm-map (kbd "C-p") #'helm-previous-line)
-     (define-key helm-map (kbd "C-n") #'helm-next-line)
+     (helm-mode)
+     (define-key helm-map (kbd "C-h")   (kbd "DEL"))
+     (define-key helm-map (kbd "C-p")   #'helm-previous-line)
+     (define-key helm-map (kbd "C-n")   #'helm-next-line)
      (define-key helm-map (kbd "C-M-p") #'helm-previous-source)
      (define-key helm-map (kbd "C-M-n") #'helm-next-source)))
 
@@ -34,6 +38,3 @@
 (global-set-key (kbd "C-c C-h t") #'helm-top)
 (global-set-key (kbd "C-c M-s o") #'helm-occur)
 (global-set-key (kbd "C-c p")     #'helm-show-kill-ring)
-
-;; Disable automatic selection when only one candidate directory is matched.
-(setq helm-ff-auto-update-initial-value nil)
