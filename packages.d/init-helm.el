@@ -9,6 +9,13 @@
 ;;; Variables
 (setq helm-input-idle-delay 0)
 (setq helm-ff-auto-update-initial-value nil)  ; Disable automatic selection when only one candidate directory is matched.
+(setq helm-for-files-preferred-list
+      '(helm-source-buffers-list
+        helm-source-files-in-current-dir
+        helm-source-recentf
+        helm-source-bookmarks
+        helm-source-file-cache
+        helm-source-locate))
 
 ;;; Key bindings
 (eval-after-load 'helm
