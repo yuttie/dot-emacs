@@ -38,14 +38,6 @@
                      :type github
                      :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"))
 (add-to-list 'el-get-sources
-             '(:name ebuild-mode
-                     :description "Edit Gentoo ebuild and eclass files"
-                     :website "http://wiki.gentoo.org/wiki/Project:Emacs"
-                     :type git
-                     :branch "ebuild-mode"
-                     :url "git://git.overlays.gentoo.org/proj/emacs-tools.git"
-                     :build (("make" "ebuild-mode.info"))))
-(add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
                      :type github
@@ -158,7 +150,6 @@
     c-eldoc
     deferred
     d-mode
-    ebuild-mode
     edit-server
     elscreen
     emacs-jabber
