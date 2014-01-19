@@ -1,5 +1,6 @@
-;;; Evil
 (evil-mode 1)
+
+;;; variables
 (setq evil-default-cursor t)
 (setq evil-search-wrap nil)
 (define-key evil-insert-state-map (kbd "C-e") #'move-end-of-line)
