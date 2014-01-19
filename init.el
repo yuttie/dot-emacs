@@ -108,7 +108,7 @@
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
                      :type github
-                     :pkgname "kiwanami/emacs-inertial-scroll"
+                     :pkgname "yuttie/emacs-inertial-scroll"
                      :features inertial-scroll
                      :depends (deferred)))
 (add-to-list 'el-get-sources
