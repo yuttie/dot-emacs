@@ -3,6 +3,16 @@
 ;;; variables
 (setq evil-default-cursor t)
 (setq evil-search-wrap nil)
+
+;;; key bindings
+(defun evil-escape-or-quit (&optional prompt)
+  (interactive)
+  (cond
+   ((or (evil-normal-state-p) (evil-insert-state-p) (evil-visual-state-p) (evil-replace-state-p))
+    [escape])
+   (t (kbd "C-g"))))
+(define-key key-translation-map (kbd "C-g") #'evil-escape-or-quit)
+
 (define-key evil-insert-state-map (kbd "C-e") #'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-h") (kbd "DEL"))
 (define-key evil-replace-state-map (kbd "C-h") (kbd "DEL"))
