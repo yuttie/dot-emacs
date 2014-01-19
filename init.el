@@ -135,6 +135,12 @@
                      :pkgname "yuttie/steady-theme-emacs"
                      :post-init (add-to-list 'custom-theme-load-path default-directory)))
 (add-to-list 'el-get-sources
+             '(:name structured-haskell-mode
+                     :description "Structured editing minor mode for Haskell in Emacs"
+                     :website "https://github.com/chrisdone/structured-haskell-mode"
+                     :type github
+                     :pkgname "chrisdone/structured-haskell-mode"))
+(add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
 
