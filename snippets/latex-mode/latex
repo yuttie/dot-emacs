@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 %\usepackage[dvipdfmx]{xcolor}    % for use with dvipdfmx
 %\usepackage[dvipdfmx]{graphicx}  % for use with dvipdfmx
+%\usepackage{booktabs}
 %\usepackage{longtable}  % must be ahead of hyperref (http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?hyperref#sf5e3f3f)
 %\usepackage{caption}
 %\usepackage{subcaption}
