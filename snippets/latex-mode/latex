@@ -20,6 +20,7 @@
 %\usepackage[dvipdfmx]{hyperref}
 %\usepackage{pxjahyper}  % for pLaTeX + hyperref + dvipdfmx
 %\usepackage[pdftex,pdfencoding=auto]{hyperref}  % for LuaLaTeX
+%\usepackage{rotating}   % for making a float sideways
 %\usepackage{algorithm}  % must be behind hyperref
 %\usepackage{listings}
 %\usepackage{fancybox}
