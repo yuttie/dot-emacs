@@ -8,6 +8,7 @@
 (defun evil-escape-or-quit (&optional prompt)
   (interactive)
   (cond
+   ((and (boundp 'skk-henkan-mode) skk-henkan-mode) (kbd "C-g"))
    ((or (evil-normal-state-p) (evil-insert-state-p) (evil-visual-state-p) (evil-replace-state-p))
     [escape])
    (t (kbd "C-g"))))
