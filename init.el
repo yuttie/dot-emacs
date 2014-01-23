@@ -1,3 +1,8 @@
+;;; Startup
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+
+;;; load-path
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;;; Measure the execution time of those functions
@@ -222,7 +227,6 @@
 (setq truncate-partial-width-windows nil)
 
 ;;; UI
-(setq inhibit-splash-screen t)
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
