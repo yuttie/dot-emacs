@@ -438,23 +438,3 @@ removed from them after the first call."
 
 ;;; nXML Mode
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . nxml-mode))
-
-;;; Auto Insert Mode
-(require 'autoinsert)
-(auto-insert-mode)
-(define-auto-insert
-  (cons "\\.\\([Hh]\\|hh\\|hpp\\)\\'" "My C / C++ header")
-  '(nil
-    (let* ((noext (substring buffer-file-name 0 (match-beginning 0)))
-           (nopath (file-name-nondirectory noext))
-           (ident (concat (upcase nopath) "_H")))
-      (concat "#ifndef " ident "\n"
-              "#define " ident  "\n"
-              "\n"
-              "\n"
-              "namespace yuta {\n"
-              "}  // namespace yuta\n"
-              "\n"
-              "\n"
-              "#endif  /* " ident " */\n"))
-    ))
