@@ -271,15 +271,15 @@ removed from them after the first call."
              (base-font    (format "%s-%d:weight=normal:slant=normal" base size))
              (ja-font      (font-spec :family ja))
              (fsn          (concat "fontset-" fontset-name))
-             (elt          (list (cons 'font fsn))))
+             (elt          `(font . ,fsn)))
         ;; create font
         (create-fontset-from-ascii-font base-font nil fontset-name)
         (set-fontset-font fsn 'unicode ja-font nil 'append)
         (add-to-list 'face-font-rescale-alist (cons ja-pat scale))
         ;; default
         (set-frame-font fsn nil t)
-        (setq initial-frame-alist (append elt initial-frame-alist)
-              default-frame-alist (append elt default-frame-alist))
+        (add-to-list 'initial-frame-alist elt)
+        (add-to-list 'default-frame-alist elt)
         ;; current frame
         (set-frame-parameter (selected-frame) 'font fsn)
         ;; call once
