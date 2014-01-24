@@ -8,6 +8,7 @@
 
 ;;; Variables
 (setq helm-input-idle-delay 0)
+(setq helm-delete-minibuffer-contents-from-point t)
 (setq helm-ff-auto-update-initial-value nil)  ; Disable automatic selection when only one candidate directory is matched.
 (setq helm-for-files-preferred-list
       '(helm-source-buffers-list
