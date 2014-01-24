@@ -2,6 +2,13 @@
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
 
+;;; Frame
+(set-scroll-bar-mode 'right)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(add-to-list 'initial-frame-alist '(menu-bar-lines . 0))
+(add-to-list 'initial-frame-alist '(tool-bar-lines . 0))
+
 ;;; load-path
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
@@ -240,7 +247,13 @@
 (swap-C-x-and-C-t (selected-frame))
 (add-hook 'after-make-frame-functions #'swap-C-x-and-C-t)
 
-;;; GUI
+;;; GUI (except for appearance)
+(setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
+(add-to-list 'default-frame-alist '(width . 84))
+(global-set-key (kbd "<C-mouse-4>") #'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") #'text-scale-decrease)
+
+;;; Font
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
 (defconst default-fontset-name "myfonts")
 (defconst default-base-font-name "monospace")
@@ -293,13 +306,6 @@ removed from them after the first call."
       (setup-window-system-configuration)
     (add-hook 'after-init-hook #'setup-window-system-configuration)))
 (add-hook 'after-make-frame-functions #'setup-window-system-configuration)
-
-(tool-bar-mode -1)
-(set-scroll-bar-mode 'right)
-(setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
-(add-to-list 'default-frame-alist '(width . 84))
-(global-set-key (kbd "<C-mouse-4>") #'text-scale-increase)
-(global-set-key (kbd "<C-mouse-5>") #'text-scale-decrease)
 
 ;;; language
 (set-language-environment "Japanese")
