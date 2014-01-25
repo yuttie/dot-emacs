@@ -1,4 +1,4 @@
-(evil-mode 1)
+(evil-mode)
 
 ;;; variables
 (setq evil-default-cursor t)
