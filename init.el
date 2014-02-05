@@ -365,7 +365,7 @@ removed from them after the first call."
   '(progn
      (require 'skk-study)
 
-     (setq default-input-method "japanese-skk-auto-fill")
+     (setq default-input-method "japanese-skk")
 
      (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.L.cdb")
      (setq skk-show-annotation t)
@@ -399,8 +399,8 @@ removed from them after the first call."
                        (put 'skk-henkan-okuri-strictly 'temporary-nil nil)
                        (setq skk-henkan-okuri-strictly t)))))
 
-     (global-set-key (kbd "C-x C-j") #'skk-mode)
-     (global-set-key (kbd "C-x j") #'skk-auto-fill-mode)
+     (global-set-key (kbd "C-x C-j") #'skk-auto-fill-mode)
+     (global-set-key (kbd "C-x j") #'skk-mode)
      (global-set-key (kbd "C-x t") #'skk-tutorial)))
 
 ;;; Tramp
