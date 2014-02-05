@@ -18,6 +18,8 @@
 (define-key evil-replace-state-map (kbd "C-h") (kbd "DEL"))
 (define-key evil-ex-completion-map (kbd "C-h") (kbd "DEL"))
 
+(define-key evil-normal-state-map (kbd "g u") #'browse-url-at-point)
+
 ;;; fold
 (define-key evil-normal-state-map "zo" #'evil-open-fold)
 (define-key evil-normal-state-map "zO" #'evil-open-folds-at-point)
