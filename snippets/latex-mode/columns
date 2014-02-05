@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: columns
+# key: columns
+# --
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{0.5\textwidth}
+    $1
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    $2
+  \end{column}
+\end{columns}
