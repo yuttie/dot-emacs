@@ -5,17 +5,18 @@
 (defconst ac-clang-precompiled-header "~/.precompile.h.pch")
 (eval-after-load 'auto-complete-clang
   '(progn
-     (when (and (not (file-exists-p ac-clang-precompiled-header))
-                (file-exists-p (file-name-sans-extension ac-clang-precompiled-header))
-                ac-clang-executable)
-       (message "Creating the precompiled header...")
-       (call-process ac-clang-executable nil nil nil
-                     "-x" "c++-header"
-                     "-std=c++11"
-                     (file-name-sans-extension (expand-file-name ac-clang-precompiled-header))
-                     "-o" (expand-file-name ac-clang-precompiled-header)))
-     (when (file-exists-p ac-clang-precompiled-header)
-       (setq ac-clang-prefix-header ac-clang-precompiled-header))))
+     (let* ((pch (expand-file-name ac-clang-precompiled-header))
+            (src (file-name-sans-extension pch)))
+       (when (and ac-clang-executable
+                  (file-exists-p src)
+                  (or (not (file-exists-p pch))
+                      (> (float-time (nth 5 (file-attributes src)))
+                         (float-time (nth 5 (file-attributes pch))))))
+         (message "Creating the precompiled header...")
+         (call-process ac-clang-executable nil nil nil
+                       "-x" "c++-header" "-std=c++11" src "-o" pch))
+       (when (file-exists-p pch)
+         (setq ac-clang-prefix-header pch)))))
 
 (add-hook 'c-mode-common-hook
           (lambda ()
