@@ -3,18 +3,26 @@
 
 ;; Precompiled header
 (defconst ac-clang-precompiled-header "~/.precompile.h.pch")
+(defun ac-clang-compile-header ()
+  ""
+  (interactive)
+  (let* ((pch (expand-file-name ac-clang-precompiled-header))
+         (src (file-name-sans-extension pch)))
+    (when (and ac-clang-executable
+               (file-exists-p src))
+      (message "Compiling the header...")
+      (call-process ac-clang-executable nil nil nil
+                    "-x" "c++-header" "-std=c++11" src "-o" pch)
+      (message "Header compiled"))))
 (eval-after-load 'auto-complete-clang
   '(progn
      (let* ((pch (expand-file-name ac-clang-precompiled-header))
             (src (file-name-sans-extension pch)))
-       (when (and ac-clang-executable
-                  (file-exists-p src)
+       (when (and (file-exists-p src)
                   (or (not (file-exists-p pch))
                       (> (float-time (nth 5 (file-attributes src)))
                          (float-time (nth 5 (file-attributes pch))))))
-         (message "Creating the precompiled header...")
-         (call-process ac-clang-executable nil nil nil
-                       "-x" "c++-header" "-std=c++11" src "-o" pch))
+         (ac-clang-compile-header))
        (when (file-exists-p pch)
          (setq ac-clang-prefix-header pch)))))
 
