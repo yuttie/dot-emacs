@@ -2,9 +2,20 @@
 (make-variable-buffer-local 'ac-clang-flags)
 
 ;; Precompiled header
-;; Use the following command line to generate it:
-;;   clang -x c++-header -std=c++11 ~/.precompile.h -o ~/.precompile.h.pch
-(setq ac-clang-prefix-header "~/.precompile.h.pch")
+(defconst ac-clang-precompiled-header "~/.precompile.h.pch")
+(eval-after-load 'auto-complete-clang
+  '(progn
+     (when (and (not (file-exists-p ac-clang-precompiled-header))
+                (file-exists-p (file-name-sans-extension ac-clang-precompiled-header))
+                ac-clang-executable)
+       (message "Creating the precompiled header...")
+       (call-process ac-clang-executable nil nil nil
+                     "-x" "c++-header"
+                     "-std=c++11"
+                     (file-name-sans-extension (expand-file-name ac-clang-precompiled-header))
+                     "-o" (expand-file-name ac-clang-precompiled-header)))
+     (when (file-exists-p ac-clang-precompiled-header)
+       (setq ac-clang-prefix-header ac-clang-precompiled-header))))
 
 (add-hook 'c-mode-common-hook
           (lambda ()
