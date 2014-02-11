@@ -37,6 +37,10 @@
              '(:name auto-complete
                      :submodule nil))
 (add-to-list 'el-get-sources
+             '(:name auto-complete-clang
+                     :pkgname "yuttie/auto-complete-clang"
+                     :branch "fix-missing-standard-include-files"))
+(add-to-list 'el-get-sources
              '(:name auto-complete-auctex
                      :description "auto-completion for auctex"
                      :website "https://github.com/monsanto/auto-complete-auctex"
