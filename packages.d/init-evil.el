@@ -77,13 +77,6 @@
 state and in `skk-j-mode'."
   (when (and (eq evil-state 'insert) (boundp 'skk-j-mode) skk-j-mode)
     ad-do-it))
-(defadvice evil-refresh-cursor
-  (around evil-refresh-cursor-unless-skk-mode activate)
-  ;; Evilによるカーソルの変更を, 挿入ステートかつ日本語モードではない場合に限定
-  "Allow ccc to update cursor color only when we are in insert
-state and in `skk-j-mode'."
-  (unless (and (eq evil-state 'insert) (boundp 'skk-j-mode) skk-j-mode)
-    ad-do-it))
 (defadvice evil-ex-search-update-pattern
   (around evil-inhibit-ex-search-update-pattern-in-skk-henkan activate)
   ;; SKKの未確定状態(skk-henkan-mode)ではない場合だけ, 検索パターンをアップデート
