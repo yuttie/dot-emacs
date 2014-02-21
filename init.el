@@ -260,7 +260,7 @@
 ;;; Font
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
 (defconst default-fontset-name "myfonts")
-(defconst default-base-font-name "monospace")
+(defconst default-base-font-name "DejaVu Sans Mono")
 (defconst default-base-font-size 9)
 (defconst default-ja-font-name "Migu 1M")
 (defconst default-ja-font-scale 1.204)
