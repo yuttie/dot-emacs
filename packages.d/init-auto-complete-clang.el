@@ -6,6 +6,7 @@
 (defun ac-clang-compile-header ()
   ""
   (interactive)
+  (require 'auto-complete-clang)
   (let* ((pch (expand-file-name ac-clang-precompiled-header))
          (src (file-name-sans-extension pch)))
     (when (and ac-clang-executable
