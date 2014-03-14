@@ -250,6 +250,7 @@
     (keyboard-translate ?\C-x ?\C-t)))
 (swap-C-x-and-C-t (selected-frame))
 (add-hook 'after-make-frame-functions #'swap-C-x-and-C-t)
+(setq revert-without-query '(".*"))
 
 ;;; GUI (except for appearance)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
