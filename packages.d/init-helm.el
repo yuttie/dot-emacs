@@ -46,3 +46,4 @@
 (global-set-key (kbd "C-c C-h t") #'helm-top)
 (global-set-key (kbd "C-c M-s o") #'helm-occur)
 (global-set-key (kbd "C-c p")     #'helm-show-kill-ring)
+(global-set-key (kbd "C-c C-f")   #'helm-imenu)
