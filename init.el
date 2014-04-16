@@ -10,7 +10,7 @@
 (add-to-list 'initial-frame-alist '(tool-bar-lines . 0))
 
 ;;; load-path
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
 
 ;;; Measure the execution time of those functions
 (require 'initchart)
@@ -19,7 +19,7 @@
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
 
 ;;; El-Get
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
 (setq el-get-user-package-directory "~/.emacs.d/packages.d/")
 
 (unless (require 'el-get nil 'noerror)
