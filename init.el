@@ -446,3 +446,7 @@ removed from them after the first call."
 
 ;;; nXML Mode
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . nxml-mode))
+
+;;; typerex for OCaml
+;; opam install typerex
+(with-temp-buffer (insert (shell-command-to-string "ocp-edit-mode emacs -load-global-config")) (eval-buffer))
