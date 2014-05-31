@@ -169,6 +169,7 @@
     auto-complete-auctex
     auto-complete-clang
     calfw
+    caml-mode
     c-eldoc
     deferred
     d-mode
