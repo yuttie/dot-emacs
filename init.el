@@ -214,6 +214,7 @@
     term+evil
     term+mode
     term+mux
+    tuareg-mode
     twittering-mode
     wanderlust
     wgrep
