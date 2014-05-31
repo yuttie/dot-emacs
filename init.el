@@ -446,3 +446,11 @@ removed from them after the first call."
 
 ;;; nXML Mode
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . nxml-mode))
+
+;;; Merlin for OCaml
+;; ocamlmerlin must be available in a directory in PATH
+(defconst merlin-lisp-dir "~/.opam/system/share/emacs/site-lisp")  ; directory containing merlin.el
+(push (expand-file-name merlin-lisp-dir) load-path)
+(autoload 'merlin-mode "merlin" "Merlin mode" t)
+(add-hook 'tuareg-mode-hook 'merlin-mode)
+(add-hook 'caml-mode-hook 'merlin-mode)
