@@ -343,17 +343,8 @@ removed from them after the first call."
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;;; auto indentation
+(electric-indent-mode)
 (setq-default indent-tabs-mode nil)
-
-;;; auto indentation in lisp-mode
-(defun set-newline-and-indent ()
-  (local-set-key (kbd "RET") #'newline-and-indent))
-(add-hook 'lisp-mode-hook #'set-newline-and-indent)
-
-;;; auto indentation in cc-mode
-(defun my-make-CR-do-indent ()  ; from cc-mode's manual
-  (define-key c-mode-base-map (kbd "RET") #'c-context-line-break))
-(add-hook 'c-initialization-hook #'my-make-CR-do-indent)
 
 ;;; completion
 (setq completion-ignore-case t)
