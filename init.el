@@ -448,4 +448,7 @@ removed from them after the first call."
 
 ;;; typerex for OCaml
 ;; opam install typerex
+(add-hook 'tuareg-mode-hook  ; this must be put before line loading TypeRex config
+          (lambda ()
+            (setq ac-auto-start t)))
 (with-temp-buffer (insert (shell-command-to-string "ocp-edit-mode emacs -load-global-config")) (eval-buffer))
