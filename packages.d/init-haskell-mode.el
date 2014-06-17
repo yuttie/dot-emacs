@@ -15,9 +15,6 @@
      (define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
      (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
      (define-key haskell-mode-map (kbd "C-c M-.") nil)
-     (define-key haskell-mode-map (kbd "C-c C-d") nil)))
-
-(eval-after-load 'evil
-  '(progn
-     (evil-define-key 'normal haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
-     (evil-define-key 'normal haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)))
+     (define-key haskell-mode-map (kbd "C-c C-d") nil)
+     (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
+     (define-key haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)))
