@@ -3,6 +3,14 @@
 (add-hook 'haskell-mode-hook #'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook #'turn-on-haskell-decl-scan)
 
+;;; disable electric-indent-mode in haskell-mode
+(add-hook 'haskell-mode-hook
+          (lambda ()
+            (add-hook 'electric-indent-functions
+                      (lambda () 'no-indent)
+                      nil
+                      'local)))
+
 (setq haskell-indentation-left-offset 4)
 
 ;;; use the haskell-interactive-mode instead of the inferior-haskell-mode
