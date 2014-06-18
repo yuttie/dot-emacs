@@ -47,3 +47,32 @@
 (global-set-key (kbd "C-c M-s o") #'helm-occur)
 (global-set-key (kbd "C-c p")     #'helm-show-kill-ring)
 (global-set-key (kbd "C-c C-f")   #'helm-imenu)
+
+;;; Sorting
+(defun helm-generic-sort-fn (s1 s2)
+  "Sort predicate function for helm candidates.
+Args S1 and S2 can be single or \(display . real\) candidates,
+that is sorting is done against real value of candidate."
+  (let* ((reg1  (concat "\\_<" helm-pattern "\\_>"))
+         (reg2  (concat "\\_<" helm-pattern))
+         (split (split-string helm-pattern))
+         (str1  (if (consp s1) (cdr s1) s1))
+         (str2  (if (consp s2) (cdr s2) s2))
+         (score #'(lambda (str r1 r2 lst)
+                    (cond ((string-match r1 str) 4)
+                          ((and (string-match " " helm-pattern)
+                                (string-match (concat "\\_<" (car lst)) str)
+                                (cl-loop for r in (cdr lst)
+                                      always (string-match r str))) 3)
+                          ((and (string-match " " helm-pattern)
+                                (cl-loop for r in lst always (string-match r str))) 2)
+                          ((string-match r2 str) 1)
+                          (t 0))))
+         (sc1 (funcall score str1 reg1 reg2 split))
+         (sc2 (funcall score str2 reg1 reg2 split)))
+    (cond ((or (zerop (string-width helm-pattern))
+               (and (zerop sc1) (zerop sc2)))
+           (string-lessp str1 str2))
+          ((= sc1 sc2)
+           (string-lessp str1 str2))
+          (t (> sc1 sc2)))))
