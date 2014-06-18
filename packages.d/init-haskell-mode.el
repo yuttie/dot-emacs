@@ -7,7 +7,7 @@
 (add-hook 'haskell-mode-hook
           (lambda ()
             (add-hook 'electric-indent-functions
-                      (lambda () 'no-indent)
+                      (lambda (c) 'no-indent)
                       nil
                       'local)))
 
