@@ -175,7 +175,7 @@
     d-mode
     edit-server
     elscreen
-    emacs-jabber
+    ;;emacs-jabber  ; this package fails to install
     emmet-mode
     ess
     evil
