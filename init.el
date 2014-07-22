@@ -4,9 +4,7 @@
 
 ;;; Frame
 (set-scroll-bar-mode 'right)
-(menu-bar-mode 0)
 (tool-bar-mode 0)
-(add-to-list 'initial-frame-alist '(menu-bar-lines . 0))
 (add-to-list 'initial-frame-alist '(tool-bar-lines . 0))
 
 ;;; load-path
