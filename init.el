@@ -460,8 +460,9 @@ by using nxml's indentation rules."
 
 ;;; Merlin for OCaml
 ;; ocamlmerlin must be available in a directory in PATH
-(defconst merlin-lisp-dir "~/.opam/system/share/emacs/site-lisp")  ; directory containing merlin.el
-(push (expand-file-name merlin-lisp-dir) load-path)
+(setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
+(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
+(setq merlin-use-auto-complete-mode t)
