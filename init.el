@@ -466,3 +466,8 @@ by using nxml's indentation rules."
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
 (setq merlin-use-auto-complete-mode t)
+(add-hook 'merlin-mode-hook
+          (lambda ()
+            (flycheck-mode -1)
+            (global-unset-key (kbd "M-p"))
+            (global-set-key (kbd "M-n") #'merlin-error-next)))
