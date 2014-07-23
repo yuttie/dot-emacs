@@ -155,6 +155,13 @@
                      :type github
                      :pkgname "chrisdone/structured-haskell-mode"))
 (add-to-list 'el-get-sources
+             '(:name tuareg-mode
+                     :description "A  GOOD Emacs mode to edit Objective Caml code."
+                     :website "https://github.com/ocaml/tuareg"
+                     :type github
+                     :pkgname "ocaml/tuareg"
+                     :load-path (".")))
+(add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
 
