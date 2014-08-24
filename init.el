@@ -295,7 +295,7 @@ removed from them after the first call."
              (base         default-base-font-name)
              (size         default-base-font-size)
              (ja           default-ja-font-name)
-             (ja-pat       (format ".*%s.*" default-ja-font-name))
+             (ja-pat       (format ".*%s.*" (rx (eval default-ja-font-name))))
              (scale        default-ja-font-scale)
              (base-font    (format "%s-%d:weight=normal:slant=normal" base size))
              (ja-font      (font-spec :family ja))
