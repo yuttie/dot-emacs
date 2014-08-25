@@ -269,6 +269,7 @@
 (defconst default-fontset-name "myfonts")
 (defconst default-base-font-name "Anonymous Pro")
 (defconst default-ja-font-name "M+ 1m regular")
+(defconst default-ja-font-xlfd-pattern (format ".*%s.*" (rx "M+ 1m")))
 (cond
  ((string= system-type "darwin")
   (defconst default-base-font-size 12)
@@ -295,7 +296,7 @@ removed from them after the first call."
              (base         default-base-font-name)
              (size         default-base-font-size)
              (ja           default-ja-font-name)
-             (ja-pat       (format ".*%s.*" (rx (eval default-ja-font-name))))
+             (ja-pat       default-ja-font-xlfd-pattern)
              (scale        default-ja-font-scale)
              (base-font    (format "%s-%d:weight=normal:slant=normal" base size))
              (ja-font      (font-spec :family ja))
