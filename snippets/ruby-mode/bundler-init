@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bundler-init
+# key: bundler-init
+# --
+require 'rubygems'
+require 'bundler/setup'
