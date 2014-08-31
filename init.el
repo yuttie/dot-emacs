@@ -417,7 +417,6 @@ removed from them after the first call."
 ;;; Text mode
 (add-hook 'text-mode-hook
           (lambda ()
-            (auto-fill-mode)
             (flyspell-mode)))
 
 ;;; browse-url
