@@ -427,6 +427,11 @@ removed from them after the first call."
           (lambda ()
             (diff-auto-refine-mode)))
 
+;;; dired
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (hl-line-mode)))
+
 ;;; Ediff
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
