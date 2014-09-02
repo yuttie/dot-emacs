@@ -13,6 +13,7 @@
 
 (setq haskell-indentation-left-offset 4)
 (setq haskell-indentation-ifte-offset 4)
+(setq haskell-indentation-starter-offset 4)
 
 ;;; use the haskell-interactive-mode instead of the inferior-haskell-mode
 (eval-after-load "haskell-mode"
