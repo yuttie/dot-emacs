@@ -275,8 +275,8 @@
   (defconst default-base-font-size 12)
   (defconst default-ja-font-scale 1.605))
  (t
-  (defconst default-base-font-size 9)
-  (defconst default-ja-font-scale 1.204)))
+  (defconst default-base-font-size 8)
+  (defconst default-ja-font-scale 1.104)))
 
 (defun setup-window-system-configuration (&optional frame)
   "Initialize configurations for window system.
