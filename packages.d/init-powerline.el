@@ -1,3 +1,23 @@
+(defface powerline-mode-inactive      nil "")
+(defface powerline-mode-normal        nil "")
+(defface powerline-mode-insert        nil "")
+(defface powerline-mode-visual        nil "")
+(defface powerline-mode-replace       nil "")
+(defface powerline-mode-operator      nil "")
+(defface powerline-mode-emacs         nil "")
+(defface powerline-first-inactive     nil "")
+(defface powerline-first-insert       nil "")
+(defface powerline-first-normal       nil "")
+(defface powerline-second-inactive    nil "")
+(defface powerline-second-insert      nil "")
+(defface powerline-second-normal      nil "")
+(defface powerline-third-inactive     nil "")
+(defface powerline-third-insert       nil "")
+(defface powerline-third-normal       nil "")
+(defface powerline-buffer-id-inactive nil "")
+(defface powerline-buffer-id-insert   nil "")
+(defface powerline-buffer-id-normal   nil "")
+
 (setq-default mode-line-format
               '("%e"
                 (:eval
