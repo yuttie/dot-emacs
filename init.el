@@ -200,6 +200,7 @@
     helm
     helm-descbinds
     helm-ls-git
+    hlinum
     html5
     inertial-scroll
     inf-ruby
