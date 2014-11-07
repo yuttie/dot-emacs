@@ -331,7 +331,6 @@ removed from them after the first call."
 
 ;;; programming
 (add-hook 'prog-mode-hook #'linum-mode)
-(add-hook 'prog-mode-hook #'whitespace-mode)
 (add-hook 'prog-mode-hook #'flyspell-prog-mode)
 (eval-after-load 'whitespace
   '(progn
