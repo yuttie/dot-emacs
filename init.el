@@ -164,6 +164,13 @@
 (add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
+(add-to-list 'el-get-sources
+             '(:name zsh-history
+                     :description "Zsh history file encoder/decoder for Emacs"
+                     :website "https://github.com/kawabata/emacs-zsh-history"
+                     :type github
+                     :pkgname "kawabata/emacs-zsh-history"
+                     :features zsh-history))
 
 (defconst my-packages
   '(ace-jump-mode
@@ -225,7 +232,9 @@
     wanderlust
     wgrep
     yari
-    yasnippet))
+    yasnippet
+    zsh-history
+    ))
 
 (el-get-cleanup my-packages)
 (el-get 'sync my-packages)
