@@ -12,10 +12,14 @@
 \usepackage{amssymb,amsmath}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
 %\usepackage[dvipdfmx]{xcolor}    % for use with dvipdfmx
 %\usepackage[dvipdfmx]{graphicx}  % for use with dvipdfmx
+\usepackage{array}  % for improved array and tabular environments
 %\usepackage{booktabs}
 %\usepackage{longtable}  % must be ahead of hyperref (http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?hyperref#sf5e3f3f)
+%\usepackage{mdwtab}
 %\usepackage{caption}
 %\usepackage{subcaption}
 %\usepackage[dvipdfmx]{hyperref}
@@ -25,6 +29,8 @@
 %\usepackage{algorithm}  % must be behind hyperref
 %\usepackage{listings}
 %\usepackage{fancybox}
+%\usepackage{ifpdf}
+%\usepackage{eqparbox}
 
 % Font
 %\usepackage{newpxtext,newpxmath}  % Palatino
