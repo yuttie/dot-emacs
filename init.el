@@ -185,6 +185,7 @@
     c-eldoc
     deferred
     d-mode
+    ddskk
     edit-server
     elscreen
     ;;emacs-jabber  ; this package fails to install
