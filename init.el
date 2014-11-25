@@ -52,6 +52,9 @@
                      :type github
                      :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"))
 (add-to-list 'el-get-sources
+             '(:name ddskk
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name elscreen
                      :description "Screen Manager for Emacsen"
                      :type github
