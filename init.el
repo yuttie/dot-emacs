@@ -388,7 +388,7 @@ removed from them after the first call."
 
      (setq default-input-method "japanese-skk")
 
-     (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.L.cdb")
+     (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.LL.cdb")
      (setq skk-show-annotation t)
      (setq skk-show-inline 'vertical)
      (setq skk-use-act t)
