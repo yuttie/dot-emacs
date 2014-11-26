@@ -393,6 +393,9 @@ removed from them after the first call."
      (setq skk-show-inline 'vertical)
      (setq skk-use-act t)
 
+     (setq skk-dcomp-activate t)
+     (setq skk-dcomp-multiple-activate t)
+
      (setq skk-rom-kana-rule-list
            (append skk-rom-kana-rule-list
                    '(("!"  nil "！")
