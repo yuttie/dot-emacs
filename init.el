@@ -390,6 +390,7 @@ removed from them after the first call."
 
      (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.LL.cdb")
      (setq skk-status-indicator 'minor-mode)
+     (setq skk-show-mode-show t)
      (setq skk-show-annotation t)
      (setq skk-show-inline 'vertical)
      (setq skk-use-act t)
