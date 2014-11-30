@@ -204,8 +204,7 @@
     flycheck-d-unittest
     flycheck-haskell
     ghc-mod
-    git-gutter+
-    git-gutter-fringe+
+    git-gutter-fringe
     gtags
     haskell-mode
     helm
