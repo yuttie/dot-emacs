@@ -260,6 +260,7 @@
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (setq-default indicate-empty-lines t)
 (load-theme 'steady-dark t)
 (define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
