@@ -3,6 +3,7 @@
 ;;; variables
 (setq evil-default-cursor t)
 (setq evil-search-wrap nil)
+(setq evil-want-fine-undo nil)
 
 ;;; key bindings
 (defun evil-escape-or-quit (&optional prompt)
