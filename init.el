@@ -282,7 +282,7 @@
 ;;; Font
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
 (defconst default-fontset-name "myfonts")
-(defconst default-base-font-name "Anonymous Pro")
+(defconst default-base-font-name "DejaVu Sans Mono")
 (defconst default-ja-font-name "M+ 1m regular")
 (defconst default-ja-font-xlfd-pattern (format ".*%s.*" (rx "M+ 1m")))
 (cond
