@@ -1,0 +1,11 @@
+(require 'delight)
+(delight
+ '((eldoc-mode nil eldoc)
+   (emacs-lisp-mode "Elisp" :major)
+   (flycheck-mode " FC" flycheck)
+   (flyspell-mode " FS" flyspell)
+   (git-gutter+-mode " GG+" git-gutter+)
+   (helm-mode)
+   (rainbow-mode)
+   (undo-tree-mode " UT" undo-tree)
+   (yas-minor-mode " Y" yasnippet)))
