@@ -282,7 +282,7 @@
 ;;; Font
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
 (defconst default-fontset-name "myfonts")
-(defconst default-base-font-name "DejaVu Sans Mono")
+(defconst default-base-font-name "Envy Code R")
 (defconst default-ja-font-name "M+ 1m regular")
 (defconst default-ja-font-xlfd-pattern (format ".*%s.*" (rx "M+ 1m")))
 (cond
@@ -290,8 +290,8 @@
   (defconst default-base-font-size 12)
   (defconst default-ja-font-scale 1.605))
  (t
-  (defconst default-base-font-size 9)
-  (defconst default-ja-font-scale 1.204)))
+  (defconst default-base-font-size 8)
+  (defconst default-ja-font-scale 1.100)))
 
 (defun setup-window-system-configuration (&optional frame)
   "Initialize configurations for window system.
