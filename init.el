@@ -463,6 +463,9 @@ removed from them after the first call."
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
 
+;;; sh-mode
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+
 ;;; CC Mode
 (setq-default c-basic-offset 4)
 (setq c-default-style '((java-mode . "java") (awk-mode . "awk") (other . "linux")))
