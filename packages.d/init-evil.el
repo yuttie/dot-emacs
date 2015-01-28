@@ -21,6 +21,11 @@
 
 (define-key evil-normal-state-map (kbd "g w") #'browse-url-at-point)
 
+(defadvice evil-ex-search-next (after advice-for-evil-ex-search-next activate)
+  (evil-scroll-line-to-center (line-number-at-pos)))
+(defadvice evil-ex-search-previous (after advice-for-evil-ex-search-previous activate)
+  (evil-scroll-line-to-center (line-number-at-pos)))
+
 ;;; fold
 (define-key evil-normal-state-map "zo" #'evil-open-fold)
 (define-key evil-normal-state-map "zO" #'evil-open-folds-at-point)
