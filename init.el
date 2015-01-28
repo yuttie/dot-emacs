@@ -237,6 +237,7 @@
     tuareg-mode
     twittering-mode
     wanderlust
+    web-mode
     wgrep
     yari
     yasnippet
