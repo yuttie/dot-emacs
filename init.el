@@ -220,6 +220,9 @@
     mmm-mode
     multiple-cursors
     org-mode
+    php-completion
+    php-eldoc
+    php-mode
     popwin
     powerline
     rainbow-mode
