@@ -177,12 +177,8 @@
 
 (defconst my-packages
   '(ace-jump-mode
-    ac-math
     ag
     auctex
-    auto-complete
-    auto-complete-auctex
-    auto-complete-clang
     calfw
     caml-mode
     c-eldoc
