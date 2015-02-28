@@ -179,6 +179,10 @@
   '(ace-jump-mode
     ag
     auctex
+    company-auctex
+    company-ghc
+    company-math
+    company-mode
     calfw
     caml-mode
     c-eldoc
