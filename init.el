@@ -226,6 +226,7 @@
     popwin
     powerline
     rainbow-mode
+    robe-mode
     ruby-mode
     search-web
     session
