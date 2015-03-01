@@ -177,12 +177,12 @@
 
 (defconst my-packages
   '(ace-jump-mode
-    ac-math
     ag
     auctex
-    auto-complete
-    auto-complete-auctex
-    auto-complete-clang
+    company-auctex
+    company-ghc
+    company-math
+    company-mode
     calfw
     caml-mode
     c-eldoc
@@ -502,7 +502,7 @@ by using nxml's indentation rules."
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
-(setq merlin-use-auto-complete-mode t)
+(add-to-list 'company-backends 'merlin-company-backend)
 (add-hook 'merlin-mode-hook
           (lambda ()
             (flycheck-mode -1)

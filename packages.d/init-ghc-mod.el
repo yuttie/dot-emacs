@@ -9,12 +9,6 @@
 
 (add-hook 'haskell-mode-hook #'my-ghc-init)
 
-;;; auto-complete
-(eval-after-load 'auto-complete
-  '(add-hook 'haskell-mode-hook
-             (lambda ()
-               (add-to-list 'ac-sources 'ac-source-ghc-mod))))
-
 ;;; key bindings
 (add-hook 'haskell-mode-hook
           (lambda ()
