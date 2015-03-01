@@ -504,7 +504,8 @@ by using nxml's indentation rules."
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
-(add-to-list 'company-backends 'merlin-company-backend)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'merlin-company-backend))
 (add-hook 'merlin-mode-hook
           (lambda ()
             (flycheck-mode -1)
