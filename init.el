@@ -383,6 +383,7 @@ removed from them after the first call."
 (setq ispell-program-name "aspell")
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+(setq flyspell-delay 0)
 
 ;;; desktop
 (setq desktop-path '("."))
