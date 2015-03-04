@@ -1,3 +1,6 @@
+;;; Decrease the number of GCs
+(setq gc-cons-threshold (* 4 1024 1024))
+
 ;;; Startup
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
