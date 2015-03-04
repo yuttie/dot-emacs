@@ -34,20 +34,6 @@
              '(:name ace-jump-mode
                      :features nil))
 (add-to-list 'el-get-sources
-             '(:name auto-complete
-                     :submodule nil))
-(add-to-list 'el-get-sources
-             '(:name auto-complete-clang
-                     :pkgname "yuttie/auto-complete-clang"
-                     :branch "fix-missing-standard-include-files"))
-(add-to-list 'el-get-sources
-             '(:name auto-complete-auctex
-                     :description "auto-completion for auctex"
-                     :website "https://github.com/monsanto/auto-complete-auctex"
-                     :type github
-                     :pkgname "monsanto/auto-complete-auctex"
-                     :depends (auctex auto-complete yasnippet)))
-(add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
                      :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
@@ -117,9 +103,6 @@
              '(:name haskell-mode
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
-             '(:name html5
-                     :features nil))
-(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
@@ -134,9 +117,6 @@
              '(:name multiple-cursors
                      :features nil))
 (add-to-list 'el-get-sources
-             '(:name popup
-                     :submodule nil))
-(add-to-list 'el-get-sources
              '(:name search-web
                      :description "Post web search queries using `browse-url'"
                      :website "https://github.com/tomoya/search-web.el"
@@ -150,12 +130,6 @@
                      :type github
                      :pkgname "yuttie/steady-theme-emacs"
                      :post-init (add-to-list 'custom-theme-load-path default-directory)))
-(add-to-list 'el-get-sources
-             '(:name structured-haskell-mode
-                     :description "Structured editing minor mode for Haskell in Emacs"
-                     :website "https://github.com/chrisdone/structured-haskell-mode"
-                     :type github
-                     :pkgname "chrisdone/structured-haskell-mode"))
 (add-to-list 'el-get-sources
              '(:name tuareg-mode
                      :description "A  GOOD Emacs mode to edit Objective Caml code."
