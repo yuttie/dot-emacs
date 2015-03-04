@@ -169,6 +169,7 @@
     ;;emacs-jabber  ; this package fails to install
     emmet-mode
     ess
+    esup
     evil
     evil-elscreen
     evil-matchit
