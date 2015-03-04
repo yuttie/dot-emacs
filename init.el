@@ -82,9 +82,6 @@
              '(:name expand-region
                      :features nil))
 (add-to-list 'el-get-sources
-             '(:name f
-                     :depends (s dash)))
-(add-to-list 'el-get-sources
              '(:name flycheck-d-unittest
                      :description "This library adds D unittest support to flycheck."
                      :website "https://github.com/flycheck/flycheck-d-unittest"
