@@ -1,5 +1,9 @@
-;;; Decrease the number of GCs
-(setq gc-cons-threshold (* 4 1024 1024))
+;;; Decrease the number of GCs during startup
+(let ((gc-cons-threshold-original gc-cons-threshold))
+  (setq gc-cons-threshold (* 64 1024 1024))  ; 64 MiB
+  (add-hook 'after-init-hook
+            (lambda ()
+              (setq gc-cons-threshold gc-cons-threshold-original))))
 
 ;;; Startup
 (setq inhibit-startup-screen t)
