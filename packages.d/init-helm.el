@@ -33,10 +33,10 @@
 
 (global-set-key (kbd "M-x") #'helm-M-x)
 
-(global-set-key (kbd "C-x C-f") #'helm-for-files)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "C-x C-b") #'helm-buffers-list)
 (global-unset-key (kbd "C-x b"))
-(global-set-key (kbd "C-c f f") #'helm-find-files)
+(global-set-key (kbd "C-c f f") #'helm-for-files)
 (global-set-key (kbd "C-c f F") #'helm-find)
 (global-set-key (kbd "C-c f l") #'helm-locate)
 
