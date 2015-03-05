@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 ;;; Decrease the number of GCs during startup
 (let ((gc-cons-threshold-original gc-cons-threshold))
   (setq gc-cons-threshold (* 64 1024 1024))  ; 64 MiB
