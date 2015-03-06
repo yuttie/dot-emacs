@@ -1,5 +1,10 @@
 (require 'skk-autoloads)
-(eval-after-load 'skk-autoloads
+
+(global-set-key (kbd "C-x C-j") #'skk-auto-fill-mode)
+(global-set-key (kbd "C-x j") #'skk-mode)
+(global-set-key (kbd "C-x t") #'skk-tutorial)
+
+(eval-after-load 'skk
   '(progn
      (require 'skk-study)
 
@@ -40,8 +45,4 @@
                           (<= (minibuffer-depth) 1))
                      (progn
                        (put 'skk-henkan-okuri-strictly 'temporary-nil nil)
-                       (setq skk-henkan-okuri-strictly t)))))
-
-     (global-set-key (kbd "C-x C-j") #'skk-auto-fill-mode)
-     (global-set-key (kbd "C-x j") #'skk-mode)
-     (global-set-key (kbd "C-x t") #'skk-tutorial)))
+                       (setq skk-henkan-okuri-strictly t)))))))
