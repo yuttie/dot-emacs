@@ -1,4 +1,4 @@
-(load "skk-autoloads" t)
+(require 'skk-autoloads)
 (eval-after-load 'skk-autoloads
   '(progn
      (require 'skk-study)
