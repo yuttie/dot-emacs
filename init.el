@@ -368,55 +368,6 @@ removed from them after the first call."
 ;;; desktop
 (setq desktop-path '("."))
 
-;;; SKK
-(load "skk-autoloads" t)
-(eval-after-load 'skk-autoloads
-  '(progn
-     (require 'skk-study)
-
-     (setq default-input-method "japanese-skk")
-
-     (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.LL.cdb")
-     (setq skk-status-indicator 'minor-mode)
-     (setq skk-show-mode-show t)
-     (setq skk-show-annotation t)
-     (setq skk-show-inline 'vertical)
-     (setq skk-use-act t)
-
-     (setq skk-dcomp-activate t)
-     (setq skk-dcomp-multiple-activate t)
-
-     (setq skk-rom-kana-rule-list
-           (append skk-rom-kana-rule-list
-                   '(("!"  nil "！")
-                     ("~"  nil "〜")
-                     ("z " nil "　")
-                     ("z(" nil "（")
-                     ("z)" nil "）"))))
-
-     ;; 送り仮名の厳密なマッチ
-     (setq skk-henkan-okuri-strictly t)
-     (setq skk-process-okuri-early nil)
-     (add-hook 'minibuffer-setup-hook
-               (lambda ()
-                 (if (and (boundp 'skk-henkan-okuri-strictly)
-                          skk-henkan-okuri-strictly
-                          (not (eq last-command 'skk-purge-from-jisyo)))
-                     (progn
-                       (setq skk-henkan-okuri-strictly nil)
-                       (put 'skk-henkan-okuri-strictly 'temporary-nil t)))))
-     (add-hook 'minibuffer-exit-hook
-               (lambda ()
-                 (if (and (get 'skk-henkan-okuri-strictly 'temporary-nil)
-                          (<= (minibuffer-depth) 1))
-                     (progn
-                       (put 'skk-henkan-okuri-strictly 'temporary-nil nil)
-                       (setq skk-henkan-okuri-strictly t)))))
-
-     (global-set-key (kbd "C-x C-j") #'skk-auto-fill-mode)
-     (global-set-key (kbd "C-x j") #'skk-mode)
-     (global-set-key (kbd "C-x t") #'skk-tutorial)))
-
 ;;; Tramp
 (setq tramp-default-method "sshx")
 
