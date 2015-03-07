@@ -14,5 +14,5 @@
 (autoload 'R-transcript-mode "ess-site" "" t)
 (autoload 'Rd-mode           "ess-site" "" t)
 
-(eval-after-load 'ess-s-l
-  '(ess-toggle-underscore nil))
+(with-eval-after-load 'ess-s-l
+  (ess-toggle-underscore nil))

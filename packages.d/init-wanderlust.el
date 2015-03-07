@@ -19,23 +19,21 @@
             (wl-summary-display-top)))
 (add-hook 'wl-mail-setup-hook #'wl-draft-config-exec)  ; Automatically configure SMTP when we start writing a draft
 
-(eval-after-load 'evil
-  '(progn
-     (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
-     (add-to-list 'evil-emacs-state-modes 'wl-summary-mode)
-     (add-to-list 'evil-emacs-state-modes 'wl-template-mode)
-     (add-hook 'wl-folder-mode-hook #'evil-emacs-state)))
+(with-eval-after-load 'evil
+  (add-to-list 'evil-emacs-state-modes 'wl-folder-mode)
+  (add-to-list 'evil-emacs-state-modes 'wl-summary-mode)
+  (add-to-list 'evil-emacs-state-modes 'wl-template-mode)
+  (add-hook 'wl-folder-mode-hook #'evil-emacs-state))
 
 ;; Key Bindings
-(eval-after-load 'wl
-  '(progn
-     (define-key wl-folder-mode-map (kbd "j") #'wl-folder-next-entity)
-     (define-key wl-folder-mode-map (kbd "k") #'wl-folder-prev-entity)
+(with-eval-after-load 'wl
+  (define-key wl-folder-mode-map (kbd "j") #'wl-folder-next-entity)
+  (define-key wl-folder-mode-map (kbd "k") #'wl-folder-prev-entity)
 
-     (define-key wl-summary-mode-map (kbd "j") #'wl-summary-next)
-     (define-key wl-summary-mode-map (kbd "k") #'wl-summary-prev)
-     (define-key wl-summary-mode-map (kbd "n") #'wl-summary-down)
-     (define-key wl-summary-mode-map (kbd "p") #'wl-summary-up)
-     (define-key wl-summary-mode-map (kbd "J") #'wl-summary-next-line-content)
-     (define-key wl-summary-mode-map (kbd "K") #'wl-summary-prev-line-content)
-     (define-key wl-summary-mode-map (kbd "C-j") #'wl-summary-jump-to-current-message)))
+  (define-key wl-summary-mode-map (kbd "j") #'wl-summary-next)
+  (define-key wl-summary-mode-map (kbd "k") #'wl-summary-prev)
+  (define-key wl-summary-mode-map (kbd "n") #'wl-summary-down)
+  (define-key wl-summary-mode-map (kbd "p") #'wl-summary-up)
+  (define-key wl-summary-mode-map (kbd "J") #'wl-summary-next-line-content)
+  (define-key wl-summary-mode-map (kbd "K") #'wl-summary-prev-line-content)
+  (define-key wl-summary-mode-map (kbd "C-j") #'wl-summary-jump-to-current-message))

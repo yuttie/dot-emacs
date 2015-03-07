@@ -19,17 +19,15 @@
         helm-source-locate))
 
 ;;; Key bindings
-(eval-after-load 'helm
-  '(progn
-     (helm-mode)
-     (define-key helm-map (kbd "C-h")   (kbd "DEL"))
-     (define-key helm-map (kbd "C-p")   #'helm-previous-line)
-     (define-key helm-map (kbd "C-n")   #'helm-next-line)
-     (define-key helm-map (kbd "C-M-p") #'helm-previous-source)
-     (define-key helm-map (kbd "C-M-n") #'helm-next-source)))
-(eval-after-load 'helm-files
-  '(progn
-     (define-key helm-find-files-map (kbd "C-h") #'helm-ff-delete-char-backward)))
+(with-eval-after-load 'helm
+  (helm-mode)
+  (define-key helm-map (kbd "C-h")   (kbd "DEL"))
+  (define-key helm-map (kbd "C-p")   #'helm-previous-line)
+  (define-key helm-map (kbd "C-n")   #'helm-next-line)
+  (define-key helm-map (kbd "C-M-p") #'helm-previous-source)
+  (define-key helm-map (kbd "C-M-n") #'helm-next-source))
+(with-eval-after-load 'helm-files
+  (define-key helm-find-files-map (kbd "C-h") #'helm-ff-delete-char-backward))
 
 (global-set-key (kbd "M-x") #'helm-M-x)
 

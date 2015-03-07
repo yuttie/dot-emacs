@@ -87,7 +87,7 @@
                      :type github
                      :pkgname "flycheck/flycheck-haskell"
                      :depends (flycheck haskell-mode dash f)
-                     :post-init (eval-after-load 'flycheck '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))))
+                     :post-init (with-eval-after-load 'flycheck (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))))
 (add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
@@ -332,10 +332,9 @@ removed from them after the first call."
 ;;; programming
 (add-hook 'prog-mode-hook #'linum-mode)
 (add-hook 'prog-mode-hook #'flyspell-prog-mode)
-(eval-after-load 'whitespace
-  '(progn
-     (setq whitespace-style '(face lines-tail))
-     (setq whitespace-line-column 80)))
+(with-eval-after-load 'whitespace
+  (setq whitespace-style '(face lines-tail))
+  (setq whitespace-line-column 80))
 
 ;;; printing
 ;; http://aki.issp.u-tokyo.ac.jp/itoh/PukiWiki/pukiwiki.php?Emacs
@@ -361,8 +360,8 @@ removed from them after the first call."
 ;;; spell check
 (setq ispell-dictionary "en")
 (setq ispell-program-name "aspell")
-(eval-after-load "ispell"
-  '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+(with-eval-after-load "ispell"
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 (setq flyspell-delay 0)
 
 ;;; desktop
@@ -436,8 +435,8 @@ by using nxml's indentation rules."
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'merlin-company-backend))
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'merlin-company-backend))
 (add-hook 'merlin-mode-hook
           (lambda ()
             (flycheck-mode -1)

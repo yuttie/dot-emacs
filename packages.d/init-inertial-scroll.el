@@ -19,9 +19,8 @@
 ;(global-set-key (vector mouse-wheel-down-event) #'inertias-down)
 ;(global-set-key (vector mouse-wheel-up-event)   #'inertias-up)
 
-(eval-after-load 'evil
-  '(progn
-     (evil-declare-not-repeat #'inertias-up)
-     (evil-declare-not-repeat #'inertias-down)
-     (define-key evil-normal-state-map (kbd "C-f") #'inertias-up)
-     (define-key evil-normal-state-map (kbd "C-b") #'inertias-down)))
+(with-eval-after-load 'evil
+  (evil-declare-not-repeat #'inertias-up)
+  (evil-declare-not-repeat #'inertias-down)
+  (define-key evil-normal-state-map (kbd "C-f") #'inertias-up)
+  (define-key evil-normal-state-map (kbd "C-b") #'inertias-down))
