@@ -319,10 +319,7 @@ removed from them after the first call."
                      #'setup-window-system-configuration)))))
 
 (when window-system
-  (if after-init-time
-      ;; already initialized
-      (setup-window-system-configuration)
-    (add-hook 'window-setup-hook #'setup-window-system-configuration t)))
+  (add-hook 'window-setup-hook #'setup-window-system-configuration t))
 (add-hook 'after-make-frame-functions #'setup-window-system-configuration)
 
 ;;; language
