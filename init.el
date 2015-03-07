@@ -314,7 +314,7 @@ removed from them after the first call."
         ;; current frame
         (set-frame-parameter (selected-frame) 'font fsn)
         ;; call once
-        (remove-hook 'after-init-hook #'setup-window-system-configuration)
+        (remove-hook 'window-setup-hook #'setup-window-system-configuration)
         (remove-hook 'after-make-frame-functions
                      #'setup-window-system-configuration)))))
 
@@ -322,7 +322,7 @@ removed from them after the first call."
   (if after-init-time
       ;; already initialized
       (setup-window-system-configuration)
-    (add-hook 'after-init-hook #'setup-window-system-configuration)))
+    (add-hook 'window-setup-hook #'setup-window-system-configuration t)))
 (add-hook 'after-make-frame-functions #'setup-window-system-configuration)
 
 ;;; language
