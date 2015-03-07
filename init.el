@@ -154,6 +154,8 @@
                      :pkgname "kawabata/emacs-zsh-history"
                      :features zsh-history))
 
+(el-get-bundle use-package)  ; Initialize 'use-package' prior to other packages
+
 (defconst my-packages
   '(ace-jump-mode
     ag
@@ -218,6 +220,7 @@
     term+mux
     tuareg-mode
     twittering-mode
+    use-package
     wanderlust
     web-mode
     wgrep
