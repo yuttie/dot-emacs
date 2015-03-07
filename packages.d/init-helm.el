@@ -1,6 +1,6 @@
 ;;; Autoloads
-(setq completing-read-function 'helm--completing-read-default
-      read-file-name-function  'helm--generic-read-file-name)
+(setq completing-read-function #'helm--completing-read-default
+      read-file-name-function  #'helm--generic-read-file-name)
 (autoload 'helm--completing-read-default "helm"
   "An helm replacement of `completing-read'.")
 (autoload 'helm--generic-read-file-name "helm"
