@@ -435,8 +435,9 @@ by using nxml's indentation rules."
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode t)
 (add-hook 'caml-mode-hook 'merlin-mode t)
-(with-eval-after-load 'company
-  (add-to-list 'company-backends 'merlin-company-backend))
+(with-eval-after-load 'merlin
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'merlin-company-backend)))
 (setq merlin-command 'opam)
 (add-hook 'merlin-mode-hook
           (lambda ()
