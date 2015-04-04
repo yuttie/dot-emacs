@@ -202,6 +202,7 @@
     markdown-mode
     mmm-mode
     multiple-cursors
+    nim-mode
     org-mode
     php-completion
     php-eldoc
