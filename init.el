@@ -211,6 +211,7 @@
     rainbow-mode
     robe-mode
     ruby-mode
+    rust-mode
     search-web
     session
     steady-theme-emacs
