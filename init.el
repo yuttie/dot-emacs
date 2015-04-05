@@ -123,6 +123,14 @@
              '(:name multiple-cursors
                      :features nil))
 (add-to-list 'el-get-sources
+             '(:name racer
+                     :description "Rust Code Completion utility "
+                     :website "https://github.com/phildawes/racer"
+                     :type github
+                     :pkgname "phildawes/racer"
+                     :load-path ("editors")
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name search-web
                      :description "Post web search queries using `browse-url'"
                      :website "https://github.com/tomoya/search-web.el"
@@ -209,6 +217,7 @@
     php-mode
     popwin
     powerline
+    racer
     rainbow-mode
     robe-mode
     ruby-mode
