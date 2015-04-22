@@ -204,6 +204,7 @@
     helm-descbinds
     helm-ls-git
     hlinum
+    indent-guide
     inertial-scroll
     inf-ruby
     magit
