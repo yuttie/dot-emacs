@@ -107,6 +107,7 @@
                      :depends (git-gutter+ fringe-helper)))
 (add-to-list 'el-get-sources
              '(:name haskell-mode
+                     :checkout "v13.12"
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
              '(:name inertial-scroll
