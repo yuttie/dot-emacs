@@ -172,7 +172,6 @@
     company-auctex
     company-ghc
     company-inf-ruby
-    company-math
     company-mode
     calfw
     caml-mode
