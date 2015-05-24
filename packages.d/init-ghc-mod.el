@@ -1,13 +1,10 @@
-;;; Define my own "ghc-init" since the original one does define-keys
-(defun my-ghc-init ()
-  (require 'ghc)
-  (ghc-abbrev-init)
-  (ghc-type-init)
-  (unless ghc-initialized
-    (ghc-comp-init)
-    (setq ghc-initialized t)))
-
-(add-hook 'haskell-mode-hook #'my-ghc-init)
+;;; Prevent "ghc-init" from defining key bindings
+(add-hook 'haskell-mode-hook #'ghc-init)
+(defadvice ghc-init (around ghc-init-without-key-bindings activate)
+  (let ((orig-define-key (symbol-function 'define-key)))
+    (defalias 'define-key 'ignore)
+    ad-do-it
+    (fset 'define-key orig-define-key)))
 
 ;;; key bindings
 (add-hook 'haskell-mode-hook
