@@ -260,6 +260,7 @@
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)  ;; don't wrap lines by default
 (setq truncate-partial-width-windows nil)
+(define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
 ;;; UI
 (line-number-mode)    ;; for the mode line
@@ -268,7 +269,6 @@
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (setq-default indicate-empty-lines t)
 (load-theme 'steady-dark t)
-(define-key minibuffer-local-map (kbd "C-h") (kbd "DEL"))
 (defun swap-C-x-and-C-t (frame)
   (with-selected-frame frame
     (keyboard-translate ?\C-t ?\C-x)

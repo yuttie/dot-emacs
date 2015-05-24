@@ -15,9 +15,6 @@
 (define-key key-translation-map (kbd "C-g") #'evil-escape-or-quit)
 
 (define-key evil-insert-state-map (kbd "C-e") #'move-end-of-line)
-(define-key evil-insert-state-map (kbd "C-h") (kbd "DEL"))
-(define-key evil-replace-state-map (kbd "C-h") (kbd "DEL"))
-(define-key evil-ex-completion-map (kbd "C-h") (kbd "DEL"))
 
 (define-key evil-normal-state-map (kbd "g w") #'browse-url-at-point)
 
