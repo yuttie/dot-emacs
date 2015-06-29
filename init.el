@@ -210,6 +210,7 @@
     indent-guide
     inertial-scroll
     inf-ruby
+    less-css-mode
     magit
     markdown-mode
     mmm-mode
