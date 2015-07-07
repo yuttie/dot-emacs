@@ -100,7 +100,7 @@
                      :website "https://github.com/nonsequitur/git-gutter-plus"
                      :type github
                      :pkgname "nonsequitur/git-gutter-plus"
-                     :depends (git-modes)))
+                     :depends (magit)))
 (add-to-list 'el-get-sources
              '(:name git-gutter-fringe+
                      :description "Fringe version of git-gutter+.el"
