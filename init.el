@@ -201,6 +201,7 @@
     ghc-mod
     git-gutter+
     git-gutter-fringe+
+    git-modes
     gtags
     haskell-mode
     helm
