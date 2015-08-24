@@ -281,6 +281,7 @@
 
 ;;; GUI (except for appearance)
 (setq scroll-conservatively 101)  ;; Don't let redisplay recenter point.
+(setq scroll-margin 2)
 (add-to-list 'default-frame-alist '(width . 84))
 (global-set-key (kbd "<C-mouse-4>") #'text-scale-increase)
 (global-set-key (kbd "<C-mouse-5>") #'text-scale-decrease)
