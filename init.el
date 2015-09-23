@@ -142,11 +142,11 @@
                      :pkgname "tomoya/search-web.el"
                      :features search-web))
 (add-to-list 'el-get-sources
-             '(:name steady-theme-emacs
-                     :description "A steady theme for Emacs"
-                     :website "https://github.com/yuttie/steady-theme-emacs"
+             '(:name night-theme
+                     :description "A night theme for Emacs"
+                     :website "https://github.com/yuttie/night-theme"
                      :type github
-                     :pkgname "yuttie/steady-theme-emacs"
+                     :pkgname "yuttie/night-theme"
                      :post-init (add-to-list 'custom-theme-load-path default-directory)))
 (add-to-list 'el-get-sources
              '(:name tuareg-mode
@@ -230,7 +230,7 @@
     rust-mode
     search-web
     session
-    steady-theme-emacs
+    night-theme
     term+
     term+evil
     term+mode
@@ -270,7 +270,7 @@
 (setq linum-format " %3d ")
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (setq-default indicate-empty-lines t)
-(load-theme 'steady-dark t)
+(load-theme 'night t)
 (defun swap-C-x-and-C-t (frame)
   (with-selected-frame frame
     (keyboard-translate ?\C-t ?\C-x)
