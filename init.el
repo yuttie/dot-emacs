@@ -43,6 +43,9 @@
              '(:name company-auctex
                      :depends (yasnippet company-mode auctex)))
 (add-to-list 'el-get-sources
+             '(:name company-quickhelp
+                     :depends (pos-tip)))
+(add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
                      :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
