@@ -176,6 +176,7 @@
     company-ghc
     company-inf-ruby
     company-mode
+    company-quickhelp
     calfw
     caml-mode
     c-eldoc
