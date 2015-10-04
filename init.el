@@ -173,7 +173,10 @@
 (el-get-bundle use-package)  ; Initialize 'use-package' prior to other packages
 
 (defconst my-packages
-  '(ace-jump-mode
+  '(;; Evil must be initialized earlier than packages that use the evil-define-key macro
+    evil
+    ;;
+    ace-jump-mode
     ag
     auctex
     company-auctex
@@ -194,7 +197,6 @@
     emmet-mode
     ess
     esup
-    evil
     evil-elscreen
     evil-matchit
     evil-numbers
