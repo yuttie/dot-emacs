@@ -23,6 +23,7 @@
 (require 'initchart)
 (initchart-record-execution-time-of load file)
 (initchart-record-execution-time-of require feature)
+(initchart-record-execution-time-of load-theme theme)
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
 
 ;;; El-Get
