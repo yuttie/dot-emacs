@@ -1,1 +1,2 @@
-(company-quickhelp-mode)
+(with-eval-after-load 'company
+  (company-quickhelp-mode))
