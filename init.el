@@ -222,6 +222,7 @@
     inertial-scroll
     inf-ruby
     less-css-mode
+    macrostep
     magit
     markdown-mode
     mmm-mode
