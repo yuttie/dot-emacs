@@ -117,6 +117,15 @@
                      :checkout "v13.12"
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
+             '(:name hydrangea
+                     :description "Theme building framework for Emacs"
+                     :website "https://github.com/yuttie/hydrangea"
+                     :type github
+                     :pkgname "yuttie/hydrangea"
+                     :branch "compile-time-transformation"
+                     :post-init (progn
+                                  (add-to-list 'custom-theme-load-path default-directory))))
+(add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
                      :website "https://github.com/kiwanami/emacs-inertial-scroll"
@@ -145,13 +154,6 @@
                      :type github
                      :pkgname "tomoya/search-web.el"
                      :features search-web))
-(add-to-list 'el-get-sources
-             '(:name night-theme
-                     :description "A night theme for Emacs"
-                     :website "https://github.com/yuttie/night-theme"
-                     :type github
-                     :pkgname "yuttie/night-theme"
-                     :post-init (add-to-list 'custom-theme-load-path default-directory)))
 (add-to-list 'el-get-sources
              '(:name tuareg-mode
                      :description "A  GOOD Emacs mode to edit Objective Caml code."
@@ -215,6 +217,7 @@
     helm-descbinds
     helm-ls-git
     hlinum
+    hydrangea
     indent-guide
     inertial-scroll
     inf-ruby
@@ -237,7 +240,6 @@
     rust-mode
     search-web
     session
-    night-theme
     term+
     term+evil
     term+mode
@@ -277,7 +279,7 @@
 (setq linum-format " %3d ")
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (setq-default indicate-empty-lines t)
-(load-theme 'night t)
+(load-theme 'hydrangea t)
 (defun swap-C-x-and-C-t (frame)
   (with-selected-frame frame
     (keyboard-translate ?\C-t ?\C-x)
