@@ -117,11 +117,11 @@
                      :checkout "v13.12"
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
-             '(:name hydrangea
+             '(:name hydrangea-theme
                      :description "Theme building framework for Emacs"
-                     :website "https://github.com/yuttie/hydrangea"
+                     :website "https://github.com/yuttie/hydrangea-theme"
                      :type github
-                     :pkgname "yuttie/hydrangea"
+                     :pkgname "yuttie/hydrangea-theme"
                      :branch "compile-time-transformation"
                      :post-init (progn
                                   (add-to-list 'custom-theme-load-path default-directory))))
@@ -217,7 +217,7 @@
     helm-descbinds
     helm-ls-git
     hlinum
-    hydrangea
+    hydrangea-theme
     indent-guide
     inertial-scroll
     inf-ruby
