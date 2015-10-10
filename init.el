@@ -254,6 +254,7 @@
     rust-mode
     search-web
     session
+    smartparens
     smooth-scrolling
     term+
     term+evil
