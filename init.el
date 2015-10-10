@@ -230,6 +230,7 @@
     indent-guide
     inertial-scroll
     inf-ruby
+    json-mode
     less-css-mode
     macrostep
     magit
