@@ -185,9 +185,9 @@
   '(;; Evil must be initialized earlier than packages that use the evil-define-key macro
     evil
     ;;
-    ace-jump-mode
     ag
     auctex
+    avy
     company-auctex
     company-ghc
     company-inf-ruby
