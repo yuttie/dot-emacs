@@ -200,6 +200,7 @@
     delight
     d-mode
     ddskk
+    dired+
     edit-server
     elscreen
     ;;emacs-jabber  ; this package fails to install
