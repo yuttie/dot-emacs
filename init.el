@@ -222,6 +222,7 @@
     gtags
     haskell-mode
     helm
+    helm-ag
     helm-descbinds
     helm-ls-git
     hlinum
