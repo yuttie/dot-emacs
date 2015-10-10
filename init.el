@@ -221,6 +221,7 @@
     git-gutter-fringe+
     git-modes
     gtags
+    guide-key
     haskell-mode
     helm
     helm-ag
