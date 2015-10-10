@@ -17,6 +17,22 @@
         helm-source-bookmarks
         helm-source-file-cache
         helm-source-locate))
+(setq helm-buffers-fuzzy-match t
+      helm-M-x-fuzzy-match t
+      helm--fuzzy-match t
+      helm-fuzzy-match t
+      helm-apropos-fuzzy-match t
+      helm-ff-fuzzy-match t
+      helm-file-cache-fuzzy-match t
+      helm-recentf-fuzzy-match t
+      helm-buffers-fuzzy-match t
+      helm-imenu-fuzzy-match t
+      helm-locate-fuzzy-match t
+      helm-completion-in-region-fuzzy-match t
+      helm-mode-fuzzy-match t
+      helm-imenu-fuzzy-match t
+      helm-semantic-fuzzy-match t
+      helm-fuzzy-match t)
 
 ;;; Key bindings
 (with-eval-after-load 'helm
