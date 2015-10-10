@@ -225,6 +225,7 @@
     helm-descbinds
     helm-ls-git
     hlinum
+    htmlize
     hydrangea-theme
     indent-guide
     inertial-scroll
