@@ -185,6 +185,7 @@
   '(;; Evil must be initialized earlier than packages that use the evil-define-key macro
     evil
     ;;
+    ace-window
     ag
     auctex
     avy
