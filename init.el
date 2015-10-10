@@ -248,6 +248,7 @@
     rust-mode
     search-web
     session
+    smooth-scrolling
     term+
     term+evil
     term+mode
