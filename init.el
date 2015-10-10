@@ -208,6 +208,7 @@
     esup
     evil-elscreen
     evil-matchit
+    evil-nerd-commenter
     evil-numbers
     evil-surround
     expand-region
