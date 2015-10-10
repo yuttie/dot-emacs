@@ -78,6 +78,13 @@
                      :pkgname "redguardtoo/evil-matchit"
                      :depends (evil)))
 (add-to-list 'el-get-sources
+             '(:name bling/evil-visualstar
+                     :description "Starts a * or # search from the visual selection"
+                     :website "https://github.com/bling/evil-visualstar"
+                     :type github
+                     :pkgname "bling/evil-visualstar"
+                     :depends (evil)))
+(add-to-list 'el-get-sources
              '(:name expand-region
                      :features nil))
 (add-to-list 'el-get-sources
