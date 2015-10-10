@@ -245,6 +245,7 @@
     php-mode
     popwin
     powerline
+    projectile
     racer
     rainbow-mode
     robe-mode
