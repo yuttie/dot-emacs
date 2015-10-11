@@ -146,6 +146,12 @@
              '(:name multiple-cursors
                      :features nil))
 (add-to-list 'el-get-sources
+             '(:name navbar
+                     :description "Navigation bar for Emacs"
+                     :website "https://github.com/papaeye/emacs-navbar"
+                     :type github
+                     :pkgname "papaeye/emacs-navbar"))
+(add-to-list 'el-get-sources
              '(:name racer
                      :description "Rust Code Completion utility "
                      :website "https://github.com/phildawes/racer"
@@ -240,6 +246,7 @@
     markdown-mode
     mmm-mode
     multiple-cursors
+    navbar
     nim-mode
     org-mode
     php-completion
