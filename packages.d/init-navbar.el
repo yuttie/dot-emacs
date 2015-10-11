@@ -22,6 +22,9 @@
     buffer)
   (advice-add #'navbar-buffer-create :filter-return #'advise-navbar-hide-more)
 
+  (require 'navbarx-elscreen)
+  (setq navbarx-elscreen-tab-body-format " %n ")
+  (setq navbarx-elscreen-tab-truncate 18)
   (setq elscreen-display-tab nil)
-  (navbar-mode)
-  (add-to-list 'navbar-item-list #'navbarx-elscreen t))
+  (add-to-list 'navbar-item-list #'navbarx-elscreen t)
+  (navbar-mode))
