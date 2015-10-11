@@ -15,5 +15,12 @@
         window)))
   (advice-add #'navbar-make-window :override #'advise-navbar-make-taller-window)
 
+  (defun advise-navbar-hide-more (buffer)
+    (with-current-buffer buffer
+      (setq cursor-in-non-selected-windows nil)
+      (setq show-trailing-whitespace nil))
+    buffer)
+  (advice-add #'navbar-buffer-create :filter-return #'advise-navbar-hide-more)
+
   (navbar-mode)
   (add-to-list 'navbar-item-list #'navbarx-elscreen t))
