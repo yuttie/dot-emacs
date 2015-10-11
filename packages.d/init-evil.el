@@ -5,6 +5,9 @@
 (setq evil-search-wrap nil)
 (setq evil-want-fine-undo nil)
 
+;;; Ex commands
+(evil-ex-define-cmd "align" #'align-regexp)
+
 ;;; key bindings
 (defun evil-escape-or-quit (&optional prompt)
   (interactive)
