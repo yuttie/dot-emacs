@@ -128,7 +128,6 @@
                      :website "https://github.com/yuttie/hydrangea-theme"
                      :type github
                      :pkgname "yuttie/hydrangea-theme"
-                     :branch "compile-time-transformation"
                      :post-init (progn
                                   (add-to-list 'custom-theme-load-path default-directory))))
 (add-to-list 'el-get-sources
