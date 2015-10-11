@@ -22,5 +22,6 @@
     buffer)
   (advice-add #'navbar-buffer-create :filter-return #'advise-navbar-hide-more)
 
+  (setq elscreen-display-tab nil)
   (navbar-mode)
   (add-to-list 'navbar-item-list #'navbarx-elscreen t))
