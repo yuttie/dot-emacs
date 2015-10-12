@@ -234,6 +234,7 @@
     helm-ls-git
     highlight-numbers
     highlight-quoted
+    highlight-symbol
     hlinum
     htmlize
     hydrangea-theme
