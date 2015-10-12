@@ -4,4 +4,3 @@
 (popwin-mode)
 
 (add-to-list 'popwin:special-display-config '(dired-mode :position top))
-(add-to-list 'popwin:special-display-config '("^\\*helm.*\\*$" :regexp t))

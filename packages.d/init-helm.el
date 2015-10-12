@@ -91,3 +91,10 @@ that is sorting is done against real value of candidate."
           ((= sc1 sc2)
            (string-lessp str1 str2))
           (t (> sc1 sc2)))))
+
+;;; Popup window
+(add-to-list 'display-buffer-alist
+             '("helm" .
+               (display-buffer-in-side-window
+                (side . bottom)
+                (window-height . 0.5))))
