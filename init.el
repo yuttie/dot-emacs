@@ -232,6 +232,7 @@
     helm-ag
     helm-descbinds
     helm-ls-git
+    highlight-numbers
     hlinum
     htmlize
     hydrangea-theme
