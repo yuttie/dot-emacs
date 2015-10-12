@@ -233,6 +233,7 @@
     helm-descbinds
     helm-ls-git
     highlight-numbers
+    highlight-quoted
     hlinum
     htmlize
     hydrangea-theme
