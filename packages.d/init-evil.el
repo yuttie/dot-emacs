@@ -24,6 +24,10 @@
 (define-key evil-motion-state-map (kbd "<remap> <evil-next-line>")     #'evil-next-visual-line)
 (define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") #'evil-previous-visual-line)
 
+(with-eval-after-load 'company
+  (define-key evil-insert-state-map (kbd "C-n") nil)
+  (define-key evil-insert-state-map (kbd "C-p") nil))
+
 (define-key evil-normal-state-map (kbd "g w") #'browse-url-at-point)
 
 ;;; fold
