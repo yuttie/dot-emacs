@@ -23,6 +23,7 @@
   (advice-add #'navbar-buffer-create :filter-return #'advise-navbar-hide-more)
 
   (require 'navbarx-elscreen)
+  (setq navbar-item-separator " ")
   (setq navbarx-elscreen-tab-body-format " %n ")
   (setq navbarx-elscreen-tab-truncate 18)
   (setq elscreen-display-tab nil)
