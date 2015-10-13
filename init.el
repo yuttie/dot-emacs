@@ -298,12 +298,16 @@
      ,@body))
 (defun find-user-emacs-file ()
   (interactive)
-  (with-default-directory user-emacs-directory
-      (call-interactively #'find-file)))
+  (if (require 'helm-files nil t)
+      (helm-find-files-1 (concat user-emacs-directory "/"))
+    (with-default-directory user-emacs-directory
+        (call-interactively #'find-file))))
 (defun find-package-config-file ()
   (interactive)
-  (with-default-directory el-get-user-package-directory
-      (call-interactively #'find-file)))
+  (if (require 'helm-files nil t)
+      (helm-find-files-1 (concat el-get-user-package-directory "/"))
+    (with-default-directory el-get-user-package-directory
+        (call-interactively #'find-file))))
 (define-prefix-command 'dot-files-map)
 (global-set-key (kbd "C-x .") #'dot-files-map)
 (define-key dot-files-map (kbd "e") #'find-user-emacs-file)
