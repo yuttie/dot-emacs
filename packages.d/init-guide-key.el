@@ -1,2 +1,2 @@
-(setq guide-key/guide-key-sequence '("C-c f" "C-c" "M-s"))
+(setq guide-key/guide-key-sequence '("C-c f" "C-c" "C-c p" "M-s"))
 (guide-key-mode)
