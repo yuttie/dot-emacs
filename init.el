@@ -289,6 +289,26 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
+;;; Open configuration files quickly
+(defmacro with-default-directory (directory &rest body)
+  (declare (indent 2) (debug t))
+  `(let ((default-directory (or (and ,directory
+                                     (file-name-as-directory ,directory))
+                                default-directory)))
+     ,@body))
+(defun find-user-emacs-file ()
+  (interactive)
+  (with-default-directory user-emacs-directory
+      (call-interactively #'find-file)))
+(defun find-package-config-file ()
+  (interactive)
+  (with-default-directory el-get-user-package-directory
+      (call-interactively #'find-file)))
+(define-prefix-command 'dot-files-map)
+(global-set-key (kbd "C-x .") #'dot-files-map)
+(define-key dot-files-map (kbd "e") #'find-user-emacs-file)
+(define-key dot-files-map (kbd "p") #'find-package-config-file)
+
 ;;; emacs
 (blink-cursor-mode)
 (show-paren-mode t)
