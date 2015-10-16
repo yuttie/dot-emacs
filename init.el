@@ -480,6 +480,7 @@ removed from them after the first call."
 
 ;;; sh-mode
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.xprofile\\'" . sh-mode))
 
 ;;; CC Mode
 (setq-default c-basic-offset 4)
