@@ -128,8 +128,7 @@
                      :website "https://github.com/yuttie/hydrangea-theme"
                      :type github
                      :pkgname "yuttie/hydrangea-theme"
-                     :post-init (progn
-                                  (add-to-list 'custom-theme-load-path default-directory))))
+                     :post-init (add-to-list 'custom-theme-load-path default-directory)))
 (add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
