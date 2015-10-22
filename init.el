@@ -470,6 +470,7 @@ removed from them after the first call."
 (setq ediff-split-window-function #'split-window-horizontally)
 
 ;;; eldoc
+(add-hook 'lisp-mode-hook #'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook #'turn-on-eldoc-mode)
 (add-hook 'lisp-interaction-mode-hook #'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook #'turn-on-eldoc-mode)
