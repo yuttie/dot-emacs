@@ -5,7 +5,7 @@
 (setq company-require-match nil)
 (setq company-auto-complete 'company-explicit-action-p)
 (setq company-auto-complete-chars (lambda (input) t))
-(setq company-idle-delay 0)
+(setq company-idle-delay 0.1)
 (setq company-frontends
       '(company-pseudo-tooltip-unless-just-one-frontend
         company-preview-frontend
