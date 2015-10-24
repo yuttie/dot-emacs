@@ -67,6 +67,13 @@
                      :pkgname "gabesoft/evil-mc"
                      :depends (evil)))
 (add-to-list 'el-get-sources
+             '(:name evil-smartparens
+                     :description "Evil support for smartparens"
+                     :website "https://github.com/expez/evil-smartparens"
+                     :type github
+                     :pkgname "expez/evil-smartparens"
+                     :depends (evil smartparens)))
+(add-to-list 'el-get-sources
              '(:name evil-visualstar
                      :description "Starts a * or # search from the visual selection"
                      :website "https://github.com/bling/evil-visualstar"
@@ -184,6 +191,7 @@
     evil-mc
     evil-nerd-commenter
     evil-numbers
+    evil-smartparens
     evil-surround
     expand-region
     flycheck
