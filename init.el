@@ -38,9 +38,6 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-sources
-             '(:name ace-jump-mode
-                     :features nil))
-(add-to-list 'el-get-sources
              '(:name company-auctex
                      :depends (yasnippet company-mode auctex)))
 (add-to-list 'el-get-sources
@@ -54,9 +51,6 @@
                      :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"))
 (add-to-list 'el-get-sources
              '(:name ddskk
-                     :features nil))
-(add-to-list 'el-get-sources
-             '(:name ess
                      :features nil))
 (add-to-list 'el-get-sources
              '(:name evil
@@ -73,24 +67,6 @@
                      :pkgname "bling/evil-visualstar"
                      :depends (evil)))
 (add-to-list 'el-get-sources
-             '(:name expand-region
-                     :features nil))
-(add-to-list 'el-get-sources
-             '(:name flycheck-d-unittest
-                     :description "This library adds D unittest support to flycheck."
-                     :website "https://github.com/flycheck/flycheck-d-unittest"
-                     :type github
-                     :pkgname "flycheck/flycheck-d-unittest"
-                     :depends (flycheck dash)))
-(add-to-list 'el-get-sources
-             '(:name flycheck-haskell
-                     :description "Improved Haskell support for Flycheck"
-                     :website "https://github.com/flycheck/flycheck-haskell"
-                     :type github
-                     :pkgname "flycheck/flycheck-haskell"
-                     :depends (flycheck haskell-mode dash f)
-                     :post-init (with-eval-after-load 'flycheck (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))))
-(add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
@@ -99,7 +75,7 @@
                      :website "https://github.com/nonsequitur/git-gutter-plus"
                      :type github
                      :pkgname "nonsequitur/git-gutter-plus"
-                     :depends (magit)))
+                     :depends (magit)))  ; Depending on Magit's git-commit.el
 (add-to-list 'el-get-sources
              '(:name git-gutter-fringe+
                      :description "Fringe version of git-gutter+.el"
@@ -129,9 +105,6 @@
              '(:name multi-mode-util
                     :pkgname "tarao/multi-mode-util"))
 (add-to-list 'el-get-sources
-             '(:name multiple-cursors
-                     :features nil))
-(add-to-list 'el-get-sources
              '(:name navbar
                      :description "Navigation bar for Emacs"
                      :website "https://github.com/papaeye/emacs-navbar"
@@ -159,13 +132,6 @@
                      :type github
                      :pkgname "tomoya/search-web.el"
                      :features search-web))
-(add-to-list 'el-get-sources
-             '(:name tuareg-mode
-                     :description "A  GOOD Emacs mode to edit Objective Caml code."
-                     :website "https://github.com/ocaml/tuareg"
-                     :type github
-                     :pkgname "ocaml/tuareg"
-                     :load-path (".")))
 (add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
