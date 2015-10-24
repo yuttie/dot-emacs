@@ -17,8 +17,7 @@
 
   (defun advise-navbar-hide-more (buffer)
     (with-current-buffer buffer
-      (setq cursor-in-non-selected-windows nil)
-      (setq show-trailing-whitespace nil))
+      (setq cursor-in-non-selected-windows nil))
     buffer)
   (advice-add #'navbar-buffer-create :filter-return #'advise-navbar-hide-more)
 

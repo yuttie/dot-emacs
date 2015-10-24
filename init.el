@@ -317,7 +317,6 @@
 (show-paren-mode t)
 (setq show-paren-delay 0)
 (setq-default fill-column 80)
-(setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)  ;; don't wrap lines by default
 (setq-default bidi-display-reordering nil)  ; http://emacs.stackexchange.com/questions/598/how-do-i-handle-files-with-extremely-long-lines/603#603
 (setq truncate-partial-width-windows nil)
@@ -410,6 +409,7 @@ removed from them after the first call."
 (add-hook 'prog-mode-hook #'linum-mode)
 (add-hook 'prog-mode-hook #'flyspell-prog-mode)
 (add-hook 'prog-mode-hook (lambda () (modify-syntax-entry ?_ "w")))
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
 (with-eval-after-load 'whitespace
   (setq whitespace-style '(face lines-tail))
   (setq whitespace-line-column 80))
