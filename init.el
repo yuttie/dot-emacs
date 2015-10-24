@@ -159,12 +159,10 @@
                      :features nil))
 (add-to-list 'el-get-sources
              '(:name racer
-                     :description "Rust Code Completion utility "
-                     :website "https://github.com/phildawes/racer"
+                     :description "Racer support for Emacs"
+                     :website "https://github.com/racer-rust/emacs-racer"
                      :type github
-                     :pkgname "phildawes/racer"
-                     :load-path ("editors")
-                     :features nil))
+                     :pkgname "racer-rust/emacs-racer"))
 (add-to-list 'el-get-sources
              '(:name search-web
                      :description "Post web search queries using `browse-url'"

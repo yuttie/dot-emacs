@@ -1,4 +1,4 @@
 (setq racer-rust-src-path (expand-file-name "~/rust/src/"))
 (setq racer-cmd "/usr/bin/racer")
-(with-eval-after-load 'rust-mode
-  (require 'racer))
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
