@@ -200,7 +200,6 @@
     caml-mode
     c-eldoc
     deferred
-    delight
     d-mode
     ddskk
     dired+
