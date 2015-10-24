@@ -187,6 +187,7 @@
     ess
     esup
     evil-elscreen
+    evil-jumper
     evil-matchit
     evil-mc
     evil-nerd-commenter
