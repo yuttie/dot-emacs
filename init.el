@@ -71,13 +71,6 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
-             '(:name evil-matchit
-                     :description "Vim matchit ported into Emacs"
-                     :website "https://github.com/redguardtoo/evil-matchit"
-                     :type github
-                     :pkgname "redguardtoo/evil-matchit"
-                     :depends (evil)))
-(add-to-list 'el-get-sources
              '(:name bling/evil-visualstar
                      :description "Starts a * or # search from the visual selection"
                      :website "https://github.com/bling/evil-visualstar"
