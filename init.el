@@ -60,6 +60,13 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
+             '(:name evil-mc
+                     :description "Multiple cursors implementation for evil-mode "
+                     :website "https://github.com/gabesoft/evil-mc"
+                     :type github
+                     :pkgname "gabesoft/evil-mc"
+                     :depends (evil)))
+(add-to-list 'el-get-sources
              '(:name evil-visualstar
                      :description "Starts a * or # search from the visual selection"
                      :website "https://github.com/bling/evil-visualstar"
