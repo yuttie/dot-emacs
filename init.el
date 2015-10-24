@@ -108,6 +108,19 @@
              '(:name haskell-mode
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
+             '(:name highlight-numbers
+                     :description "Highlight numbers in source code"
+                     :website "https://github.com/Fanael/highlight-numbers"
+                     :type github
+                     :pkgname "Fanael/highlight-numbers"
+                     :depends (parent-mode)))
+(add-to-list 'el-get-sources
+             '(:name highlight-quoted
+                     :description "Highlight Lisp quotes and quoted symbols"
+                     :website "https://github.com/Fanael/highlight-quoted"
+                     :type github
+                     :pkgname "Fanael/highlight-quoted"))
+(add-to-list 'el-get-sources
              '(:name hydrangea-theme
                      :description "Theme building framework for Emacs"
                      :website "https://github.com/yuttie/hydrangea-theme"
@@ -131,6 +144,12 @@
                      :website "https://github.com/papaeye/emacs-navbar"
                      :type github
                      :pkgname "papaeye/emacs-navbar"))
+(add-to-list 'el-get-sources
+             '(:name parent-mode
+                     :description "get major mode's parent modes"
+                     :website "https://github.com/Fanael/parent-mode"
+                     :type github
+                     :pkgname "Fanael/parent-mode"))
 (add-to-list 'el-get-sources
              '(:name pos-tip
                      :description "Show tooltip at point"
