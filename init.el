@@ -192,6 +192,7 @@
     evil-mc
     evil-nerd-commenter
     evil-numbers
+    evil-org-mode
     evil-smartparens
     evil-surround
     expand-region
