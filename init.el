@@ -56,6 +56,13 @@
              '(:name evil
                      :before (setq evil-search-module 'evil-search)))
 (add-to-list 'el-get-sources
+             '(:name evil-anzu
+                     :description "anzu for evil-mode"
+                     :website "https://github.com/syohex/emacs-evil-anzu"
+                     :type github
+                     :pkgname "syohex/emacs-evil-anzu"
+                     :depends (evil anzu)))
+(add-to-list 'el-get-sources
              '(:name evil-elscreen
                      :features evil-elscreen
                      :depends (evil elscreen)))
