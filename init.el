@@ -56,11 +56,6 @@
              '(:name ddskk
                      :features nil))
 (add-to-list 'el-get-sources
-             '(:name elscreen
-                     :description "Screen Manager for Emacsen"
-                     :type github
-                     :pkgname "shosti/elscreen"))
-(add-to-list 'el-get-sources
              '(:name ess
                      :features nil))
 (add-to-list 'el-get-sources
