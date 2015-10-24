@@ -181,6 +181,7 @@
     esup
     evil-elscreen
     evil-matchit
+    evil-mc
     evil-nerd-commenter
     evil-numbers
     evil-surround
@@ -214,7 +215,6 @@
     magit
     markdown-mode
     mmm-mode
-    multiple-cursors
     navbar
     nim-mode
     org-mode
