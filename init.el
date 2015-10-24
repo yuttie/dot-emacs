@@ -143,6 +143,13 @@
                      :type github
                      :pkgname "papaeye/emacs-navbar"))
 (add-to-list 'el-get-sources
+             '(:name pos-tip
+                     :description "Show tooltip at point"
+                     :website "https://github.com/pitkali/pos-tip"
+                     :type github
+                     :pkgname "pitkali/pos-tip"
+                     :features nil))
+(add-to-list 'el-get-sources
              '(:name racer
                      :description "Rust Code Completion utility "
                      :website "https://github.com/phildawes/racer"
