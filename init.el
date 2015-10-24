@@ -387,6 +387,7 @@ removed from them after the first call."
 ;;; programming
 (add-hook 'prog-mode-hook #'linum-mode)
 (add-hook 'prog-mode-hook #'flyspell-prog-mode)
+(add-hook 'prog-mode-hook (lambda () (modify-syntax-entry ?_ "w")))
 (with-eval-after-load 'whitespace
   (setq whitespace-style '(face lines-tail))
   (setq whitespace-line-column 80))
@@ -447,11 +448,15 @@ removed from them after the first call."
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
 
-;;; eldoc
-(add-hook 'lisp-mode-hook #'turn-on-eldoc-mode)
-(add-hook 'emacs-lisp-mode-hook #'turn-on-eldoc-mode)
+;;; Lisp
+(add-hook 'lisp-mode-hook             #'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook       #'turn-on-eldoc-mode)
 (add-hook 'lisp-interaction-mode-hook #'turn-on-eldoc-mode)
-(add-hook 'ielm-mode-hook #'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook             #'turn-on-eldoc-mode)
+(add-hook 'lisp-mode-hook             (lambda () (modify-syntax-entry ?- "w")))
+(add-hook 'emacs-lisp-mode-hook       (lambda () (modify-syntax-entry ?- "w")))
+(add-hook 'lisp-interaction-mode-hook (lambda () (modify-syntax-entry ?- "w")))
+(add-hook 'ielm-mode-hook             (lambda () (modify-syntax-entry ?- "w")))
 
 ;;; VC
 (setq vc-handled-backends nil)  ;; disabling VC at all
