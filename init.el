@@ -251,7 +251,6 @@
     navbar
     nim-mode
     org-mode
-    php-completion
     php-eldoc
     php-mode
     popwin
