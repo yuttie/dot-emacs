@@ -66,7 +66,7 @@
                      :features evil-elscreen
                      :depends (evil elscreen)))
 (add-to-list 'el-get-sources
-             '(:name bling/evil-visualstar
+             '(:name evil-visualstar
                      :description "Starts a * or # search from the visual selection"
                      :website "https://github.com/bling/evil-visualstar"
                      :type github
