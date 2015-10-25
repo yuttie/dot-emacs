@@ -128,7 +128,9 @@
                      :website "https://github.com/yuttie/hydrangea-theme"
                      :type github
                      :pkgname "yuttie/hydrangea-theme"
-                     :post-init (add-to-list 'custom-theme-load-path default-directory)))
+                     :autoloads "hydrangea-autoloads"
+                     :build `((,el-get-emacs "-batch" "--quick" "--eval"
+                                             "(let ((generated-autoload-file (expand-file-name \"hydrangea-autoloads.el\" \".\")) (backup-inhibited t)) (update-directory-autoloads \".\"))"))))
 (add-to-list 'el-get-sources
              '(:name inertial-scroll
                      :description "Inertial scrolling for emacs"
