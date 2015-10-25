@@ -62,7 +62,6 @@
 
                               (powerline-buffer-id   buffer-id-face 'l)
                               (powerline-raw "%*"    face2 'l)
-                              (powerline-buffer-size face2 'l)
 
                               (powerline-raw " "     face2)
                               (funcall separator-left face2 face3)
