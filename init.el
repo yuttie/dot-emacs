@@ -110,6 +110,12 @@
              '(:name haskell-mode
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
+             '(:name highlight-defined
+                     :description "Syntax highlighting of known Elisp symbols"
+                     :website "https://github.com/Fanael/highlight-defined"
+                     :type github
+                     :pkgname "Fanael/highlight-defined"))
+(add-to-list 'el-get-sources
              '(:name highlight-numbers
                      :description "Highlight numbers in source code"
                      :website "https://github.com/Fanael/highlight-numbers"
