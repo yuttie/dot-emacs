@@ -231,7 +231,6 @@
     git-gutter-fringe+
     git-modes
     gtags
-    guide-key
     haskell-mode
     helm
     helm-ag
@@ -279,6 +278,7 @@
     wanderlust
     web-mode
     wgrep
+    which-key
     yari
     yasnippet
     zsh-history
