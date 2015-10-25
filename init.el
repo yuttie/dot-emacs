@@ -15,6 +15,8 @@
 (set-scroll-bar-mode 'right)
 (tool-bar-mode 0)
 (add-to-list 'initial-frame-alist '(tool-bar-lines . 0))
+(add-to-list 'initial-frame-alist '(right-divider-width . 1))
+(add-to-list 'initial-frame-alist '(bottom-divider-width . 0))
 
 ;;; load-path
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
