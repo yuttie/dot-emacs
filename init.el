@@ -208,6 +208,7 @@
     auctex
     avy
     company-auctex
+    company-c-headers
     company-ghc
     company-inf-ruby
     company-mode
