@@ -46,6 +46,9 @@
              '(:name company-quickhelp
                      :depends (company pos-tip)))
 (add-to-list 'el-get-sources
+             '(:name company-statistics
+                     :depends (company)))
+(add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
                      :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
