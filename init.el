@@ -212,6 +212,7 @@
     company-inf-ruby
     company-mode
     company-quickhelp
+    company-statistics
     calfw
     caml-mode
     c-eldoc
