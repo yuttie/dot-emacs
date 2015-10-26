@@ -93,6 +93,9 @@
                      :pkgname "bling/evil-visualstar"
                      :depends (evil)))
 (add-to-list 'el-get-sources
+             '(:name flycheck-pos-tip
+                     :checkout "472fa870"))
+(add-to-list 'el-get-sources
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
@@ -235,6 +238,7 @@
     flycheck
     flycheck-d-unittest
     flycheck-haskell
+    flycheck-pos-tip
     ghc-mod
     git-gutter+
     git-gutter-fringe+
