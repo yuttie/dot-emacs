@@ -213,6 +213,7 @@
     company-mode
     company-quickhelp
     company-statistics
+    company-web
     calfw
     caml-mode
     c-eldoc
