@@ -44,10 +44,10 @@
                      :depends (yasnippet company-mode auctex)))
 (add-to-list 'el-get-sources
              '(:name company-quickhelp
-                     :depends (company pos-tip)))
+                     :depends (company-mode pos-tip)))
 (add-to-list 'el-get-sources
              '(:name company-statistics
-                     :depends (company)))
+                     :depends (company-mode)))
 (add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
