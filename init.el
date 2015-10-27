@@ -225,6 +225,7 @@
     dired+
     edit-server
     elscreen
+    elscreen-persist
     ;;emacs-jabber  ; this package fails to install
     emmet-mode
     ess
