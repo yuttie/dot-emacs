@@ -25,7 +25,7 @@
   (require 'navbarx-elscreen)
   (setq navbar-item-separator " ")
   (setq navbarx-elscreen-tab-body-format " %n ")
-  (setq navbarx-elscreen-tab-truncate 18)
+  (setq navbarx-elscreen-tab-truncate 24)
   (setq elscreen-display-tab nil)
   (add-to-list 'navbar-item-list #'navbarx-elscreen t)
   (navbar-mode))
