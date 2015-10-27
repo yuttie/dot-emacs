@@ -8,6 +8,7 @@
              (window (display-buffer-in-side-window
                       buffer '((side . top) (window-height . 2)))))  ; window-height was 1
         (set-window-fringes window 0 0)
+        (set-window-scroll-bars window nil nil nil)
         (set-window-display-table window navbar-display-table)
         (set-window-parameter window 'delete-window 'ignore)
         (set-window-parameter window 'no-other-window t)
