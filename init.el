@@ -49,6 +49,9 @@
              '(:name company-statistics
                      :depends (company-mode)))
 (add-to-list 'el-get-sources
+             '(:name company-web
+                     :depends (company-mode dash web-completion-data)))
+(add-to-list 'el-get-sources
              '(:name d-mode
                      :description "An Emacs mode for D code."
                      :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
