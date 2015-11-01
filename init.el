@@ -495,6 +495,9 @@ removed from them after the first call."
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
 
+;;; generic-x
+(require 'generic-x)
+
 ;;; Lisp
 (add-hook 'lisp-mode-hook             #'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook       #'turn-on-eldoc-mode)
