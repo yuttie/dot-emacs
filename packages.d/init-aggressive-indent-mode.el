@@ -1,1 +1,1 @@
-(global-aggressive-indent-mode)
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
