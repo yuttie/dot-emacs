@@ -190,6 +190,12 @@
                      :pkgname "tomoya/search-web.el"
                      :features search-web))
 (add-to-list 'el-get-sources
+             '(:name speed-type
+                     :description "Practice touch and speed typing"
+                     :website "https://github.com/hagleitn/speed-type"
+                     :type github
+                     :pkgname "hagleitn/speed-type"))
+(add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
 (add-to-list 'el-get-sources
@@ -289,6 +295,7 @@
     session
     smartparens
     smooth-scrolling
+    speed-type
     term+
     term+evil
     term+mode
