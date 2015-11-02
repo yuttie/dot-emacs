@@ -303,6 +303,7 @@
     tuareg-mode
     twittering-mode
     use-package
+    vimish-fold
     wanderlust
     web-mode
     wgrep
