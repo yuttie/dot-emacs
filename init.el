@@ -214,6 +214,7 @@
     ;;
     ace-window
     ag
+    aggressive-indent-mode
     auctex
     avy
     company-auctex
