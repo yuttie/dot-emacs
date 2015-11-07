@@ -25,6 +25,10 @@
         company-dabbrev
         company-capf))
 
+(with-eval-after-load 'company
+  (define-key company-active-map [return]    nil)
+  (define-key company-active-map (kbd "RET") nil))
+
 (add-hook 'company-mode-hook
           (lambda ()
             (define-key company-active-map (kbd "C-n") #'company-select-next)
