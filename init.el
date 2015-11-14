@@ -354,6 +354,7 @@
 (setq-default truncate-lines t)  ;; don't wrap lines by default
 (setq-default bidi-display-reordering nil)  ; http://emacs.stackexchange.com/questions/598/how-do-i-handle-files-with-extremely-long-lines/603#603
 (setq truncate-partial-width-windows nil)
+(setq x-select-enable-clipboard nil)
 (define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
 ;;; UI
