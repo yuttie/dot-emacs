@@ -552,8 +552,10 @@ by using nxml's indentation rules."
 
 ;;; Merlin for OCaml
 ;; ocamlmerlin must be available in a directory in PATH
-(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
-(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+(let ((opam-share-dir (shell-command-to-string "opam config var share 2> /dev/null")))
+  (if (string= opam-share-dir "")
+      (message "You may need to run `opam init` first.")
+    (add-to-list 'load-path (concat (substring opam-share-dir 0 -1) "/emacs/site-lisp"))))
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook #'merlin-mode t)
 (add-hook 'caml-mode-hook #'merlin-mode t)
