@@ -31,6 +31,7 @@
 ;;; El-Get
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
 (setq el-get-user-package-directory "~/.emacs.d/packages.d/")
+(setq el-get-git-shallow-clone t)
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
