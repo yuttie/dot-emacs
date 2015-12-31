@@ -98,6 +98,7 @@
                      :depends (evil)))
 (add-to-list 'el-get-sources
              '(:name flycheck-pos-tip
+                     :shallow nil
                      :checkout "472fa870"))
 (add-to-list 'el-get-sources
              '(:name ghc-mod
