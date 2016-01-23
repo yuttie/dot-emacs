@@ -360,6 +360,8 @@
 (define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 
 ;;; UI
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
 (line-number-mode)    ;; for the mode line
 (column-number-mode)  ;; for the mode line
 (setq linum-format " %3d ")
