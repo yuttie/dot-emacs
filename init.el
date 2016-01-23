@@ -385,8 +385,10 @@
 
 ;;; Font
 ;; https://github.com/tarao/dotfiles/blob/master/.emacs.d/init/window-system.el
+;; ABCDEabcde1234567890ABCDEabcde1234567890ABCDEabcde1234567890ABCDEabcde1234567890
+;; あいうえおあいうえおかきくけこかきくけこあいうえおあいうえおかきくけこかきくけこ
 (defconst default-fontset-name "myfonts")
-(defconst default-base-font-name "Hack")
+(defconst default-base-font-name "Midway")
 (defconst default-ja-font-name "M+ 1m regular")
 (defconst default-ja-font-xlfd-pattern (format ".*%s.*" (rx "M+ 1m")))
 (cond
@@ -394,7 +396,7 @@
   (defconst default-base-font-size 12)
   (defconst default-ja-font-scale 1.605))
  (t
-  (defconst default-base-font-size 7)
+  (defconst default-base-font-size 8.5)
   (defconst default-ja-font-scale 1.200)))
 
 (defun setup-window-system-configuration (&optional frame)
@@ -417,7 +419,7 @@ removed from them after the first call."
              (ja           default-ja-font-name)
              (ja-pat       default-ja-font-xlfd-pattern)
              (scale        default-ja-font-scale)
-             (base-font    (format "%s-%d:weight=normal:slant=normal" base size))
+             (base-font    (format "%s-%f:weight=normal:slant=normal" base size))
              (ja-font      (font-spec :family ja))
              (fsn          (concat "fontset-" fontset-name))
              (elt          `(font . ,fsn)))
