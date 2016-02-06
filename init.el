@@ -215,6 +215,7 @@
     evil
     ;;
     ace-window
+    adoc-mode
     ag
     aggressive-indent-mode
     auctex
