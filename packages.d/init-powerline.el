@@ -55,7 +55,7 @@
                                          powerline-default-separator
                                          (cdr powerline-default-separator-dir))))
                         (lhs (list
-                              (powerline-raw (capitalize (symbol-name evil-state)) mode-face 'l)
+                              (powerline-raw (upcase (symbol-name evil-state)) mode-face 'l)
 
                               (powerline-raw " "     mode-face)
                               (funcall separator-left mode-face face2)
