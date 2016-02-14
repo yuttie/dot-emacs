@@ -1,0 +1,6 @@
+(:name highlight-numbers
+       :description "Highlight numbers in source code"
+       :website "https://github.com/Fanael/highlight-numbers"
+       :type github
+       :pkgname "Fanael/highlight-numbers"
+       :depends (parent-mode))

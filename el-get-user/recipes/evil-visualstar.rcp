@@ -1,0 +1,6 @@
+(:name evil-visualstar
+       :description "Starts a * or # search from the visual selection"
+       :website "https://github.com/bling/evil-visualstar"
+       :type github
+       :pkgname "bling/evil-visualstar"
+       :depends (evil))

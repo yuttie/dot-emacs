@@ -1,0 +1,5 @@
+(:name racer
+       :description "Racer support for Emacs"
+       :website "https://github.com/racer-rust/emacs-racer"
+       :type github
+       :pkgname "racer-rust/emacs-racer")

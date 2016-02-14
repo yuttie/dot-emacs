@@ -40,6 +40,8 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+
 (add-to-list 'el-get-sources
              '(:name company-auctex
                      :depends (yasnippet company-mode auctex)))
@@ -53,49 +55,15 @@
              '(:name company-web
                      :depends (company-mode dash web-completion-data)))
 (add-to-list 'el-get-sources
-             '(:name d-mode
-                     :description "An Emacs mode for D code."
-                     :website "https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode"
-                     :type github
-                     :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"))
-(add-to-list 'el-get-sources
              '(:name ddskk
                      :features nil))
 (add-to-list 'el-get-sources
              '(:name evil
                      :before (setq evil-search-module 'evil-search)))
 (add-to-list 'el-get-sources
-             '(:name evil-anzu
-                     :description "anzu for evil-mode"
-                     :website "https://github.com/syohex/emacs-evil-anzu"
-                     :type github
-                     :pkgname "syohex/emacs-evil-anzu"
-                     :depends (evil anzu)))
-(add-to-list 'el-get-sources
              '(:name evil-elscreen
                      :features evil-elscreen
                      :depends (evil elscreen)))
-(add-to-list 'el-get-sources
-             '(:name evil-mc
-                     :description "Multiple cursors implementation for evil-mode "
-                     :website "https://github.com/gabesoft/evil-mc"
-                     :type github
-                     :pkgname "gabesoft/evil-mc"
-                     :depends (evil)))
-(add-to-list 'el-get-sources
-             '(:name evil-smartparens
-                     :description "Evil support for smartparens"
-                     :website "https://github.com/expez/evil-smartparens"
-                     :type github
-                     :pkgname "expez/evil-smartparens"
-                     :depends (evil smartparens)))
-(add-to-list 'el-get-sources
-             '(:name evil-visualstar
-                     :description "Starts a * or # search from the visual selection"
-                     :website "https://github.com/bling/evil-visualstar"
-                     :type github
-                     :pkgname "bling/evil-visualstar"
-                     :depends (evil)))
 (add-to-list 'el-get-sources
              '(:name flycheck-pos-tip
                      :shallow nil
@@ -104,109 +72,14 @@
              '(:name ghc-mod
                      :depends (haskell-mode)))
 (add-to-list 'el-get-sources
-             '(:name git-gutter+
-                     :description "Manage Git hunks straight from the buffer"
-                     :website "https://github.com/nonsequitur/git-gutter-plus"
-                     :type github
-                     :pkgname "nonsequitur/git-gutter-plus"
-                     :depends (magit)))  ; Depending on Magit's git-commit.el
-(add-to-list 'el-get-sources
-             '(:name git-gutter-fringe+
-                     :description "Fringe version of git-gutter+.el"
-                     :website "https://github.com/nonsequitur/git-gutter-fringe-plus"
-                     :type github
-                     :pkgname "nonsequitur/git-gutter-fringe-plus"
-                     :depends (git-gutter+ fringe-helper)))
-(add-to-list 'el-get-sources
              '(:name haskell-mode
                      :post-init (require 'haskell-mode-autoloads)))
 (add-to-list 'el-get-sources
-             '(:name highlight-defined
-                     :description "Syntax highlighting of known Elisp symbols"
-                     :website "https://github.com/Fanael/highlight-defined"
-                     :type github
-                     :pkgname "Fanael/highlight-defined"))
-(add-to-list 'el-get-sources
-             '(:name highlight-numbers
-                     :description "Highlight numbers in source code"
-                     :website "https://github.com/Fanael/highlight-numbers"
-                     :type github
-                     :pkgname "Fanael/highlight-numbers"
-                     :depends (parent-mode)))
-(add-to-list 'el-get-sources
-             '(:name highlight-quoted
-                     :description "Highlight Lisp quotes and quoted symbols"
-                     :website "https://github.com/Fanael/highlight-quoted"
-                     :type github
-                     :pkgname "Fanael/highlight-quoted"))
-(add-to-list 'el-get-sources
-             '(:name hydrangea-theme
-                     :description "Theme building framework for Emacs"
-                     :website "https://github.com/yuttie/hydrangea-theme"
-                     :type github
-                     :pkgname "yuttie/hydrangea-theme"
-                     :autoloads "hydrangea-autoloads"
-                     :build `((,el-get-emacs "-batch" "--quick" "--eval"
-                                             "(let ((generated-autoload-file (expand-file-name \"hydrangea-autoloads.el\" \".\")) (backup-inhibited t)) (update-directory-autoloads \".\"))"))))
-(add-to-list 'el-get-sources
-             '(:name inertial-scroll
-                     :description "Inertial scrolling for emacs"
-                     :website "https://github.com/kiwanami/emacs-inertial-scroll"
-                     :type github
-                     :pkgname "yuttie/emacs-inertial-scroll"
-                     :features inertial-scroll
-                     :depends (deferred)))
-(add-to-list 'el-get-sources
              '(:name multi-mode-util
-                    :pkgname "tarao/multi-mode-util"))
-(add-to-list 'el-get-sources
-             '(:name navbar
-                     :description "Navigation bar for Emacs"
-                     :website "https://github.com/papaeye/emacs-navbar"
-                     :type github
-                     :pkgname "papaeye/emacs-navbar"))
-(add-to-list 'el-get-sources
-             '(:name parent-mode
-                     :description "get major mode's parent modes"
-                     :website "https://github.com/Fanael/parent-mode"
-                     :type github
-                     :pkgname "Fanael/parent-mode"))
-(add-to-list 'el-get-sources
-             '(:name pos-tip
-                     :description "Show tooltip at point"
-                     :website "https://github.com/pitkali/pos-tip"
-                     :type github
-                     :pkgname "pitkali/pos-tip"
-                     :features nil))
-(add-to-list 'el-get-sources
-             '(:name racer
-                     :description "Racer support for Emacs"
-                     :website "https://github.com/racer-rust/emacs-racer"
-                     :type github
-                     :pkgname "racer-rust/emacs-racer"))
-(add-to-list 'el-get-sources
-             '(:name search-web
-                     :description "Post web search queries using `browse-url'"
-                     :website "https://github.com/tomoya/search-web.el"
-                     :type github
-                     :pkgname "tomoya/search-web.el"
-                     :features search-web))
-(add-to-list 'el-get-sources
-             '(:name speed-type
-                     :description "Practice touch and speed typing"
-                     :website "https://github.com/hagleitn/speed-type"
-                     :type github
-                     :pkgname "hagleitn/speed-type"))
+                     :pkgname "tarao/multi-mode-util"))
 (add-to-list 'el-get-sources
              '(:name twittering-mode
                      :features nil))
-(add-to-list 'el-get-sources
-             '(:name zsh-history
-                     :description "Zsh history file encoder/decoder for Emacs"
-                     :website "https://github.com/kawabata/emacs-zsh-history"
-                     :type github
-                     :pkgname "kawabata/emacs-zsh-history"
-                     :features zsh-history))
 
 (el-get-bundle use-package)  ; Initialize 'use-package' prior to other packages
 

@@ -1,0 +1,5 @@
+(:name speed-type
+       :description "Practice touch and speed typing"
+       :website "https://github.com/hagleitn/speed-type"
+       :type github
+       :pkgname "hagleitn/speed-type")

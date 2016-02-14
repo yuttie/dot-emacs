@@ -1,0 +1,5 @@
+(:name highlight-quoted
+       :description "Highlight Lisp quotes and quoted symbols"
+       :website "https://github.com/Fanael/highlight-quoted"
+       :type github
+       :pkgname "Fanael/highlight-quoted")

@@ -1,0 +1,5 @@
+(:name parent-mode
+       :description "get major mode's parent modes"
+       :website "https://github.com/Fanael/parent-mode"
+       :type github
+       :pkgname "Fanael/parent-mode")

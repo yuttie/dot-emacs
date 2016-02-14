@@ -1,0 +1,5 @@
+(:name navbar
+       :description "Navigation bar for Emacs"
+       :website "https://github.com/papaeye/emacs-navbar"
+       :type github
+       :pkgname "papaeye/emacs-navbar")

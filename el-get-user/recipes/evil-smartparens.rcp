@@ -1,0 +1,6 @@
+(:name evil-smartparens
+       :description "Evil support for smartparens"
+       :website "https://github.com/expez/evil-smartparens"
+       :type github
+       :pkgname "expez/evil-smartparens"
+       :depends (evil smartparens))

@@ -1,0 +1,6 @@
+(:name zsh-history
+       :description "Zsh history file encoder/decoder for Emacs"
+       :website "https://github.com/kawabata/emacs-zsh-history"
+       :type github
+       :pkgname "kawabata/emacs-zsh-history"
+       :features zsh-history)
