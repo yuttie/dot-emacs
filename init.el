@@ -116,7 +116,6 @@
     htmlize
     indent-guide
     inertial-scroll
-    navbar
     popwin
     powerline
     projectile
