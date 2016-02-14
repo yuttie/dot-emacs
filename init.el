@@ -42,44 +42,34 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
-(add-to-list 'el-get-sources
-             '(:name company-auctex
-                     :depends (yasnippet company-mode auctex)))
-(add-to-list 'el-get-sources
-             '(:name company-quickhelp
-                     :depends (company-mode pos-tip)))
-(add-to-list 'el-get-sources
-             '(:name company-statistics
-                     :depends (company-mode)))
-(add-to-list 'el-get-sources
-             '(:name company-web
-                     :depends (company-mode dash web-completion-data)))
-(add-to-list 'el-get-sources
-             '(:name ddskk
-                     :features nil))
-(add-to-list 'el-get-sources
-             '(:name evil
-                     :before (setq evil-search-module 'evil-search)))
-(add-to-list 'el-get-sources
-             '(:name evil-elscreen
-                     :features evil-elscreen
-                     :depends (evil elscreen)))
-(add-to-list 'el-get-sources
-             '(:name flycheck-pos-tip
-                     :shallow nil
-                     :checkout "472fa870"))
-(add-to-list 'el-get-sources
-             '(:name ghc-mod
-                     :depends (haskell-mode)))
-(add-to-list 'el-get-sources
-             '(:name haskell-mode
-                     :post-init (require 'haskell-mode-autoloads)))
-(add-to-list 'el-get-sources
-             '(:name multi-mode-util
-                     :pkgname "tarao/multi-mode-util"))
-(add-to-list 'el-get-sources
-             '(:name twittering-mode
-                     :features nil))
+(setq recipe-fixes
+      '((:name company-auctex
+               :depends (yasnippet company-mode auctex))
+        (:name company-quickhelp
+               :depends (company-mode pos-tip))
+        (:name company-statistics
+               :depends (company-mode))
+        (:name company-web
+               :depends (company-mode dash web-completion-data))
+        (:name ddskk
+               :features nil)
+        (:name evil
+               :before (setq evil-search-module 'evil-search))
+        (:name evil-elscreen
+               :features evil-elscreen
+               :depends (evil elscreen))
+        (:name flycheck-pos-tip
+               :shallow nil
+               :checkout "472fa870")
+        (:name ghc-mod
+               :depends (haskell-mode))
+        (:name haskell-mode
+               :post-init (require 'haskell-mode-autoloads))
+        (:name multi-mode-util
+               :pkgname "tarao/multi-mode-util")
+        (:name twittering-mode
+               :features nil)))
+(setq el-get-sources (append recipe-fixes el-get-sources))
 
 (el-get-bundle use-package)  ; Initialize 'use-package' prior to other packages
 
