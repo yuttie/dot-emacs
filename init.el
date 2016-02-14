@@ -28,6 +28,11 @@
 (initchart-record-execution-time-of load-theme theme)
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
 
+;;; Space-prefixed map
+(define-prefix-command 'space-prefixed-map)
+(with-eval-after-load 'evil
+  (define-key evil-motion-state-map (kbd "SPC") #'space-prefixed-map))
+
 ;;; El-Get
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
 (setq el-get-user-package-directory "~/.emacs.d/packages.d/")
@@ -370,6 +375,9 @@ removed from them after the first call."
 (add-hook 'text-mode-hook
           (lambda ()
             (flyspell-mode)))
+
+;;; align
+(define-key space-prefixed-map (kbd "a") #'align-regexp)
 
 ;;; browse-url
 (setq browse-url-browser-function #'browse-url-firefox)
