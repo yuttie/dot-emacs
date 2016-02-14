@@ -215,33 +215,19 @@
     evil
     ;;
     ace-window
-    adoc-mode
     ag
     aggressive-indent-mode
-    auctex
     avy
-    company-auctex
-    company-cabal
-    company-c-headers
-    company-ghc
-    company-inf-ruby
-    company-mode
-    company-quickhelp
-    company-statistics
-    company-web
     calfw
-    caml-mode
-    c-eldoc
-    deferred
-    d-mode
     ddskk
+    deferred
     dired+
     edit-server
     elscreen
     elscreen-persist
     ;;emacs-jabber  ; this package fails to install
-    emmet-mode
-    ess
+    company-mode
+    company-quickhelp
     esup
     evil-elscreen
     evil-jumper
@@ -254,15 +240,8 @@
     evil-surround
     expand-region
     flycheck
-    flycheck-d-unittest
-    flycheck-haskell
     flycheck-pos-tip
-    ghc-mod
-    git-gutter+
-    git-gutter-fringe+
-    git-modes
     gtags
-    haskell-mode
     helm
     helm-ag
     helm-descbinds
@@ -272,29 +251,13 @@
     highlight-symbol
     hlinum
     htmlize
-    hydrangea-theme
     indent-guide
     inertial-scroll
-    inf-ruby
-    json-mode
-    less-css-mode
-    macrostep
-    magit
-    markdown-mode
-    mmm-mode
     navbar
-    nim-mode
-    org-mode
-    php-eldoc
-    php-mode
     popwin
     powerline
     projectile
-    racer
     rainbow-mode
-    robe-mode
-    ruby-mode
-    rust-mode
     search-web
     session
     smartparens
@@ -304,17 +267,68 @@
     term+evil
     term+mode
     term+mux
-    tuareg-mode
     twittering-mode
     use-package
     vimish-fold
     wanderlust
-    web-mode
     wgrep
     which-key
-    yari
     yasnippet
     zsh-history
+    ;; Theme
+    hydrangea-theme
+    ;; Git
+    git-gutter+
+    git-gutter-fringe+
+    git-modes
+    magit
+    ;; C/C++
+    c-eldoc
+    company-c-headers
+    ;; D
+    d-mode
+    flycheck-d-unittest
+    ;; Elisp
+    macrostep
+    ;; Haskell
+    company-cabal
+    company-ghc
+    flycheck-haskell
+    ghc-mod
+    haskell-mode
+    ;; LaTeX
+    auctex
+    company-auctex
+    ;; Lightweight Markup Languages
+    adoc-mode
+    markdown-mode
+    org-mode
+    ;; Nim
+    nim-mode
+    ;; OCaml
+    caml-mode
+    tuareg-mode
+    ;; R
+    company-statistics
+    ess
+    ;; Ruby
+    company-inf-ruby
+    inf-ruby
+    robe-mode
+    ruby-mode
+    yari
+    ;; Rust
+    racer
+    rust-mode
+    ;; Web
+    company-web
+    emmet-mode
+    json-mode
+    less-css-mode
+    mmm-mode
+    php-eldoc
+    php-mode
+    web-mode
     ))
 
 (el-get-cleanup my-packages)
