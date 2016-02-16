@@ -89,6 +89,7 @@
     calfw
     ddskk
     deferred
+    delight
     dired+
     edit-server
     elscreen
