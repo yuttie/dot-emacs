@@ -8,6 +8,7 @@
    (evil-smartparens-mode      nil evil-smartparens)
    (flycheck-mode              nil flycheck)
    (flyspell-mode              nil flyspell)
+   (git-gutter+-mode           nil git-gutter+)
    (helm-mode                  nil helm-mode)
    (highlight-symbol-mode      nil highlight-symbol)
    (indent-guide-mode          nil indent-guide)
