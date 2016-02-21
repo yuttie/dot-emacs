@@ -11,6 +11,9 @@
 
   (setq skk-cdb-large-jisyo "~/.emacs.d/SKK-JISYO.LL.cdb")
   (setq skk-status-indicator 'minor-mode)
+  (setq skk-hiragana-mode-string "SKK:Hira")
+  (setq skk-katakana-mode-string "SKK:Kana")
+  (setq skk-jisx0208-latin-mode-string "SKK:ZE")
   (setq skk-show-mode-show t)
   (setq skk-show-annotation t)
   (setq skk-show-inline 'vertical)
