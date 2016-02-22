@@ -72,6 +72,9 @@
                :post-init (require 'haskell-mode-autoloads))
         (:name multi-mode-util
                :pkgname "tarao/multi-mode-util")
+        (:name session
+               :load-path (".")
+               :url  "http://downloads.sourceforge.net/project/emacs-session/session-2.4a.tar.gz")
         (:name twittering-mode
                :features nil)))
 (setq el-get-sources (append recipe-fixes el-get-sources))
