@@ -26,9 +26,11 @@
         (append skk-rom-kana-rule-list
                 '(("!"  nil "！")
                   ("~"  nil "〜")
-                  ("z " nil "　")
-                  ("z(" nil "（")
-                  ("z)" nil "）"))))
+                  ("` " nil "　")
+                  ("`(" nil "（")
+                  ("`)" nil "）")
+                  ("`." nil "・")
+                  ("`," nil "…"))))
 
   ;; 送り仮名の厳密なマッチ
   (setq skk-henkan-okuri-strictly t)
