@@ -17,6 +17,7 @@
    (t (kbd "C-g"))))
 (define-key key-translation-map (kbd "C-g") #'evil-escape-or-quit)
 
+(define-key evil-insert-state-map (kbd "C-a") #'move-beginning-of-line)
 (define-key evil-insert-state-map (kbd "C-e") #'move-end-of-line)
 
 (define-key evil-motion-state-map   (kbd "<remap> <evil-next-line>")     #'evil-next-visual-line)
