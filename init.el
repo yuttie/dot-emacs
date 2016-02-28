@@ -32,7 +32,6 @@
 (define-prefix-command 'space-prefixed-map)
 (with-eval-after-load 'evil
   (define-key evil-motion-state-map (kbd "SPC") #'space-prefixed-map))
-(define-key space-prefixed-map (kbd "c") #'evilnc-comment-operator)
 
 ;;; El-Get
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
