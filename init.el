@@ -27,6 +27,12 @@
 (initchart-record-execution-time-of require feature)
 (initchart-record-execution-time-of load-theme theme)
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
+(add-hook 'after-init-hook
+          (lambda ()
+            (let* ((filename (format-time-string "initchart_%Y-%m-%d-%H%M%S.svg"))
+                   (filepath (concat user-emacs-directory "/" filename)))
+              (initchart-visualize-init-sequence filepath)))
+          t)
 
 ;;; Space-prefixed map
 (define-prefix-command 'space-prefixed-map)
