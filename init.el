@@ -26,6 +26,7 @@
 (initchart-record-execution-time-of load file)
 (initchart-record-execution-time-of require feature)
 (initchart-record-execution-time-of load-theme theme)
+(initchart-record-execution-time-of el-get-do-init package)
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
 (add-hook 'after-init-hook
           (lambda ()
