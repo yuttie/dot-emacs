@@ -28,12 +28,13 @@
 (initchart-record-execution-time-of load-theme theme)
 (initchart-record-execution-time-of el-get-do-init package)
 (initchart-record-execution-time-of el-get-load-package-user-init-file package)
+(setq initchart-session-report (concat user-emacs-directory "/" (format-time-string "initchart_%Y-%m-%d-%H%M%S.svg")))
 (add-hook 'after-init-hook
-          (lambda ()
-            (let* ((filename (format-time-string "initchart_%Y-%m-%d-%H%M%S.svg"))
-                   (filepath (concat user-emacs-directory "/" filename)))
-              (initchart-visualize-init-sequence filepath)))
+          (lambda () (initchart-visualize-init-sequence initchart-session-report))
           t)
+(defun initchart-open-session-report ()
+  (interactive)
+  (browse-url initchart-session-report))
 
 ;;; Space-prefixed map
 (define-prefix-command 'space-prefixed-map)
