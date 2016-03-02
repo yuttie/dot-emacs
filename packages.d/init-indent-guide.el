@@ -1,2 +1,3 @@
-(setq indent-guide-delay 0.01)
+(setq indent-guide-delay 0.1)
+(setq indent-guide-recursive t)
 (indent-guide-global-mode)
