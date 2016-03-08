@@ -132,6 +132,7 @@
     htmlize
     indent-guide
     inertial-scroll
+    page-break-lines
     popwin
     powerline
     projectile
