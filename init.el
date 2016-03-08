@@ -387,6 +387,8 @@ removed from them after the first call."
 (add-hook 'text-mode-hook
           (lambda ()
             (flyspell-mode)))
+(global-set-key (kbd "S-<next>") (lambda () (interactive) (forward-page) (recenter-top-bottom 0)))
+(global-set-key (kbd "S-<prior>") (lambda () (interactive) (backward-page) (recenter-top-bottom 0)))
 
 ;;; align
 (define-key space-prefixed-map (kbd "a") #'align-regexp)
