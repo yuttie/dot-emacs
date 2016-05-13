@@ -175,6 +175,8 @@
     flycheck-haskell
     ghc-mod
     haskell-mode
+    ;; Julia
+    julia-mode
     ;; LaTeX
     auctex
     company-auctex
