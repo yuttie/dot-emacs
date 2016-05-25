@@ -117,6 +117,7 @@
     evil-org-mode
     evil-smartparens
     evil-surround
+    evil-terminal-cursor-changer
     expand-region
     flycheck
     flycheck-pos-tip
