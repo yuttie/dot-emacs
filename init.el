@@ -78,6 +78,8 @@
                :depends (haskell-mode))
         (:name haskell-mode
                :post-init (require 'haskell-mode-autoloads))
+        (:name helm
+               :post-init nil)
         (:name multi-mode-util
                :pkgname "tarao/multi-mode-util")
         (:name session
