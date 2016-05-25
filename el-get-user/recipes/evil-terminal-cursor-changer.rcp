@@ -2,4 +2,5 @@
        :description "Chagning cursor by mode for evil on terminal."
        :website "https://github.com/7696122/evil-terminal-cursor-changer"
        :type github
-       :pkgname "7696122/evil-terminal-cursor-changer")
+       :pkgname "7696122/evil-terminal-cursor-changer"
+       :depends (evil))
