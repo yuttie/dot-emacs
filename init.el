@@ -110,6 +110,7 @@
     ;;emacs-jabber  ; this package fails to install
     company-mode
     company-quickhelp
+    company-simple-complete
     esup
     evil-elscreen
     evil-matchit

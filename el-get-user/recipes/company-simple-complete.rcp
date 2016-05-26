@@ -1,0 +1,8 @@
+(:name company-simple-complete
+       :description "Enables tab to complete and cycle completions with company-mode, similar to neocomplete in vim"
+       :website "https://gist.github.com/aaronjensen/a46f88dbd1ab9bb3aa22"
+       :type git
+       :url "https://gist.github.com/a46f88dbd1ab9bb3aa22.git"
+       :depends (company-mode)
+       :build (("mv" "company-complete-cycle.el" "company-simple-complete.el"))
+       :compile ("company-simple-complete.el"))
