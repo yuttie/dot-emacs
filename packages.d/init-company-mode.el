@@ -27,10 +27,7 @@
 
 (with-eval-after-load 'company
   (define-key company-active-map [return]    nil)
-  (define-key company-active-map (kbd "RET") nil))
-
-(add-hook 'company-mode-hook
-          (lambda ()
-            (define-key company-active-map (kbd "C-n") #'company-select-next)
-            (define-key company-active-map (kbd "C-p") #'company-select-previous)
-            (define-key company-active-map (kbd "C-d") #'company-show-doc-buffer)))
+  (define-key company-active-map (kbd "RET") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous)
+  (define-key company-active-map (kbd "C-d") #'company-show-doc-buffer))
