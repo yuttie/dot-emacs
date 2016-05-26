@@ -179,8 +179,6 @@
     flycheck-haskell
     ghc-mod
     haskell-mode
-    ;; Julia
-    julia-mode
     ;; LaTeX
     auctex
     company-auctex
@@ -193,7 +191,7 @@
     ;; OCaml
     caml-mode
     tuareg-mode
-    ;; R
+    ;; R, Julia
     company-statistics
     ess
     ;; Ruby

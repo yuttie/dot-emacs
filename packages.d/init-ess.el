@@ -6,13 +6,15 @@
          ("\\.[rR]profile\\'" . R-mode)
          ("\\.[Rr]t\\'"       . R-transcript-mode)
          ("\\.[Rr]out"        . R-transcript-mode)
-         ("\\.Rd\\'"          . Rd-mode))
+         ("\\.Rd\\'"          . Rd-mode)
+         ("\\.jl\\'"          . ess-julia-mode))
        auto-mode-alist))
 (autoload 'R                 "ess-site" "" t)
 (autoload 'R-mode            "ess-site" "" t)
 (autoload 'Rnw-mode          "ess-site" "" t)
 (autoload 'R-transcript-mode "ess-site" "" t)
 (autoload 'Rd-mode           "ess-site" "" t)
+(autoload 'ess-julia-mode    "ess-site" "" t)
 
 (with-eval-after-load 'ess-s-l
   (ess-toggle-underscore nil))
