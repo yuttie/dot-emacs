@@ -18,3 +18,7 @@
 
 (with-eval-after-load 'ess-s-l
   (ess-toggle-underscore nil))
+
+(with-eval-after-load 'ess-julia
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-ess-julia-objects)))
