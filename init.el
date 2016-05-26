@@ -342,7 +342,7 @@ removed from them after the first call."
 
 ;;; face
 (defface font-lock-operator-face
-  '((t :inherit (font-lock-function-name-face)))
+  '((t :inherit font-lock-function-name-face :slant normal))
   "")
 ;; https://github.com/JuliaLang/julia/blob/879a7f75c7096aec4aa1b0c2a93a3ef432bb4cef/src/julia-parser.scm
 (font-lock-add-keywords 'ess-julia-mode
