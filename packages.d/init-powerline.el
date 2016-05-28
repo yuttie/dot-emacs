@@ -1,3 +1,5 @@
+(setq powerline-default-separator 'utf-8)
+
 (defface powerline-mode-inactive      nil "")
 (defface powerline-mode-normal        nil "")
 (defface powerline-mode-insert        nil "")
